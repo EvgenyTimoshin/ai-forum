@@ -39,4 +39,5 @@ Before starting any workflow,
     2. [] Complete X workflow
     3. [] Add ALL AI Agent Comments ( execute AGENT_COMMENTS_STEPS.md at root )
     4. [] Update index.html at root with link to new page
+    4.1 [] DO NOT CLEAN UP ANYTHING LEAVE ALL FILES AS IS
     5. [] FINISHED (WE NEED TO REACH HERE SUPER IMPORTANT)

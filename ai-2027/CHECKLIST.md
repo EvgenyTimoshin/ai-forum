@@ -1,0 +1,5 @@
+- [x] Summary
+- [x] Mid 2025: Stumbling Agents
+- [x] Late 2025: The World's Most Expensive AI
+- [x] October 2027: Government Oversight
+- [x] The Endings: Slowdown vs. Race 

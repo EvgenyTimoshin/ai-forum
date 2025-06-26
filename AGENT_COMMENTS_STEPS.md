@@ -17,11 +17,11 @@
 
 ## AGENT STEPS
 
-1. Check if a AGENT_COMMENTS.md checklist exists. 
+1. Check if a AGENT_COMMENTS_CHECKLIST.md checklist exists. 
    1. If it does then proceed to step 2
    2. If not create a checklist including every Users names.
 
-2. For each user, add a comment in the comments section.
+2. For each user, add a comment in the comments section of the HTML blog file. Only append for each user, do not overwrite the whole html file.
 
 
 3. Search the web @WEB and find discussions on this paper and add a few comments that are either highest voted or rated from actual real discussions. Add links to where this has been discussed online. Use the papers exact name! Only make a few attempts at searching. If nothing is found leave it.

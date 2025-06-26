@@ -6,6 +6,14 @@ A single-file, self-contained HTML "digest" that transforms any long-form conten
 
 A streamlined HTML application that converts lengthy documents—research papers, articles, reports, opinion pieces, white papers, or any substantial text—into a clean, readable web interface with enhanced user experience features.
 
+## How It's Made: AI Agent Workflows
+
+This repository uses AI agents to automate content creation through several workflows:
+
+*   **PDF Conversion**: Converts academic papers, reports, or other documents from PDF into the structured HTML digest format.
+*   **Web Source Distillation**: Creates a digest from a list of provided web articles or sources, synthesizing the information into a cohesive document.
+*   **Topic Research & Synthesis**: Generates a digest on a given topic by searching the web for relevant information and synthesizing it into a new document.
+
 ## Content Layer
 
 | Part | Purpose |
@@ -25,6 +33,7 @@ A streamlined HTML application that converts lengthy documents—research papers
 | **Dark-mode toggle** | Round button (🌙 / ☀️) top-right; swaps data-theme attribute. Uses CSS variables so colours flip instantly and preference sticks in localStorage | Eye comfort and user preference |
 | **Glossary tooltips** | Under-dotted terms get hover pop-overs (pure CSS) with one-line definitions—keeps main text uncluttered | Contextual help without interruption |
 | **Responsive design** | Max-width 70ch for comfortable reading; TOC hides on screens < 900px; everything works offline (no external libs) | Universal accessibility |
+| **AI-Generated Discussion** | Simulates a comment section with personas defined in `AGENT_USERS.md`. The agent also performs a web search to incorporate real-world discussions and related topics via a 'Web Digester' persona. | Enriches the content with diverse perspectives, provides additional context, and surfaces related topics for deeper understanding. |
 | **Highlight callouts & styled elements** | Colored boxes for key points, quotes, warnings; clean table styling for data presentation | Enhanced content hierarchy |
 
 ## Tech Stack

@@ -658,6 +658,27 @@ where:
                         </p>
                     </div>
                 </div>
+                <!-- Reply from Dr. Sarah Chen -->
+                <div class="mt-4 ml-12 pl-4 border-l-2 border-slate-200 dark:border-slate-700">
+                    <div class="flex items-start space-x-3">
+                        <div class="flex-shrink-0">
+                            <div class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white font-semibold text-sm">
+                                SC
+                            </div>
+                        </div>
+                        <div class="flex-grow">
+                            <div class="flex items-center space-x-2 mb-2">
+                                <h4 class="font-semibold text-slate-800 dark:text-slate-200">Dr. Sarah Chen</h4>
+                                <span class="text-xs text-slate-500 dark:text-slate-400">CS Professor</span>
+                                <span class="text-xs text-slate-400">•</span>
+                                <span class="text-xs text-slate-400">Just now</span>
+                            </div>
+                            <p class="text-slate-700 dark:text-slate-300 leading-relaxed">
+                                An important critique, Alex. The choice between static and contextual embeddings here represents a classic trade-off between resource efficiency and semantic richness. While static embeddings like MUSE are computationally lighter, you're right that they lack the nuanced, context-dependent representations of models like BERT or ELMo. Research from my lab (Chen et al., 2022) suggests that for tasks with high lexical ambiguity, the performance gains from contextual embeddings can be significant, though with a notable increase in inference latency. The authors' ablation study seems to validate their choice for this specific implementation, but an iso-cost comparison with a distilled contextual model would be a valuable future experiment.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <!-- Dr. Wei Liu - Translation Expert -->
@@ -677,6 +698,71 @@ where:
                         </div>
                         <p class="text-slate-700 dark:text-slate-300 leading-relaxed">
                             As someone who's worked extensively with Chinese-English translation systems, I find your results on distant language pairs particularly promising. The improvement in handling cultural CSUs is noteworthy. However, I think you're missing an important category of CSUs - idiomatic expressions. These often carry cultural context that goes beyond simple word-level polysemy. Would be interesting to see how DFA handles these cases.
+                        </p>
+                    </div>
+                </div>
+                <!-- Reply from Dr. Amira Hassan -->
+                <div class="mt-4 ml-12 pl-4 border-l-2 border-slate-200 dark:border-slate-700">
+                    <div class="flex items-start space-x-3">
+                        <div class="flex-shrink-0">
+                            <div class="w-10 h-10 bg-teal-500 rounded-full flex items-center justify-center text-white font-semibold text-sm">
+                                AH
+                            </div>
+                        </div>
+                        <div class="flex-grow">
+                            <div class="flex items-center space-x-2 mb-2">
+                                <h4 class="font-semibold text-slate-800 dark:text-slate-200">Dr. Amira Hassan</h4>
+                                <span class="text-xs text-slate-500 dark:text-slate-400">Language Expert</span>
+                                <span class="text-xs text-slate-400">•</span>
+                                <span class="text-xs text-slate-400">Just now</span>
+                            </div>
+                            <p class="text-slate-700 dark:text-slate-300 leading-relaxed">
+                                I couldn't agree more, Dr. Liu. Idioms are the perfect example of where translation becomes an art, not just a science. A phrase like "it's raining cats and dogs" isn't just about the words; it's about a shared cultural shortcut. A system that can identify 'bank' as polysemous is impressive, but can it understand that translating an idiom literally is a bigger error than mistranslating a single word? That's the next frontier.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Solana Reyes - Digital Artist -->
+            <div class="mb-6 bg-slate-50 dark:bg-slate-800 rounded-lg p-4 border border-slate-200 dark:border-slate-700">
+                <div class="flex items-start space-x-3">
+                    <div class="flex-shrink-0">
+                        <div class="w-10 h-10 bg-rose-500 rounded-full flex items-center justify-center text-white font-semibold text-sm">
+                            SR
+                        </div>
+                    </div>
+                    <div class="flex-grow">
+                        <div class="flex items-center space-x-2 mb-2">
+                            <h4 class="font-semibold text-slate-800 dark:text-slate-200">Solana Reyes</h4>
+                            <span class="text-xs text-slate-500 dark:text-slate-400">Digital Artist</span>
+                            <span class="text-xs text-slate-400">•</span>
+                            <span class="text-xs text-slate-400">8m ago</span>
+                        </div>
+                        <p class="text-slate-700 dark:text-slate-300 leading-relaxed">
+                            Everyone is focused on achieving 'perfect' translation, but I'm fascinated by the beauty of the mistakes. When the model gets a CSU 'wrong,' it's creating a new kind of poetry – a "machine argot" born from misunderstanding. What if instead of fixing the 'semantic confusion,' we leaned into it? I'd love to feed this system poetry and see what surreal, beautifully broken language emerges. The 'failures' might be more artistically interesting than the successes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- James Kim - Startup Founder -->
+            <div class="mb-6 bg-slate-50 dark:bg-slate-800 rounded-lg p-4 border border-slate-200 dark:border-slate-700">
+                <div class="flex items-start space-x-3">
+                    <div class="flex-shrink-0">
+                        <div class="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center text-white font-semibold text-sm">
+                            JK
+                        </div>
+                    </div>
+                    <div class="flex-grow">
+                        <div class="flex items-center space-x-2 mb-2">
+                            <h4 class="font-semibold text-slate-800 dark:text-slate-200">James Kim</h4>
+                            <span class="text-xs text-slate-500 dark:text-slate-400">Startup Founder</span>
+                            <span class="text-xs text-slate-400">•</span>
+                            <span class="text-xs text-slate-400">5m ago</span>
+                        </div>
+                        <p class="text-slate-700 dark:text-slate-300 leading-relaxed">
+                            This is great, but the real money isn't in general translation, it's in high-stakes, domain-specific contexts. Think legal contracts, medical device manuals, or financial prospectuses. A single mistranslated term there can cost millions. Can the DFA method be fine-tuned to prioritize accuracy for a specific industry's jargon? A "Vertical-Specific DFA" could be a killer product. I'd pay a premium for a service that guarantees it won't confuse 'consideration' in a legal sense with the everyday meaning.
                         </p>
                     </div>
                 </div>

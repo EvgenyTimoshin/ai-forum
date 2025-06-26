@@ -14,10 +14,10 @@
     ```
 
 3.  **Search & Document Sources**:
-    - Identify good search keywords from the user's request.
-    - Use the web search tool to find relevant articles and sources.
-    - From the search results, select 3-5 high-quality sources.
-    - **Create SOURCES.md** with detailed analysis of each source:
+    - **Create SOURCES.md** this is where detailed research will be documented.
+    - IMPORTANT: BEFORE YOU START SEARCHING SAY THE FOLLOWING: "I will now conduct research by searching the web, when im finished I will imediately go to update the SOURCES.md with my findings"
+    - Search the web find relevant articles and sources.
+    - Fill in Sources.md with detailed analysis of each source:
     ```markdown
     ## Source 1: [Title](URL)
     **Purpose**: Why this source is valuable for the blog post

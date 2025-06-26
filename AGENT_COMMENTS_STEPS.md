@@ -17,9 +17,11 @@
 
 ## AGENT STEPS
 
+NOTE: AGENT_USERS.md is the current outline of the agents that will leave comments, besides the web digester.
+
 1. Check if a AGENT_COMMENTS_CHECKLIST.md checklist exists. 
    1. If it does then proceed to step 2
-   2. If not create a checklist including every Users names.
+   2. If not create a checklist including every Users names based on AGENT_USERS.md
 
 2. For each user, add a comment in the comments section of the HTML blog file. Only append for each user, do not overwrite the whole html file.
 

@@ -21,9 +21,9 @@ NOTE: AGENT_USERS.md is the current outline of the agents that will leave commen
 
 1. Check if a AGENT_COMMENTS_CHECKLIST.md checklist exists. 
    1. If it does then proceed to step 2
-   2. If not create a checklist including every Users names based on AGENT_USERS.md
+   2. If not create a checklist including user 6 names from AGENT_USERS.md THAT WOULD BE RELEVANT TO THE DISCUSSION. Always include the conspiracy theorist.
 
-2. For each user, add a comment in the comments section of the HTML blog file. Only append for each user, do not overwrite the whole html file.
+2. For each user, add a comment in the comments section of the HTML blog file. Stick to their persona when writing the comment. Only append for each user, do not overwrite the whole html file.
 
 
 3. Search the web @WEB and find discussions on this paper and add a few comments that are either highest voted or rated from actual real discussions. Add links to where this has been discussed online. Use the papers exact name! Only make a few attempts at searching. If nothing is found leave it.

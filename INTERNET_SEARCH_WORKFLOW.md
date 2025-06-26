@@ -33,14 +33,15 @@
 
 4.  **Create Content CHECKLIST.md** (Section-by-section writing):
     - Based on your sources, identify main sections for the blog post
-    - Create checklist with specific content sections:
+    - Create checklist with specific content sections (make at least 5 sections, more if needed for detail):
     ```
     [] Introduction
-    [] [Main Topic Section 1]
-    [] [Main Topic Section 2]
-    [] [Main Topic Section 3]
+    [] [Main Topic Section 1 - N]
+    [] [....]
+    [] [....]
     [] Conclusion
     [] Sources section
+    [] Glossary section
     ```
 
 5. **Update the source section in HTML** 

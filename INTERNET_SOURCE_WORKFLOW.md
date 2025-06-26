@@ -9,6 +9,7 @@
 
 3.  **Process Sources**:
     - For each URL, read the content of the page.
+    - Once you are finished mark it off on the relevant checklist.
     - Identify the main sections or key points from each source.
     - Add these sections as checklist items in `CHECKLIST.md`.
 

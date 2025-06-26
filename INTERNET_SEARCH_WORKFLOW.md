@@ -6,7 +6,6 @@
     - Create a new directory for the blog post inside the root of the project. The directory name should be based on the topic.
     - Inside the new directory, create a copy of `template.html` from the root, renaming it to `index.html`.
     - Update `index.html` to fix references to CSS and JS files (which are in the root).
-    - Create a `CHECKLIST.md` file in the new directory.
 
 3.  **Search for Information**:
     - Identify good search keywords from the user's request.

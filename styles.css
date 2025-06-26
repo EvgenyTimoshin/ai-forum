@@ -1,3 +1,7 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+
 /* Minimal custom CSS only for features that require JavaScript interaction */
 
 /* CSS Variables for theme switching */

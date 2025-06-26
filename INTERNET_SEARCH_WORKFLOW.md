@@ -1,31 +1,42 @@
-## Internet Search Workflow
+# Internet Search Workflow
 
-1.  **Identify Topic**: Understand the core topic the user wants a blog post about.
+## RULE: One search session, then write. NO LOOPS.
 
-2.  **Setup Files**:
-    - Create a new directory for the blog post inside the root of the project. The directory name should be based on the topic.
-    - Inside the new directory, create a copy of `template.html` from the root, renaming it to `index.html`.
-    - Update `index.html` to fix references to CSS and JS files (which are in the root).
+### Phase 1: Search (Do Once)
+1. **Identify search terms** from user request
+2. **Mark in checklist**: "Started searching for [topic]"
+3. **Perform ONE search session**:
+   - Search for your identified terms
+   - Immediately record each source found as: `[URL] - [Brief description] - [How I'll use this]`
+   - For each source there lets take the synthesized infromation from there and qoute it directly at each source. Multiple qoutes / sections are appropriate, exactly as is in the original.
+   - Add up to 5 sources maximum
+4. **If search fails**: Write "Search encountered issues, proceeding with knowledge base" in checklist
+5. **Mark in checklist**: "Search phase complete - found [X] sources" 
+6. **STOP SEARCHING** - Move to Phase 2
 
-3.  **Search for Information**:
-    - Identify good search keywords from the user's request.
-    - Use the web search tool to find relevant articles and sources.
-    - From the search results, select 3-5 high-quality sources.
-    - Mark off in the relevant checklist that you have already searched!
+### Phase 2: Plan Content
+1. Create content outline based on sources found (or knowledge if search failed)
+2. Add each major section to `CHECKLIST.md` as:
+   ```
+   [] Introduction
+   [] [Section 1 name]
+   [] [Section 2 name]
+   [] ...
+   [] Sources section
+   ```
 
-4.  **Outline Content**:
-    - Read through the selected sources.
-    - Identify the main sections and key points to cover in the blog post.
-    - Create an outline and add the main sections as checklist items in `CHECKLIST.md`.
-    - Make sure sources section is included in the checklist
-    - Also add a small overview of each source and what its purpose is in the checklist so that we can use these to reference as we write the sections.
+### Phase 3:
+1. Fill out the Sources section first it will be in the same place in the template as is, at the bottom. 
+note: We want it for context, You will be basing the content of the information you obtained from the sources with references.
 
-5.  **Write Content**:
-    - Go through the checklist. For each item:
-        - Synthesize the information from your sources for that section.
-        - Write a condensed and clear version for the blog post.
-        - Add the content to the `index.html`.
-        - Mark the item as done in `CHECKLIST.md`.
-        - IMPORTANT: Add subtle links to references from the original source where vital information / stats / examples are shared!!!
+### Phase 4: Write Content
+1. For each section in checklist:
+   - Write content for that section (you can be creative. Not every sentence has to be referencing the sources)
+   - Add sources references in the content itself where appropriate! Link to the sources that were provided.
+   - Add to `index.html`
+   - Check off in `CHECKLIST.md`
+   - Move to next section
+2. Add Sources section listing all URLs used
+3. Mark "Writing completed" in WORKFLOW_CHECKLIST.md
 
-6.  **Finalize**: Once all sections are complete, review the `index.html` file for coherence and formatting. Add a "Sources" section at the end, listing the URLs you used. 
+**CRITICAL**: Never return to Phase 1. No additional searches allowed. 

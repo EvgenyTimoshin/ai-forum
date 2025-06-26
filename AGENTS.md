@@ -1,32 +1,34 @@
+# AI Blog Post Agent Instructions
 
+## CRITICAL RULE: NEVER RESTART THIS WORKFLOW ONCE STARTED
 
+Your goal is to create a blog post by following exactly ONE workflow to completion.
 
-Your goal is to create a blog post. Based on the user's request, determine which of the following workflows to follow.
+## Initial Setup (Do Once)
+1. Create a new directory named after your topic (e.g., `topic-name-blog`)
+2. Copy `template.html` from root to new directory, rename to `index.html`
+3. Fix CSS/JS paths in `index.html` (add `../` prefix)
+4. Create `WORKFLOW_CHECKLIST.md` with:
+   ```
+   [] Setup complete
+   [] Workflow selected and started
+   [] Content collection finished
+   [] Writing completed
+   [] Agent comments added
+   [] Root index.html updated
+   [] DONE - STOP HERE
+   ```
 
-IMPORTANT: Create a new directory to work out of!
+## Workflow Selection (Choose ONE, Never Change)
 
-IMPORTANT: CARRY OUT ALL OF THE STEPS TILL THE VERY END ALL CHECKLISTS MUST BE COMPLETED
+**A. PDF Workflow**: User provided a PDF file → Follow `PDF_WORKFLOW.md`
+**B. URL Workflow**: User provided specific URLs → Follow `INTERNET_SOURCE_WORKFLOW.md`  
+**C. Search Workflow**: User wants you to research a topic → Follow `INTERNET_SEARCH_WORKFLOW.md`
 
-IMPORTANT: REGARDLESS OF THE WORKFLOW, focus on making the content condensed of the original but still rich in detail and content.
-    - reflects the original content extensively
-    - keeps all of the most important and interesting informations
-    - highlightiing important points
-    - showing key examples!
+## Content Requirements
+- Condensed but detailed content from sources
+- Preserve key information, examples, and statistics
+- Add subtle links to original sources for important claims
+- Keeps all of the most important and interesting informations
 
-2. Select the appropriate workflow:
-
-A.  **PDF Conversion Workflow**: If the user provides a PDF file to be converted into a blog post, follow the instructions in `PDF_WORKFLOW.md`.
-
-B.  **Internet Source Workflow**: If the user provides one or more URLs as sources for the blog post, follow the instructions in `INTERNET_SOURCE_WORKFLOW.md`.
-
-C.  **Internet Search Workflow**: If the user asks you to write a blog post on a topic that requires you to search the internet for information, follow the instructions in `INTERNET_SEARCH_WORKFLOW.md`.
-
-IMPORTANT: ALL NEW CHECKLISTS IN THIS DIR
-
-Before starting any workflow, 
- - read the `README.md` to understand the project context and output format
- - create a temporary WORKFLOW_CHECKLIST.md in the new directory which will help you keep track of what you need to do, in this checklist add the following:
-    [] Carry out X workflow
-    [] Add ALL AI Agent Comments ( execute AGENT_COMMENTS_STEPS.md at root )
-    [] Update index.html at root with link to new page
-    [] FINISHED
+**IMPORTANT**: Once you start a workflow, complete it entirely. Never restart or switch workflows.

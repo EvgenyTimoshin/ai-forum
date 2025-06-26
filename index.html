@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Document Digest</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./styles.css">
+    <script>
+        tailwind.config = { darkMode: 'class' };
+    </script>
+</head>
+<body class="bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-200 transition-colors">
+    <button id="themeToggle" class="fixed top-4 right-4 w-12 h-12 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-300 dark:border-slate-600 hover:bg-slate-200 dark:hover:bg-slate-700 flex items-center justify-center text-xl z-50 transition-colors">
+        <span id="themeIcon">🌙</span>
+    </button>
+    <main class="max-w-3xl mx-auto p-6">
+        <h1 class="text-3xl font-bold mb-4 text-center">AI Document Digest</h1>
+        <p class="mb-6 text-center text-slate-600 dark:text-slate-400">Select a condensed document below:</p>
+        <ul class="space-y-4 list-disc list-inside">
+            <li><a href="research-paper-translations-sonnet3.5/research-paper-translations.html" class="text-blue-500 hover:underline">Research Paper Translations (Sonnet 3.5)</a></li>
+            <li><a href="research-paper-translations-sonnet4/research-paper-translations.html" class="text-blue-500 hover:underline">Research Paper Translations (Sonnet 4)</a></li>
+            <li><a href="research-paper-translations-sonnet4-run2/research-paper-translations.html" class="text-blue-500 hover:underline">Research Paper Translations (Sonnet 4 - Run 2)</a></li>
+            <li><a href="enhancing-llm-translations-context-sonnet3.5/enhancing-llm-translation-focus.html" class="text-blue-500 hover:underline">Enhancing LLM Translation Focus (Sonnet 3.5)</a></li>
+            <li><a href="enhancing-llm-translations-context-sonnet3.5-run2/enhancing-llm-translation-focus.html" class="text-blue-500 hover:underline">Enhancing LLM Translation Focus (Sonnet 3.5 - Run 2)</a></li>
+        </ul>
+    </main>
+    <script src="./script.js"></script>
+</body>
+</html>

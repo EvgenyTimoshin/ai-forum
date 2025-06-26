@@ -34,3 +34,8 @@ A streamlined HTML application that converts lengthy documents—research papers
 
 **Tailwind CSS Reference:** [Play CDN Documentation](https://tailwindcss.com/docs/installation/play-cdn)
 
+
+## GitHub Pages
+
+The repository can be hosted using **GitHub Pages** directly from the `main` branch. The `index.html` file provides links to each digested paper and the `.nojekyll` file ensures the site is served without Jekyll processing.
+

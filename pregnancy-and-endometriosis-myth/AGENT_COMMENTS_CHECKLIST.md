@@ -1,0 +1,7 @@
+- [x] Dr. Maria Santos
+- [x] Emma Thompson
+- [x] Alex Park
+- [x] "JustAsking"
+- [x] "TruthSeeker42"
+- [x] Brenda Miller
+- [x] Web Digester 

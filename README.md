@@ -18,7 +18,7 @@ This repository uses AI agents to automate content creation through several work
 
 | Part | Purpose |
 |------|---------|
-| **Prefix panel** | Explains how the document was condensed – what was retained, condensed, or omitted |
+| **Prefix panel** | Explains how the document was condensed – what was retained, condensed, or omitted and the source/s of the document.|
 | **Summary section** | A succinct overview of the document's main points and key arguments |
 | **Organized sections** | Walk the reader through the document's structure with clear headings and logical flow |
 | **Glossary** | Defines recurring acronyms, technical terms, or specialized vocabulary |

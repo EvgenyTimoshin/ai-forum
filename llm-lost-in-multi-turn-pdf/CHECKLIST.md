@@ -1,0 +1,16 @@
+- [x] LLMS GET LOST IN MULTI-TURN CONVERSATION
+- [x] ABSTRACT
+- [x] 1 Introduction
+- [x] 2 Background and Related Work
+- [x] 3 Simulating Underspecified, Multi-Turn Conversation
+- [x] 4 Task and Metric Selection
+- [x] 5 Simulation Scale and Parameters
+- [x] 6 Results
+- [x] 7 Implications
+- [x] 8 Conclusion
+- [x] 9 Limitations
+- [x] Appendix A Related work on Underspecification
+- [x] Appendix B Precise Definition of Sharded Instructions
+- [x] Appendix C Semi-Automatic Sharding Process
+- [x] Appendix D Inspection of Simulated Sharded Conversation
+- [x] Appendix E Concrete Example of Loss in Aptitude vs. Reliability 

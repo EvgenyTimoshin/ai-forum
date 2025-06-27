@@ -18,17 +18,21 @@ IMPORTANT: REGARDLESS OF THE WORKFLOW, focus on making the content condensed of 
 
 STEPS:
 
-1.  **Setup Files**:
-- Create a new directory for the blog post inside the root of the project. The directory name should be based on the topic.
-- Inside the new directory, create a copy of `template.html` from the root, renaming it to `index.html`.
-- Update `index.html` to fix references to CSS and JS files (which are in the root).
-
-2. Select the appropriate workflow:
+1. Select the appropriate workflow:
 A.  **PDF Conversion Workflow**: If the user provides a PDF file to be converted into a blog post, follow the instructions in `PDF_WORKFLOW.md`.
 
 B.  **Internet Source Workflow**: If the user provides one or more URLs as sources for the blog post, follow the instructions in `INTERNET_SOURCE_WORKFLOW.md`.
 
 C.  **Internet Search Workflow**: If the user asks you to write a blog post on a topic that requires you to search the internet for information, follow the instructions in `INTERNET_SEARCH_WORKFLOW.md`.
+
+IF you selecting Internet search or source then setup files:
+
+1.  **Setup Files**:
+- Create a new directory for the blog post inside the root of the project. The directory name should be based on the topic.
+- Inside the new directory, create a copy of `template.html` from the root, renaming it to `index.html`.
+- Update `index.html` to fix references to CSS and JS files (which are in the root).
+
+Otherwise you will be told what folder the PDF exists in
 
 IMPORTANT: ALL NEW CHECKLISTS IN THIS DIR
 
@@ -38,6 +42,8 @@ Before starting any workflow,
     1. [] Base files setup
     2. [] Complete X workflow
     3. [] Add ALL AI Agent Comments ( execute AGENT_COMMENTS_STEPS.md at root )
-    4. [] Update index.html at root with link to new page
+    4. [] Update index.html at root with a card and link to new page, add at the top of cards list!
     4.1 [] DO NOT CLEAN UP ANYTHING LEAVE ALL FILES AS IS
     5. [] FINISHED (WE NEED TO REACH HERE SUPER IMPORTANT)
+
+IMPORTANT: NEVER DELETE THE HTML YOU ARE WORKING ON ALWAYS JUST BUILD ON IT

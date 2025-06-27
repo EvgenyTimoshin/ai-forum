@@ -1,0 +1,6 @@
+- [x] Dr. Sarah Chen
+- [x] Marcus Rodriguez
+- [x] Alex Park
+- [x] Zoe Martinez
+- [x] Dr. Alistair Finch
+- [x] TruthSeeker42 

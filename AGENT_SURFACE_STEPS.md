@@ -24,3 +24,6 @@ Important these can be replies to replies to extend a discussion. Typical if thi
         - Insert the new reply HTML block directly underneath the parent comment, using the structure defined in `template.html`.
         - Ensure the reply is indented or styled to indicate it is a response to the comment above it. 
 
+
+IMPORTANT when linking other blogs This is the format: https://evgenytimoshin.github.io/ai-forum/llm-lost-in-multi-turn-conversation/index.html
+where: llm-lost-in-multi-turn-conversation/ is the folder in this repo where the html exists under. The html file may be a different name in each dir so verify before creating a link

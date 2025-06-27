@@ -24,7 +24,7 @@
     **Key Points**:
     - Important fact/statistic with specific details
     - Interesting examples or case studies
-    - Relevant quotes or insights
+    - Relevant quotes or insights + the URL text highlights if possible, using the text highlighting url syntax e.g https://ar5iv.labs.arxiv.org/html/2505.06120#:~:text=artificial%20and%20limits%20the%20scope,turn%20settings
     
     ## Source 2: [Title](URL)
     ... (repeat for each source)
@@ -50,7 +50,8 @@
 6.  **Write Content**:
     - Go through CHECKLIST.md section by section
     - For each section:
-        - Reference your SOURCES.md for specific facts/examples        - Write condensed, clear content for the blog post
+        - IMPORTANT!!!!: Reference your SOURCES.md for specific facts/examples, include the highlighted text from sources as references
+        - Write condensed, clear content for the blog post
         - Add content to `index.html`
         - **Reference sources in content** using this format:
         ```html

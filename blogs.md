@@ -2,8 +2,8 @@
 
 This file maps project names to their directories and tracks their status.
 
-- Current project: None
-- Dir: None
+- Current project: `agent-llm-workflow-optimizations`
+- Dir: `./agent-llm-workflow-optimizations/`
 
 ---
 

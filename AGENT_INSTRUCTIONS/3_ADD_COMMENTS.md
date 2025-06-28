@@ -27,7 +27,9 @@
 - The fragment should contain ONLY the inner content - no `<html>`, `<head>`, or `<body>` tags.
 - Start with the section header: `<h2 class="text-2xl font-bold mb-6 text-slate-800 dark:text-slate-200">💬 Community Discussion</h2>`
 
-### Step 3: Read all of the html blog files in the sections/ folder!!!!
+### Step 3: Read the Markdown Content
+
+Read the `content.md` file in the project directory to understand the article's content. This will be the source for generating relevant comments.
 
 ### Step 4: Add User Comments
 
@@ -37,7 +39,7 @@
   - Proper CSS classes for dark mode compatibility
   - Avatar initials and background colors
   - User names, titles, and timestamps
-  - Comment content that references the blog post
+  - Comment content that references the blog post's markdown content
 
 ### Step 5: Incorporate Real-World Discussions
 

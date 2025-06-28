@@ -33,6 +33,9 @@ You are one of several specialized agents collaborating to create a blog post. Y
 -   **If your task is `2.5. Content Editor`**:
     -   Follow the instructions in `AGENT_INSTRUCTIONS/2.5_CONTENT_BLOG_EDITOR.md`.
 
+-   **If your task is `2.6. Markdown Creator`**:
+    -   Follow the instructions in `AGENT_INSTRUCTIONS/2.6_MARKDOWN_CREATOR.md`.
+
 -   **If your task is `3. Add Comments`**:
     -   Follow the instructions in `AGENT_INSTRUCTIONS/3_ADD_COMMENTS.md`.
 

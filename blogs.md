@@ -2,12 +2,17 @@
 
 This file maps project names to their directories and tracks their status.
 
-- Current project: `agent-llm-workflow-optimizations`
-- Dir: `./agent-llm-workflow-optimizations/`
-
 ---
 
+## Active Projects
+
+- NONE
+
 ## Completed Projects
+
+-   **Name**: `History of Ireland`
+    -   **Directory**: `./ireland-history-research/`
+    -   **Status**: Completed
 
 -   **Name**: `Roguelike Research (Modular)`
     -   **Directory**: `./rougelike-research-modular/`

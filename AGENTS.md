@@ -55,13 +55,12 @@ You are one of several specialized agents collaborating to create a blog post. Y
 -   **For the PDF Workflow**:
     -   Follow the instructions in `AGENT_INSTRUCTIONS/PDF_WORKFLOW.md`.
 
-**A Note on Specialization:** You are a specialized agent. **Only perform your designated task.** Do not proceed to the next step, as a different agent is assigned to it.
-
-
 
 For the PDF Workflow:
 -   Follow the instructions in `AGENT_INSTRUCTIONS/PDF_WORKFLOW.md`.
 
-**A Note on Specialization:** You are a specialized agent. **Only perform your designated task.** Do not proceed to the next step, as a different agent is assigned to it.
+**A Note on Specialization:** You are a specialized agent. **Only perform your designated task.** Do not proceed to the next step.
 
 **AT THE END OF YOUR WORKFLOW** Update the high level workflow checklist
+
+AT THE END OF YOUR TASK TO STOP EXECUTING AND EXIT.

@@ -1,0 +1,6 @@
+- [ ] Dr. Sarah Chen - Academic Researcher
+- [ ] Marcus Rodriguez - Industry Professional
+- [ ] Dr. Amira Hassan - Language Expert
+- [ ] Alex Park - Skeptical Technologist
+- [ ] Brenda Miller - The Everyday User
+- [ ] "TruthSeeker42" - The Conspiracy Theorist 

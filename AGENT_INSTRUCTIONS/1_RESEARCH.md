@@ -18,10 +18,6 @@ Create a `WORKFLOW_CHECKLIST.md` file in the project directory to track high-lev
 
 ### Step 3: Process and Document Sources
 
-- **For each source URL** (whether provided by the user or found via search):
-    - Read the content of the page.
-    - Announce your intention before starting research if you are searching: *"I will now conduct research by searching the web. When I'm finished, I will immediately update `SOURCES.md` with my findings."*
-
 - **Create `SOURCES.md`**: This file will contain a detailed analysis of each source. Use the following format:
 
     ```markdown
@@ -35,6 +31,13 @@ Create a `WORKFLOW_CHECKLIST.md` file in the project directory to track high-lev
     ## Source 2: [Title of Source](URL)
     ... (repeat for all sources)
     ```
+
+
+- **Do the research** (whether provided by the user or based on your own searching):
+    - Come up with a research plan
+    - Read the content of the page.
+    - Announce your intention before starting research if you are searching: *"I will now conduct research by searching the web. When I'm finished, I will immediately update `SOURCES.md` with my findings."*
+
 
 ### Step 4: Finalize
 

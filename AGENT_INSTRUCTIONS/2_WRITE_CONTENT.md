@@ -5,13 +5,13 @@
 ### Step 1: Create Content Checklist
 
 - Based on your `SOURCES.md`, identify the main sections for the blog post.
-- Create a `CHECKLIST.md` file with specific content sections. Aim for at least 5 sections, but add more if needed for detail.
+- Create a `CHECKLIST.md` file with specific content sections. 
 
     ```markdown
     [] Introduction
     [] [Main Topic Section 1]
     [] [Main Topic Section 2]
-    ...
+    ... N sections
     [] Conclusion
     [] Sources Section
     [] Glossary Section
@@ -23,7 +23,7 @@
 
 ### Step 3: Write Content Section by Section
 
-- Go through your `CHECKLIST.md` and write the content for each section.
+- Go through your `CHECKLIST.md` and write the content for each section one by one!
 - For each section:
     - **Reference `SOURCES.md`** for facts, examples, and quotes.
     - Write condensed, clear, and detailed content.

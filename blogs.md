@@ -4,13 +4,11 @@ This file maps project names to their directories and tracks their status.
 
 ---
 
-## Active Project
-
-*There is no active project currently.*
-
----
-
 ## Completed Projects
+
+-   **Name**: `Roguelike Game Research`
+    -   **Directory**: `./rouglike-research/`
+    -   **Status**: Completed
 
 -   **Name**: `llm-lost-in-multi-turn-conversation`
     -   **Directory**: `./llm-lost-in-multi-turn-conversation/`

@@ -2,7 +2,7 @@
 
 You are one of several specialized agents collaborating to create a blog post. Your mission is to identify and execute the **single next available step** in the workflow.
 
-**Your First Action: Read `blogs.md` to find the active project directory.** This file is the source of truth for what the current project is.
+**Your First Action: Read `blogs.md` to find the active project directory. Once you identify the active directory, read `PROJECT_GOAL.md` inside it to understand the project's goals.** This file is the source of truth for what the current project is.
 
 ---
 
@@ -30,24 +30,32 @@ You are one of several specialized agents collaborating to create a blog post. Y
 -   **If your task is `2. Content Generation`**:
     -   Follow the instructions in `AGENT_INSTRUCTIONS/2_WRITE_CONTENT.md`.
 
--   **If your task is `3. Add Comments and Discussion`**:
+-   **If your task is `2.5. Content Editor`**:
+    -   Follow the instructions in `AGENT_INSTRUCTIONS/2.5_CONTENT_BLOG_EDITOR.md`.
+
+-   **If your task is `3. Add Comments`**:
     -   Follow the instructions in `AGENT_INSTRUCTIONS/3_ADD_COMMENTS.md`.
 
--   **If your task is `4. Finalize and Update Root`**:
+-   **If your task is `4. Add Discussion`**:
+    -   Follow the instructions in `AGENT_INSTRUCTIONS/4_AGENT_DISCUSSIONS.md`.
+
+-   **If your task is `5. Finalize and Update Root`**:
     -   Update the main `index.html` at the root by adding a card for the new blog post at the top of the list.
     -   Do not clean up any generated files (`SOURCES.md`, checklists, etc.).
+    -   Update the main `index.html` at the root by adding a card for the new blog post at the top of the list.
+    -   In `blogs.md`, change the project's **Status** to `Completed`.
+    -   Remove the project from the **Active Project** section in `blogs.md`.
 
 -   **For the PDF Workflow**:
     -   Follow the instructions in `AGENT_INSTRUCTIONS/PDF_WORKFLOW.md`.
 
 **A Note on Specialization:** You are a specialized agent. **Only perform your designated task.** Do not proceed to the next step, as a different agent is assigned to it.
 
-If your task is `4. Finalize and Update Root`:
--   Update the main `index.html` at the root by adding a card for the new blog post at the top of the list.
--   In `blogs.md`, change the project's **Status** to `Completed`.
--   Remove the project from the **Active Project** section in `blogs.md`.
+
 
 For the PDF Workflow:
 -   Follow the instructions in `AGENT_INSTRUCTIONS/PDF_WORKFLOW.md`.
 
 **A Note on Specialization:** You are a specialized agent. **Only perform your designated task.** Do not proceed to the next step, as a different agent is assigned to it.
+
+**AT THE END OF YOUR WORKFLOW** Update the high level workflow checklist

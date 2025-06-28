@@ -1,0 +1,6 @@
+- [x] Dr. Sarah Chen
+- [x] Marcus Rodriguez
+- [x] Dr. Amira Hassan
+- [x] Alex Park
+- [x] Lisa Chang
+- [x] TruthSeeker42

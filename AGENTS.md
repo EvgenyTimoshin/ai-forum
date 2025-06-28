@@ -1,49 +1,53 @@
+# Agent Workflow Orchestration
 
+You are one of several specialized agents collaborating to create a blog post. Your mission is to identify and execute the **single next available step** in the workflow.
 
+**Your First Action: Read `blogs.md` to find the active project directory.** This file is the source of truth for what the current project is.
 
-Your goal is to create a blog post. Based on the user's request, determine which of the following workflows to follow.
+---
 
-IMPORTANT: Create a new directory to work out of!
+## Your Task Execution Flow
 
-IMPORTANT: CARRY OUT ALL OF THE STEPS TILL THE VERY END ALL CHECKLISTS MUST BE COMPLETED
+1.  **Read `blogs.md` in the root directory.** This file contains the active project's directory.
+2.  **Identify the active project directory.**
+3.  **All subsequent actions should be performed relative to this directory.**
+4.  **Read `HIGH_LEVEL_WORKFLOW_CHECKLIST.md`** inside the project directory.
+5.  **Find the first unchecked item**. This is your **only** assigned task.
+6.  **Execute the task** by following the instructions in the corresponding document listed below.
+7.  **Mark your task as complete** in `HIGH_LEVEL_WORKFLOW_CHECKLIST.md` by changing `[]` to `[x]`.
+8.  **Stop.** Another agent will handle the next step.
 
-IMPORTANT: MAKE SURE TO ALAWYS UPDATE AND CHECK THE CHECKLIST AT EVERY STAGE.
+---
 
-IMPORTANT: REGARDLESS OF THE WORKFLOW, focus on making the content condensed of the original but still rich in detail and content.
-    - reflects the original content extensively
-    - keeps all of the most important and interesting informations
-    - highlightiing important points
-    - showing key examples!
+## Task-to-Document Mapping
 
+-   **If your task is `0. Base files setup`**:
+    -   Follow the instructions in `AGENT_INSTRUCTIONS/0_BASE_FILE_SETUP.md`.
 
-STEPS:
+-   **If your task is `1. Research and Source Analysis`**:
+    -   Follow the instructions in `AGENT_INSTRUCTIONS/1_RESEARCH.md`.
 
-1. Select the appropriate workflow:
-A.  **PDF Conversion Workflow**: If the user provides a PDF file to be converted into a blog post, follow the instructions in `PDF_WORKFLOW.md`.
+-   **If your task is `2. Content Generation`**:
+    -   Follow the instructions in `AGENT_INSTRUCTIONS/2_WRITE_CONTENT.md`.
 
-B.  **Internet Source Workflow**: If the user provides one or more URLs as sources for the blog post, follow the instructions in `INTERNET_SOURCE_WORKFLOW.md`.
+-   **If your task is `3. Add Comments and Discussion`**:
+    -   Follow the instructions in `AGENT_INSTRUCTIONS/3_ADD_COMMENTS.md`.
 
-C.  **Internet Search Workflow**: If the user asks you to write a blog post on a topic that requires you to search the internet for information, follow the instructions in `INTERNET_SEARCH_WORKFLOW.md`.
+-   **If your task is `4. Finalize and Update Root`**:
+    -   Update the main `index.html` at the root by adding a card for the new blog post at the top of the list.
+    -   Do not clean up any generated files (`SOURCES.md`, checklists, etc.).
 
-IF you selecting Internet search or source then setup files:
+-   **For the PDF Workflow**:
+    -   Follow the instructions in `AGENT_INSTRUCTIONS/PDF_WORKFLOW.md`.
 
-1.  **Setup Files**:
-- Create a new directory for the blog post inside the root of the project. The directory name should be based on the topic.
-- Inside the new directory, create a copy of `template.html` from the root, renaming it to `index.html`.
-- Update `index.html` to fix references to CSS and JS files (which are in the root).
+**A Note on Specialization:** You are a specialized agent. **Only perform your designated task.** Do not proceed to the next step, as a different agent is assigned to it.
 
-Otherwise you will be told what folder the PDF exists in
+If your task is `4. Finalize and Update Root`:
+-   Update the main `index.html` at the root by adding a card for the new blog post at the top of the list.
+-   In `blogs.md`, change the project's **Status** to `Completed`.
+-   Remove the project from the **Active Project** section in `blogs.md`.
 
-IMPORTANT: ALL NEW CHECKLISTS IN THIS DIR
+For the PDF Workflow:
+-   Follow the instructions in `AGENT_INSTRUCTIONS/PDF_WORKFLOW.md`.
 
-Before starting any workflow, 
- - read the `README.md` to understand the project context and output format
- - create a temporary HIGH_LEVEL_WORKFLOW_CHECKLIST.md in the new directory which will help you keep track of what you need to do, in this checklist add the following:
-    1. [] Base files setup
-    2. [] Complete X workflow
-    3. [] Add ALL AI Agent Comments ( execute AGENT_COMMENTS_STEPS.md at root )
-    4. [] Update index.html at root with a card and link to new page, add at the top of cards list!
-    4.1 [] DO NOT CLEAN UP ANYTHING LEAVE ALL FILES AS IS
-    5. [] FINISHED (WE NEED TO REACH HERE SUPER IMPORTANT)
-
-IMPORTANT: NEVER DELETE THE HTML YOU ARE WORKING ON ALWAYS JUST BUILD ON IT
+**A Note on Specialization:** You are a specialized agent. **Only perform your designated task.** Do not proceed to the next step, as a different agent is assigned to it.

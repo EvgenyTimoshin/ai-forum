@@ -1,0 +1,87 @@
+<!-- Design Patterns Section -->
+<h2 class="section-header text-2xl font-bold mb-4 text-slate-800 dark:text-slate-200 cursor-pointer hover:text-blue-600 dark:hover:text-blue-400 select-none">🔧 Common Design Patterns and Mechanics</h2>
+<div class="section-content">
+    <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
+        Across the diverse landscape of roguelike games, certain design patterns emerge repeatedly, suggesting fundamental psychological and mechanical principles that drive player engagement. Understanding these patterns reveals why certain combinations of features create such compelling experiences.
+    </p>
+
+    <h3 class="text-lg font-semibold mb-3 text-slate-800 dark:text-slate-200">The Synergy Discovery Loop</h3>
+    <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
+        One of the most powerful patterns in roguelike design is the <span class="glossary-term relative border-b border-dotted border-slate-400 cursor-help" data-definition="Gameplay systems where multiple elements combine to create effects greater than their individual parts">synergy discovery loop</span>. Games excel when they offer multiple systems that interact in unexpected ways, creating moments of delightful discovery.
+    </p>
+
+    <ul class="list-disc list-inside space-y-2 text-slate-700 dark:text-slate-300 ml-4 mb-4">
+        <li><strong>Balatro:</strong> Joker combinations creating exponential score multipliers</li>
+        <li><strong>Luck be a Landlord:</strong> Symbol interactions like <em>monkeys eating coconuts</em><a href="#source6" class="text-blue-600 dark:text-blue-400 hover:underline">[6]</a></li>
+        <li><strong>Slay the Spire:</strong> Card and relic combinations enabling entirely new strategies</li>
+        <li><strong>Risk of Rain 2:</strong> Stacking items creating wildly overpowered builds<a href="#source16" class="text-blue-600 dark:text-blue-400 hover:underline">[16]</a></li>
+    </ul>
+
+    <div class="bg-blue-50 dark:bg-blue-950 border-l-4 border-blue-400 dark:border-blue-500 p-4 rounded-r-lg mb-4">
+        <p class="text-sm text-blue-800 dark:text-blue-200">
+            <strong>Design Principle:</strong> The most engaging roguelikes present players with systems that appear simple individually but combine in complex, often surprising ways. This creates a constant sense of possibility and experimentation<a href="#source12" class="text-blue-600 dark:text-blue-400 hover:underline">[12]</a>.
+        </p>
+    </div>
+
+    <h3 class="text-lg font-semibold mb-3 text-slate-800 dark:text-slate-200">Escalating Pressure Systems</h3>
+    <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
+        Successful roguelikes implement <span class="glossary-term relative border-b border-dotted border-slate-400 cursor-help" data-definition="Game mechanics that gradually increase difficulty or stakes over time, forcing increasingly difficult decisions as gameplay progresses">escalating pressure systems</span> that force players to make increasingly difficult decisions as runs progress:
+    </p>
+
+    <ul class="list-disc list-inside space-y-2 text-slate-700 dark:text-slate-300 ml-4 mb-4">
+        <li><strong>Risk of Rain 2:</strong> Constantly increasing difficulty timer<a href="#source16" class="text-blue-600 dark:text-blue-400 hover:underline">[16]</a></li>
+        <li><strong>Luck be a Landlord:</strong> Exponentially rising rent payments<a href="#source7" class="text-blue-600 dark:text-blue-400 hover:underline">[7]</a></li>
+        <li><strong>Balatro:</strong> Score targets that increase dramatically between levels</li>
+        <li><strong>Darkest Dungeon:</strong> Accumulating stress and resource depletion<a href="#source15" class="text-blue-600 dark:text-blue-400 hover:underline">[15]</a></li>
+    </ul>
+
+    <h3 class="text-lg font-semibold mb-3 text-slate-800 dark:text-slate-200">Strategic Adaptation Requirements</h3>
+    <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
+        The best roguelikes force players to adapt their strategies based on what the game provides, rather than allowing them to pursue a single optimal approach. This creates the "puzzle" aspect that keeps runs feeling fresh<a href="#source12" class="text-blue-600 dark:text-blue-400 hover:underline">[12]</a>.
+    </p>
+
+    <div class="bg-amber-50 dark:bg-amber-950 border-l-4 border-amber-400 dark:border-amber-500 p-4 rounded-r-lg mb-4">
+        <p class="text-sm text-amber-800 dark:text-amber-200">
+            <strong>Anti-Pattern Warning:</strong> Games that allow players to "solve" the optimal strategy too easily risk becoming repetitive. The strongest roguelikes maintain multiple viable paths to victory<a href="#source3" class="text-blue-600 dark:text-blue-400 hover:underline">[3]</a>.
+        </p>
+    </div>
+
+    <h3 class="text-lg font-semibold mb-3 text-slate-800 dark:text-slate-200">Information Management and Uncertainty</h3>
+    <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
+        Roguelikes carefully balance information revelation and uncertainty. Too much predictability removes tension, while too little creates frustration. Successful games use techniques like:
+    </p>
+
+    <ul class="list-disc list-inside space-y-2 text-slate-700 dark:text-slate-300 ml-4 mb-4">
+        <li><strong>Visible enemy intents</strong> (Slay the Spire) enabling tactical planning</li>
+        <li><strong>Probabilistic feedback</strong> showing likely but not guaranteed outcomes</li>
+        <li><strong>Breadcrumb systems</strong> providing hints about upcoming challenges<a href="#source1" class="text-blue-600 dark:text-blue-400 hover:underline">[1]</a></li>
+        <li><strong>Triangulation through multiple clues</strong> rather than explicit instruction<a href="#source1" class="text-blue-600 dark:text-blue-400 hover:underline">[1]</a></li>
+    </ul>
+
+    <h3 class="text-lg font-semibold mb-3 text-slate-800 dark:text-slate-200">Meta-Progression Balance</h3>
+    <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
+        Modern roguelikes often include <span class="glossary-term relative border-b border-dotted border-slate-400 cursor-help" data-definition="Permanent progression systems that persist between individual runs">meta-progression</span> systems, but the most successful implementations maintain careful balance:
+    </p>
+
+    <div class="bg-blue-50 dark:bg-blue-950 border-l-4 border-blue-400 dark:border-blue-500 p-4 rounded-r-lg mb-4">
+        <p class="text-sm text-blue-800 dark:text-blue-200">
+            <strong>Balance Principle:</strong> Meta-progression should unlock new possibilities and strategies rather than simply making the game easier. The goal is variety and replayability, not power creep<a href="#source12" class="text-blue-600 dark:text-blue-400 hover:underline">[12]</a>.
+        </p>
+    </div>
+
+    <h3 class="text-lg font-semibold mb-3 text-slate-800 dark:text-slate-200">Emotional Pacing and Recovery</h3>
+    <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
+        The most addictive roguelikes understand emotional pacing, providing moments of triumph, tension, relief, and discovery in carefully orchestrated sequences. This includes:
+    </p>
+
+    <ul class="list-disc list-inside space-y-2 text-slate-700 dark:text-slate-300 ml-4 mb-4">
+        <li><strong>Victory peaks:</strong> Moments where perfect synergies create feelings of unstoppable power</li>
+        <li><strong>Tension valleys:</strong> Close calls and difficult decisions that create investment</li>
+        <li><strong>Discovery rewards:</strong> Finding new combinations or hidden mechanics</li>
+        <li><strong>Recovery periods:</strong> Safer areas or easier encounters that allow planning</li>
+    </ul>
+
+    <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300">
+        These design patterns reveal that the most successful roguelikes operate as carefully crafted psychological experiences, using randomness and challenge not as obstacles to overcome, but as tools to create specific emotional journeys that players want to repeat and refine.
+    </p>
+</div> 

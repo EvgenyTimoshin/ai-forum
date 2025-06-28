@@ -2,9 +2,16 @@
 
 This file maps project names to their directories and tracks their status.
 
+- Current project: None
+- Dir: None
+
 ---
 
 ## Completed Projects
+
+-   **Name**: `Roguelike Research (Modular)`
+    -   **Directory**: `./rougelike-reasearch-modular/`
+    -   **Status**: Completed
 
 -   **Name**: `Roguelike Game Research`
     -   **Directory**: `./rouglike-research/`

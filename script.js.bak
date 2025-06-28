@@ -1,79 +1,3 @@
-// Modular content loading functionality
-async function loadFragments() {
-    const sections = document.querySelectorAll('section[data-src]');
-    
-    for (const section of sections) {
-        const src = section.getAttribute('data-src');
-        if (!src) continue;
-        
-        try {
-            const response = await fetch(src);
-            if (response.ok) {
-                const content = await response.text();
-                section.innerHTML = content;
-            } else {
-                section.innerHTML = `
-                    <div class="bg-red-50 dark:bg-red-950 border-l-4 border-red-400 dark:border-red-500 p-4 rounded-r-lg">
-                        <p class="text-red-800 dark:text-red-200">
-                            <strong>Loading Error:</strong> Failed to load ${src} (${response.status})
-                        </p>
-                        <p class="text-sm text-red-600 dark:text-red-400 mt-2">
-                            You can try accessing this section directly: 
-                            <a href="${src}" class="underline hover:no-underline">${src}</a>
-                        </p>
-                    </div>
-                `;
-            }
-        } catch (error) {
-            // Check if this is a CORS error due to file:// protocol
-            if (window.location.protocol === 'file:' && error.message.includes('fetch')) {
-                section.innerHTML = `
-                    <div class="bg-blue-50 dark:bg-blue-950 border-l-4 border-blue-400 dark:border-blue-500 p-4 rounded-r-lg">
-                        <p class="text-blue-800 dark:text-blue-200">
-                            <strong>Local Development Mode:</strong> Cannot dynamically load ${src}
-                        </p>
-                        <p class="text-sm text-blue-600 dark:text-blue-400 mt-2">
-                            This content will load automatically when deployed to GitHub Pages.
-                        </p>
-                        <p class="text-sm text-blue-600 dark:text-blue-400 mt-1">
-                            For local development with dynamic loading, run: <code class="bg-blue-100 dark:bg-blue-900 px-1 rounded">python -m http.server 8000</code>
-                        </p>
-                        <p class="text-sm text-blue-600 dark:text-blue-400 mt-2">
-                            View section directly: 
-                            <a href="${src}" class="underline hover:no-underline">${src}</a>
-                        </p>
-                    </div>
-                `;
-            } else {
-                section.innerHTML = `
-                    <div class="bg-red-50 dark:bg-red-950 border-l-4 border-red-400 dark:border-red-500 p-4 rounded-r-lg">
-                        <p class="text-red-800 dark:text-red-200">
-                            <strong>Loading Error:</strong> Could not fetch ${src}
-                        </p>
-                        <p class="text-sm text-red-600 dark:text-red-400 mt-2">
-                            Error: ${error.message}
-                        </p>
-                        <p class="text-sm text-red-600 dark:text-red-400 mt-1">
-                            You can try accessing this section directly: 
-                            <a href="${src}" class="underline hover:no-underline">${src}</a>
-                        </p>
-                    </div>
-                `;
-            }
-        }
-    }
-    
-    // After all fragments are loaded, reinitialize functionality that depends on content
-    if (tocNav) generateTOC();
-    setupSectionToggle();
-    updateProgressBar();
-    setupTooltipPositioning();
-    updateReadingTimeDisplay();
-    
-    // Clear the reading time cache since content has changed
-    cachedReadingTimes = null;
-}
-
 // Reading time calculation functionality
 const WORDS_PER_MINUTE = 225; // Average reading speed
 let totalWordCount = 0;
@@ -277,11 +201,7 @@ function setupTooltipPositioning() {
 }
 
 // Initialize all functionality
-document.addEventListener('DOMContentLoaded', async () => {
-    // Load fragments first
-    await loadFragments();
-    
-    // Then initialize other functionality (this happens again in loadFragments, but ensures it works if no fragments)
+document.addEventListener('DOMContentLoaded', () => {
     if (tocNav) generateTOC();
     setupSectionToggle();
     updateProgressBar();

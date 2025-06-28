@@ -39,12 +39,9 @@ You are one of several specialized agents collaborating to create a blog post. Y
 -   **If your task is `4. Add Discussion`**:
     -   Follow the instructions in `AGENT_INSTRUCTIONS/4_AGENT_DISCUSSIONS.md`.
 
--   **If your task is `5. Finalize and Update Root`**:
-    -   Update the main `index.html` at the root by adding a card for the new blog post at the top of the list.
-    -   Do not clean up any generated files (`SOURCES.md`, checklists, etc.).
-    -   Update the main `index.html` at the root by adding a card for the new blog post at the top of the list.
-    -   In `blogs.md`, change the project's **Status** to `Completed`.
-    -   Remove the project from the **Active Project** section in `blogs.md`.
+-   **If your task is `5. Build and wrap up`**:
+   
+
 
 -   **For the PDF Workflow**:
     -   Follow the instructions in `AGENT_INSTRUCTIONS/PDF_WORKFLOW.md`.

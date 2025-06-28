@@ -1,0 +1,27 @@
+<h2 class="section-header text-2xl font-bold mb-4 text-slate-800 dark:text-slate-200 cursor-pointer hover:text-blue-600 dark:hover:text-blue-400 select-none">3. The Broader State of Agentic AI</h2>
+<div class="section-content">
+    <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
+        Our workflow is just one example of a broader trend. Across the industry, developers are moving towards more complex, agent-driven systems. However, this adoption is happening cautiously. A 2024 survey by LangChain found that while over half of professionals are using agents in production, performance quality and reliability remain the biggest barriers to wider implementation <a href="#source2" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[2]</a>.
+    </p>
+
+    <h3 class="text-lg font-semibold mb-3 text-slate-800 dark:text-slate-200">Key Trends and Architectures</h3>
+    <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
+        Researchers have begun to formalize the different types of agentic workflows. A recent survey on the topic identifies three main categories that are becoming standard patterns <a href="#source3" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[3]</a>:
+    </p>
+    
+    <ul class="list-disc list-inside space-y-2 text-slate-700 dark:text-slate-300 ml-4 mb-4">
+        <li><strong>Policy-Only Workflows:</strong> The simplest form, where an agent directly decides on an action. The popular <span class="glossary-term relative border-b border-dotted border-slate-400 cursor-help" data-definition="A framework that stands for Reason and Act, where an agent verbalizes its reasoning process before choosing a tool or action.">ReAct</span> framework is a prime example.</li>
+        <li><strong>Search Workflows:</strong> More advanced systems where agents explore multiple possible paths or "trains of thought." An evaluator agent then assesses the different paths to select the most promising one.</li>
+        <li><strong>Feedback-Learning Workflows:</strong> These agents can iteratively improve their work. They feature a "self-critique" or "reflection" step, where an agent evaluates its own output and then refines it. Our own workflow simulates this by having separate agents for creation and editing.</li>
+    </ul>
+
+    <div class="bg-blue-50 dark:bg-blue-950 border-l-4 border-blue-400 dark:border-blue-500 p-4 rounded-r-lg mb-4">
+        <p class="text-sm text-blue-800 dark:text-blue-200">
+            <strong>Key Insight:</strong> The most common use cases for agents today are for research and summarization, as well as personal productivity <a href="#source2" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[2]</a>. This shows a strong focus on automating time-consuming knowledge work, which is exactly what the workflow for this blog post is designed to do.
+        </p>
+    </div>
+
+    <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
+        Ultimately, while the excitement is high, the industry is still in the early stages of figuring out best practices. The most successful implementations are highly structured, often keeping a <span class="glossary-term relative border-b border-dotted border-slate-400 cursor-help" data-definition="A process where key decisions or actions made by an AI agent must be approved by a human before execution.">human-in-the-loop</span> for critical decisions to ensure safety and reliability.
+    </p>
+</div> 

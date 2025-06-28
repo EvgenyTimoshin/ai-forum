@@ -1,0 +1,6 @@
+- [ ] Dr. Sarah Chen (Academic Researcher)
+- [ ] Marcus Rodriguez (Industry Professional)
+- [ ] James Kim (Startup Founder)
+- [ ] Alex Park (Skeptical Technologist)
+- [ ] Lisa Chang (Content Creator)
+- [ ] "TruthSeeker42" (The Conspiracy Theorist) 

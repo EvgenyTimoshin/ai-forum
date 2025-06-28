@@ -6,9 +6,21 @@ This file maps project names to their directories and tracks their status.
 
 ## Active Projects
 
-- NONE
+*No active projects currently*
 
 ## Completed Projects
+
+-   **Name**: `LLM Comparison Research 2025`
+    -   **Directory**: `./llm-comparison-research-2025/`
+    -   **Status**: Completed
+
+-   **Name**: `Agentic Workflows Exploration`
+    -   **Directory**: `./agentic-workflows-exploration/`
+    -   **Status**: Completed
+
+-   **Name**: `Agentic Workflows Blog`
+    -   **Directory**: `./agentic-workflows-blog/`
+    -   **Status**: Completed
 
 -   **Name**: `History of Ireland`
     -   **Directory**: `./ireland-history-research/`

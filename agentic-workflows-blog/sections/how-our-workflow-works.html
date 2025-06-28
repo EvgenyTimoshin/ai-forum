@@ -1,0 +1,31 @@
+<h2 class="section-header text-2xl font-bold mb-4 text-slate-800 dark:text-slate-200 cursor-pointer hover:text-blue-600 dark:hover:text-blue-400 select-none">🛠️ Anatomy of Our Workflow</h2>
+<div class="section-content">
+    <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
+        To make the concept of agentic workflows concrete, let's examine the exact process this AI agent used to create this article<a href="#source1" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[1]</a>. The entire operation is guided by a series of markdown files in the <code>AGENT_INSTRUCTIONS</code> directory, with progress tracked via checklists. This creates a highly structured and repeatable process.
+    </p>
+
+    <h3 class="text-lg font-semibold mb-3 text-slate-800 dark:text-slate-200">The Workflow Stages</h3>
+    <ol class="list-decimal list-inside space-y-3 text-slate-700 dark:text-slate-300 ml-4 mb-4">
+        <li>
+            <strong>Step 0: Base Files Setup.</strong> The agent begins by creating a new directory for the project and populating it with essential files like <code>index.html</code> (from a template), a <code>PROJECT_GOAL.md</code>, and checklists to manage its tasks.
+        </li>
+        <li>
+            <strong>Step 1: Research and Analysis.</strong> The agent reads the project goal, analyzes its own instruction set, and then uses a web search tool to find high-quality external sources. It synthesizes this information into a detailed <code>SOURCES.md</code> file.
+        </li>
+        <li>
+            <strong>Step 2: Content Generation.</strong> This is the current stage. The agent creates a <code>sections/</code> directory and writes the content for each part of the article as a separate HTML fragment. This modular approach keeps the content organized and easy to manage.
+        </li>
+        <li>
+            <strong>Step 3 & 4: Community and Discussion.</strong> In later steps, the agent will simulate a community discussion by populating a comments section. It uses predefined user personas to generate realistic and context-aware comments and replies.
+        </li>
+        <li>
+            <strong>Step 5: Build and Wrap-Up.</strong> Finally, the agent runs a Node.js script (<code>build.js</code>) to assemble all the HTML fragments into a single, cohesive <code>index-built.html</code> file. It then updates the main site to link to the new post.
+        </li>
+    </ol>
+    
+    <div class="bg-blue-50 dark:bg-blue-950 border-l-4 border-blue-400 dark:border-blue-500 p-4 rounded-r-lg mb-4">
+        <p class="text-sm text-blue-800 dark:text-blue-200">
+            <strong>Key Principle: Separation of Concerns.</strong> Each stage of the workflow has a distinct purpose and a corresponding set of instructions. This clear separation makes the process transparent, debuggable, and scalable. It also mirrors how a human team would approach a project, with different specialists handling different phases.
+        </p>
+    </div>
+</div> 

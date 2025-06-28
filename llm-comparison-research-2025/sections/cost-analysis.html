@@ -1,0 +1,151 @@
+<!-- Cost Analysis Section -->
+<h2 class="section-header text-2xl font-bold mb-4 text-slate-800 dark:text-slate-200 cursor-pointer hover:text-blue-600 dark:hover:text-blue-400 select-none">💰 Cost Analysis: Balancing Performance and Budget</h2>
+<div class="section-content">
+    <p class="text-lg leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
+        Understanding the cost implications of different LLMs is crucial for sustainable AI implementation. This analysis breaks down pricing structures and provides real-world cost scenarios to help you make informed budgeting decisions.
+    </p>
+    
+    <h3 class="text-xl font-semibold mb-3 text-slate-800 dark:text-slate-200">Pricing Overview</h3>
+    <div class="overflow-x-auto mb-6">
+        <table class="min-w-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg">
+            <thead class="bg-slate-50 dark:bg-slate-700">
+                <tr>
+                    <th class="px-4 py-2 text-left text-slate-700 dark:text-slate-300">Model</th>
+                    <th class="px-4 py-2 text-center text-slate-700 dark:text-slate-300">Input (per 1M tokens)</th>
+                    <th class="px-4 py-2 text-center text-slate-700 dark:text-slate-300">Output (per 1M tokens)</th>
+                    <th class="px-4 py-2 text-center text-slate-700 dark:text-slate-300">Cost Tier</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="border-t border-slate-200 dark:border-slate-700">
+                    <td class="px-4 py-2 text-slate-700 dark:text-slate-300 font-semibold">DeepSeek-R1</td>
+                    <td class="px-4 py-2 text-center text-green-600 dark:text-green-400 font-bold">$0.55</td>
+                    <td class="px-4 py-2 text-center text-green-600 dark:text-green-400 font-bold">$2.19</td>
+                    <td class="px-4 py-2 text-center">
+                        <span class="px-2 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-xs">Budget</span>
+                    </td>
+                </tr>
+                <tr class="border-t border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">
+                    <td class="px-4 py-2 text-slate-700 dark:text-slate-300 font-semibold">Gemini 2.5 Pro</td>
+                    <td class="px-4 py-2 text-center text-blue-600 dark:text-blue-400">$1.25 - $2.50</td>
+                    <td class="px-4 py-2 text-center text-blue-600 dark:text-blue-400">$10 - $15</td>
+                    <td class="px-4 py-2 text-center">
+                        <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-xs">Mid-Range</span>
+                    </td>
+                </tr>
+                <tr class="border-t border-slate-200 dark:border-slate-700">
+                    <td class="px-4 py-2 text-slate-700 dark:text-slate-300 font-semibold">Claude Sonnet 4</td>
+                    <td class="px-4 py-2 text-center text-blue-600 dark:text-blue-400">$3</td>
+                    <td class="px-4 py-2 text-center text-blue-600 dark:text-blue-400">$15</td>
+                    <td class="px-4 py-2 text-center">
+                        <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-xs">Mid-Range</span>
+                    </td>
+                </tr>
+                <tr class="border-t border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">
+                    <td class="px-4 py-2 text-slate-700 dark:text-slate-300 font-semibold">Claude Opus 4</td>
+                    <td class="px-4 py-2 text-center text-amber-600 dark:text-amber-400">$15</td>
+                    <td class="px-4 py-2 text-center text-amber-600 dark:text-amber-400">$75</td>
+                    <td class="px-4 py-2 text-center">
+                        <span class="px-2 py-1 bg-amber-100 dark:bg-amber-900 text-amber-800 dark:text-amber-200 rounded-full text-xs">Premium</span>
+                    </td>
+                </tr>
+                <tr class="border-t border-slate-200 dark:border-slate-700">
+                    <td class="px-4 py-2 text-slate-700 dark:text-slate-300 font-semibold">GPT-4.5 (o3)</td>
+                    <td class="px-4 py-2 text-center text-red-600 dark:text-red-400 font-bold">$75</td>
+                    <td class="px-4 py-2 text-center text-red-600 dark:text-red-400 font-bold">$150</td>
+                    <td class="px-4 py-2 text-center">
+                        <span class="px-2 py-1 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 rounded-full text-xs">Enterprise</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <h3 class="text-xl font-semibold mb-3 text-slate-800 dark:text-slate-200">Real-World Cost Scenarios</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+        <div class="bg-blue-50 dark:bg-blue-950 p-4 rounded-lg border border-blue-200 dark:border-blue-700">
+            <h4 class="font-semibold text-slate-800 dark:text-slate-200 mb-2">📝 Customer Support Chatbot</h4>
+            <p class="text-sm text-slate-700 dark:text-slate-300 mb-2">
+                10,000 conversations/day, ~500 tokens each:
+            </p>
+            <ul class="text-xs space-y-1 text-slate-600 dark:text-slate-400">
+                <li>• DeepSeek-R1: ~$8/day</li>
+                <li>• Claude Sonnet 4: ~$45/day</li>
+                <li>• GPT-4.5: ~$1,125/day</li>
+            </ul>
+        </div>
+        <div class="bg-purple-50 dark:bg-purple-950 p-4 rounded-lg border border-purple-200 dark:border-purple-700">
+            <h4 class="font-semibold text-slate-800 dark:text-slate-200 mb-2">💻 Code Generation Tool</h4>
+            <p class="text-sm text-slate-700 dark:text-slate-300 mb-2">
+                1,000 requests/day, ~2,000 tokens each:
+            </p>
+            <ul class="text-xs space-y-1 text-slate-600 dark:text-slate-400">
+                <li>• DeepSeek-R1: ~$3/day</li>
+                <li>• Claude Sonnet 4: ~$18/day</li>
+                <li>• Claude Opus 4: ~$90/day</li>
+            </ul>
+        </div>
+    </div>
+    
+    <h3 class="text-xl font-semibold mb-3 text-slate-800 dark:text-slate-200">Cost Optimization Strategies</h3>
+    <div class="space-y-4 mb-6">
+        <div class="border-l-4 border-green-400 pl-4">
+            <h4 class="font-semibold text-slate-800 dark:text-slate-200 mb-1">1. Tiered Model Usage</h4>
+            <p class="text-slate-700 dark:text-slate-300">
+                Use cheaper models for initial processing and expensive models only for complex tasks. For example, use DeepSeek-R1 for classification and Claude 4 for final generation.
+            </p>
+        </div>
+        <div class="border-l-4 border-blue-400 pl-4">
+            <h4 class="font-semibold text-slate-800 dark:text-slate-200 mb-1">2. Context Window Management</h4>
+            <p class="text-slate-700 dark:text-slate-300">
+                Optimize prompts to use fewer tokens. Pre-process documents to extract relevant sections rather than sending entire files.
+            </p>
+        </div>
+        <div class="border-l-4 border-purple-400 pl-4">
+            <h4 class="font-semibold text-slate-800 dark:text-slate-200 mb-1">3. Caching Strategies</h4>
+            <p class="text-slate-700 dark:text-slate-300">
+                Cache common responses and use embedding-based retrieval to avoid redundant API calls for similar queries.
+            </p>
+        </div>
+    </div>
+    
+    <div class="bg-amber-50 dark:bg-amber-950 border-l-4 border-amber-400 dark:border-amber-500 p-4 rounded-r-lg mb-6">
+        <h4 class="text-lg font-semibold mb-2 text-slate-800 dark:text-slate-200">Cost vs. Performance Trade-offs</h4>
+        <p class="text-slate-700 dark:text-slate-300 mb-2">
+            While DeepSeek-R1 offers exceptional value, premium models justify their cost in specific scenarios:
+        </p>
+        <ul class="list-disc list-inside text-slate-700 dark:text-slate-300 space-y-1">
+            <li>Critical accuracy requirements (medical, legal, financial)</li>
+            <li>Complex reasoning tasks requiring extended thinking</li>
+            <li>Customer-facing applications where quality directly impacts revenue</li>
+            <li>Development tasks where time saved justifies higher API costs</li>
+        </ul>
+    </div>
+    
+    <h3 class="text-xl font-semibold mb-3 text-slate-800 dark:text-slate-200">ROI Calculator Example</h3>
+    <div class="bg-slate-50 dark:bg-slate-800 p-4 rounded-lg border border-slate-200 dark:border-slate-700">
+        <p class="text-sm text-slate-700 dark:text-slate-300 mb-3">
+            <strong>Scenario:</strong> AI-powered code review tool for a 50-developer team
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+            <div>
+                <p class="font-semibold text-slate-800 dark:text-slate-200">DeepSeek-R1</p>
+                <p class="text-slate-600 dark:text-slate-400">Cost: $150/month</p>
+                <p class="text-slate-600 dark:text-slate-400">Time saved: 2hr/dev/week</p>
+                <p class="text-green-600 dark:text-green-400 font-semibold">ROI: 267x</p>
+            </div>
+            <div>
+                <p class="font-semibold text-slate-800 dark:text-slate-200">Claude Sonnet 4</p>
+                <p class="text-slate-600 dark:text-slate-400">Cost: $900/month</p>
+                <p class="text-slate-600 dark:text-slate-400">Time saved: 3hr/dev/week</p>
+                <p class="text-green-600 dark:text-green-400 font-semibold">ROI: 67x</p>
+            </div>
+            <div>
+                <p class="font-semibold text-slate-800 dark:text-slate-200">Claude Opus 4</p>
+                <p class="text-slate-600 dark:text-slate-400">Cost: $4,500/month</p>
+                <p class="text-slate-600 dark:text-slate-400">Time saved: 3.5hr/dev/week</p>
+                <p class="text-amber-600 dark:text-amber-400 font-semibold">ROI: 16x</p>
+            </div>
+        </div>
+    </div>
+</div> 

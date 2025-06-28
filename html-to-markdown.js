@@ -1,4 +1,5 @@
-const fs = require('fs');
+const fs = require('fs').promises;
+const path = require('path');
 const { JSDOM } = require('jsdom');
 const TurndownService = require('turndown');
 
@@ -50,28 +51,23 @@ turndownService.addRule('sourceLink', {
 });
 
 // Rule to ignore the audio player widget
-turndownService.addRule('skipElevenLabs', {
+turndownService.addRule('skipElements', {
     filter: function (node, options) {
-        return node.id === 'elevenlabs-audionative-widget';
+        return node.id === 'elevenlabs-audionative-widget' || node.classList.contains('animate-pulse');
     },
-    replacement: function (content, node, options) {
+    replacement: function () {
         return '';
     }
 });
 
-
 /**
- * Extracts content from an HTML file and converts it to Markdown.
- * @param {string} inputPath - Path to the input HTML file.
+ * Reads an HTML file, dynamically loads section content, and converts to Markdown.
+ * @param {string} inputPath - Path to the root HTML file (e.g., index.html).
  * @param {string} outputPath - Path to the output Markdown file.
  */
-function extractContentAsMarkdown(inputPath, outputPath) {
-    fs.readFile(inputPath, 'utf8', (err, html) => {
-        if (err) {
-            console.error(`Error reading the file ${inputPath}:`, err);
-            return;
-        }
-
+async function convertHtmlToMarkdown(inputPath, outputPath) {
+    try {
+        const html = await fs.readFile(inputPath, 'utf8');
         const dom = new JSDOM(html);
         const document = dom.window.document;
         const mainContent = document.querySelector('main');
@@ -81,14 +77,29 @@ function extractContentAsMarkdown(inputPath, outputPath) {
             return;
         }
 
-        const sections = mainContent.querySelectorAll('section');
+        const sections = mainContent.querySelectorAll('section[data-src]');
+        const baseDir = path.dirname(inputPath);
+
+        // Load content from fragment files
+        for (const section of sections) {
+            const fragmentPath = section.getAttribute('data-src');
+            if (fragmentPath) {
+                const fullFragmentPath = path.join(baseDir, fragmentPath);
+                try {
+                    const fragmentHtml = await fs.readFile(fullFragmentPath, 'utf8');
+                    section.innerHTML = fragmentHtml;
+                } catch (err) {
+                    console.warn(`Warning: Could not load section from ${fullFragmentPath}`);
+                }
+            }
+        }
+        
         let markdownOutput = '';
+        const allSections = mainContent.querySelectorAll('section');
 
-        sections.forEach((section, index) => {
+        allSections.forEach((section, index) => {
             const sectionId = section.id || `section-${index + 1}`;
-            console.log(`Processing section: #${sectionId}`);
-
-            // Skip the comments section
+            
             if (sectionId === 'comments') {
                 console.log('Skipping comments section.');
                 return;
@@ -96,18 +107,16 @@ function extractContentAsMarkdown(inputPath, outputPath) {
 
             const sectionHtml = section.innerHTML;
             const sectionMarkdown = turndownService.turndown(sectionHtml);
-
-            markdownOutput += sectionMarkdown + '\n\n---\n\n';
+            
+            markdownOutput += sectionMarkdown.trim() + '\n\n---\n\n';
         });
 
-        fs.writeFile(outputPath, markdownOutput, 'utf8', (err) => {
-            if (err) {
-                console.error(`Error writing the file ${outputPath}:`, err);
-                return;
-            }
-            console.log(`Successfully converted ${inputPath} to ${outputPath}`);
-        });
-    });
+        await fs.writeFile(outputPath, markdownOutput.trim(), 'utf8');
+        console.log(`Successfully converted ${inputPath} to ${outputPath}`);
+
+    } catch (err) {
+        console.error(`An error occurred:`, err);
+    }
 }
 
 // --- Script Execution ---
@@ -121,4 +130,4 @@ if (args.length !== 2) {
 const inputFilePath = args[0];
 const outputFilePath = args[1];
 
-extractContentAsMarkdown(inputFilePath, outputFilePath); 
+convertHtmlToMarkdown(inputFilePath, outputFilePath); 

@@ -1,0 +1,228 @@
+<!-- Use Case Recommendations Section -->
+<h2 class="section-header text-2xl font-bold mb-4 text-slate-800 dark:text-slate-200 cursor-pointer hover:text-blue-600 dark:hover:text-blue-400 select-none">🎯 Use Case Recommendations: Matching Models to Tasks</h2>
+<div class="section-content">
+    <p class="text-lg leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
+        Selecting the right <span class="glossary-term relative border-b border-dotted border-slate-400 cursor-help" data-definition="AI systems trained on vast amounts of text data to understand and generate human-like text. Modern LLMs can process code, images, and other data types.">LLM</span> for each step in your AI workflow can dramatically improve both performance and cost-efficiency. This guide provides specific recommendations based on extensive testing and real-world deployments.
+    </p>
+    
+    <h3 class="text-xl font-semibold mb-3 text-slate-800 dark:text-slate-200">AI Agent Workflow Optimization</h3>
+    <div class="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-950 dark:to-purple-950 p-6 rounded-lg border border-slate-200 dark:border-slate-700 mb-6">
+        <h4 class="font-semibold text-lg text-slate-800 dark:text-slate-200 mb-4">Multi-Model Strategy for Maximum Efficiency</h4>
+        <div class="space-y-4">
+            <div class="bg-white dark:bg-slate-800 p-4 rounded-lg">
+                <h5 class="font-semibold text-slate-800 dark:text-slate-200 mb-2">Step 1: Intent Classification & <span class="glossary-term relative border-b border-dotted border-slate-400 cursor-help" data-definition="The practice of directing different types of requests to appropriate LLMs based on task requirements, optimizing for both performance and cost.">Routing</span></h5>
+                <p class="text-sm text-slate-700 dark:text-slate-300 mb-2">
+                    <strong>Recommended:</strong> <span class="text-green-600 dark:text-green-400 font-semibold">DeepSeek-R1</span> or <span class="text-blue-600 dark:text-blue-400 font-semibold">o3-mini</span>
+                </p>
+                <p class="text-xs text-slate-600 dark:text-slate-400">
+                    Fast, cost-effective models excel at understanding user intent and routing to appropriate workflows. <strong>DeepSeek-R1's</strong> low cost makes it ideal for high-volume classification.
+                </p>
+            </div>
+            
+            <div class="bg-white dark:bg-slate-800 p-4 rounded-lg">
+                <h5 class="font-semibold text-slate-800 dark:text-slate-200 mb-2">Step 2: Information Gathering & Research</h5>
+                <p class="text-sm text-slate-700 dark:text-slate-300 mb-2">
+                    <strong>Recommended:</strong> <span class="text-purple-600 dark:text-purple-400 font-semibold">Gemini 2.5 Pro</span> or <span class="text-amber-600 dark:text-amber-400 font-semibold">GPT-4.1</span>
+                </p>
+                <p class="text-xs text-slate-600 dark:text-slate-400">
+                    Large <span class="glossary-term relative border-b border-dotted border-slate-400 cursor-help" data-definition="The maximum amount of text an LLM can process in a single request, measured in tokens. Larger windows enable processing of entire documents or codebases.">context windows</span> (1M+ <span class="glossary-term relative border-b border-dotted border-slate-400 cursor-help" data-definition="The basic unit of text processing in LLMs. Roughly equivalent to 0.75 words in English. API pricing is typically based on token consumption.">tokens</span>) enable processing entire documents. Gemini's <span class="glossary-term relative border-b border-dotted border-slate-400 cursor-help" data-definition="The ability to process and generate multiple types of content (text, images, audio, video) within a single model, without conversion between formats.">multimodal</span> capabilities handle diverse content types efficiently.
+                </p>
+            </div>
+            
+            <div class="bg-white dark:bg-slate-800 p-4 rounded-lg">
+                <h5 class="font-semibold text-slate-800 dark:text-slate-200 mb-2">Step 3: Complex Reasoning & Analysis</h5>
+                <p class="text-sm text-slate-700 dark:text-slate-300 mb-2">
+                    <strong>Recommended:</strong> <span class="text-blue-600 dark:text-blue-400 font-semibold">Claude Opus 4</span> or <span class="text-purple-600 dark:text-purple-400 font-semibold">Gemini 2.5 Pro (<span class="glossary-term relative border-b border-dotted border-slate-400 cursor-help" data-definition="Gemini's extended reasoning mode that takes additional time to work through complex problems step-by-step, providing more thorough and accurate responses.">Deep Think</span>)</span>
+                </p>
+                <p class="text-xs text-slate-600 dark:text-slate-400">
+                    Extended <span class="glossary-term relative border-b border-dotted border-slate-400 cursor-help" data-definition="Extended reasoning capability where models deliberately work through problems step-by-step, trading response time for improved accuracy and depth.">thinking modes</span> provide superior reasoning. Claude 4's <span class="glossary-term relative border-b border-dotted border-slate-400 cursor-help" data-definition="A model capability featuring both instant responses and extended thinking modes, allowing users to choose between speed and depth of analysis.">hybrid reasoning</span> excels at multi-step problem solving.
+                </p>
+            </div>
+            
+            <div class="bg-white dark:bg-slate-800 p-4 rounded-lg">
+                <h5 class="font-semibold text-slate-800 dark:text-slate-200 mb-2">Step 4: Code Generation & Technical Tasks</h5>
+                <p class="text-sm text-slate-700 dark:text-slate-300 mb-2">
+                    <strong>Recommended:</strong> <span class="text-blue-600 dark:text-blue-400 font-semibold">Claude Sonnet/Opus 4</span>
+                </p>
+                <p class="text-xs text-slate-600 dark:text-slate-400">
+                    Industry-leading <span class="glossary-term relative border-b border-dotted border-slate-400 cursor-help" data-definition="Software Engineering benchmark measuring LLM ability to solve real-world coding problems from GitHub issues. Higher scores indicate better coding capabilities.">SWE-bench</span> scores (<strong>72.5%+</strong>) make Claude 4 the clear choice for software development tasks.
+                </p>
+            </div>
+            
+            <div class="bg-white dark:bg-slate-800 p-4 rounded-lg">
+                <h5 class="font-semibold text-slate-800 dark:text-slate-200 mb-2">Step 5: Final Output & User Interaction</h5>
+                <p class="text-sm text-slate-700 dark:text-slate-300 mb-2">
+                    <strong>Recommended:</strong> <span class="text-red-600 dark:text-red-400 font-semibold">GPT-4.5</span> or <span class="text-blue-600 dark:text-blue-400 font-semibold">Claude Sonnet 4</span>
+                </p>
+                <p class="text-xs text-slate-600 dark:text-slate-400">
+                    Natural conversation flow and high <span class="glossary-term relative border-b border-dotted border-slate-400 cursor-help" data-definition="A model's ability to understand and respond to human emotions appropriately, creating more natural and empathetic interactions.">EQ</span> make these models ideal for customer-facing outputs. Use <strong>GPT-4.5</strong> when quality is paramount.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <h3 class="text-xl font-semibold mb-3 text-slate-800 dark:text-slate-200">Domain-Specific Recommendations</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+        <div class="border border-slate-200 dark:border-slate-700 rounded-lg p-4">
+            <h4 class="font-semibold text-slate-800 dark:text-slate-200 mb-3">🏥 Healthcare & Medical</h4>
+            <ul class="space-y-2 text-sm">
+                <li class="flex items-start">
+                    <span class="text-green-500 mr-2">✓</span>
+                    <div>
+                        <strong class="text-slate-700 dark:text-slate-300">Clinical Decision Support:</strong>
+                        <span class="text-blue-600 dark:text-blue-400">Claude Opus 4</span> - Safety and accuracy critical
+                    </div>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-green-500 mr-2">✓</span>
+                    <div>
+                        <strong class="text-slate-700 dark:text-slate-300">Medical Image Analysis:</strong>
+                        <span class="text-purple-600 dark:text-purple-400">Gemini 2.5 Pro</span> - Native multimodal
+                    </div>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-green-500 mr-2">✓</span>
+                    <div>
+                        <strong class="text-slate-700 dark:text-slate-300">Patient Communication:</strong>
+                        <span class="text-red-600 dark:text-red-400">GPT-4.5</span> - Empathetic responses
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="border border-slate-200 dark:border-slate-700 rounded-lg p-4">
+            <h4 class="font-semibold text-slate-800 dark:text-slate-200 mb-3">💰 Finance & Trading</h4>
+            <ul class="space-y-2 text-sm">
+                <li class="flex items-start">
+                    <span class="text-green-500 mr-2">✓</span>
+                    <div>
+                        <strong class="text-slate-700 dark:text-slate-300">Real-time Analysis:</strong>
+                        <span class="text-purple-600 dark:text-purple-400">Grok 3</span> - Live market data access
+                    </div>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-green-500 mr-2">✓</span>
+                    <div>
+                        <strong class="text-slate-700 dark:text-slate-300">Risk Assessment:</strong>
+                        <span class="text-blue-600 dark:text-blue-400">Claude Opus 4</span> - Complex reasoning
+                    </div>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-green-500 mr-2">✓</span>
+                    <div>
+                        <strong class="text-slate-700 dark:text-slate-300">Report Generation:</strong>
+                        <span class="text-green-600 dark:text-green-400">DeepSeek-R1</span> - High volume, cost-effective
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="border border-slate-200 dark:border-slate-700 rounded-lg p-4">
+            <h4 class="font-semibold text-slate-800 dark:text-slate-200 mb-3">🎓 Education & Research</h4>
+            <ul class="space-y-2 text-sm">
+                <li class="flex items-start">
+                    <span class="text-green-500 mr-2">✓</span>
+                    <div>
+                        <strong class="text-slate-700 dark:text-slate-300">Scientific Research:</strong>
+                        <span class="text-purple-600 dark:text-purple-400">Gemini 2.5 Pro</span> - Best GPQA scores
+                    </div>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-green-500 mr-2">✓</span>
+                    <div>
+                        <strong class="text-slate-700 dark:text-slate-300">Tutoring Systems:</strong>
+                        <span class="text-blue-600 dark:text-blue-400">Claude Sonnet 4</span> - Balanced cost/quality
+                    </div>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-green-500 mr-2">✓</span>
+                    <div>
+                        <strong class="text-slate-700 dark:text-slate-300">Homework Help:</strong>
+                        <span class="text-green-600 dark:text-green-400">o3-mini</span> - STEM optimization
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="border border-slate-200 dark:border-slate-700 rounded-lg p-4">
+            <h4 class="font-semibold text-slate-800 dark:text-slate-200 mb-3">💻 Software Development</h4>
+            <ul class="space-y-2 text-sm">
+                <li class="flex items-start">
+                    <span class="text-green-500 mr-2">✓</span>
+                    <div>
+                        <strong class="text-slate-700 dark:text-slate-300">Code Generation:</strong>
+                        <span class="text-blue-600 dark:text-blue-400">Claude 4</span> - Top SWE-bench performer
+                    </div>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-green-500 mr-2">✓</span>
+                    <div>
+                        <strong class="text-slate-700 dark:text-slate-300">Documentation:</strong>
+                        <span class="text-purple-600 dark:text-purple-400">Gemini 2.5 Pro</span> - Large context processing
+                    </div>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-green-500 mr-2">✓</span>
+                    <div>
+                        <strong class="text-slate-700 dark:text-slate-300">Code Reviews:</strong>
+                        <span class="text-green-600 dark:text-green-400">DeepSeek-R1</span> - Cost-effective for volume
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <h3 class="text-xl font-semibold mb-3 text-slate-800 dark:text-slate-200">Decision Matrix</h3>
+    <div class="overflow-x-auto mb-6">
+        <table class="min-w-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-sm">
+            <thead class="bg-slate-50 dark:bg-slate-700">
+                <tr>
+                    <th class="px-4 py-2 text-left text-slate-700 dark:text-slate-300">If You Need...</th>
+                    <th class="px-4 py-2 text-left text-slate-700 dark:text-slate-300">Choose...</th>
+                    <th class="px-4 py-2 text-left text-slate-700 dark:text-slate-300">Because...</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="border-t border-slate-200 dark:border-slate-700">
+                    <td class="px-4 py-2 text-slate-700 dark:text-slate-300">Lowest cost</td>
+                    <td class="px-4 py-2 font-semibold text-green-600 dark:text-green-400">DeepSeek-R1</td>
+                    <td class="px-4 py-2 text-slate-600 dark:text-slate-400">27x cheaper than GPT-4.5</td>
+                </tr>
+                <tr class="border-t border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">
+                    <td class="px-4 py-2 text-slate-700 dark:text-slate-300">Best coding</td>
+                    <td class="px-4 py-2 font-semibold text-blue-600 dark:text-blue-400">Claude 4</td>
+                    <td class="px-4 py-2 text-slate-600 dark:text-slate-400">72.5% SWE-bench score</td>
+                </tr>
+                <tr class="border-t border-slate-200 dark:border-slate-700">
+                    <td class="px-4 py-2 text-slate-700 dark:text-slate-300">Largest context</td>
+                    <td class="px-4 py-2 font-semibold text-purple-600 dark:text-purple-400">Gemini 2.5 Pro</td>
+                    <td class="px-4 py-2 text-slate-600 dark:text-slate-400">Up to 2M tokens</td>
+                </tr>
+                <tr class="border-t border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">
+                    <td class="px-4 py-2 text-slate-700 dark:text-slate-300">Real-time data</td>
+                    <td class="px-4 py-2 font-semibold text-purple-600 dark:text-purple-400">Grok 3</td>
+                    <td class="px-4 py-2 text-slate-600 dark:text-slate-400">X/Twitter integration</td>
+                </tr>
+                <tr class="border-t border-slate-200 dark:border-slate-700">
+                    <td class="px-4 py-2 text-slate-700 dark:text-slate-300">Natural conversation</td>
+                    <td class="px-4 py-2 font-semibold text-red-600 dark:text-red-400">GPT-4.5</td>
+                    <td class="px-4 py-2 text-slate-600 dark:text-slate-400">Highest EQ and creativity</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="bg-blue-50 dark:bg-blue-950 border-l-4 border-blue-400 dark:border-blue-500 p-4 rounded-r-lg">
+        <h4 class="text-lg font-semibold mb-2 text-slate-800 dark:text-slate-200">Pro Tip: Hybrid Approach</h4>
+        <p class="text-slate-700 dark:text-slate-300 mb-2">
+            The most successful AI implementations use multiple models strategically:
+        </p>
+        <ol class="list-decimal list-inside text-slate-700 dark:text-slate-300 space-y-1 text-sm">
+            <li>Use DeepSeek-R1 for initial processing and filtering</li>
+            <li>Route complex queries to specialized models based on task type</li>
+            <li>Reserve premium models (GPT-4.5, Claude Opus 4) for critical outputs</li>
+            <li>Implement caching to reduce repeated API calls</li>
+            <li>Monitor usage patterns and optimize model selection monthly</li>
+        </ol>
+    </div>
+</div> 

@@ -1,0 +1,22 @@
+We want to do some latest breaking and most impactful news summarization from today. We want to cover:
+- politics
+- economy
+- arts
+- technology
+- stock market
+
+We need to use 15 sources from the internet. Find reliable famous news sources.
+
+It is 28/06/2025 today.
+
+Note lets also note that this whole workflow will be multi agent, where every step is carried out by lower powered LLM agents. Mix agent mode. Each step will be a different agent. 
+
+Step 0 -  GPT- 4o
+Step 1 - Claude Sonnet 4 MAX
+Step 2 - GPT 4.1
+Step 2.5 - GPT 4.1
+Step 2.6 - GPT 4o
+Step 3 - Sonnet 3.7
+Step 4 - Gemini 2.5 pro
+Step 5 - GPT o4-mini
+Step 6 - 

@@ -1,0 +1,32 @@
+<h2 class="section-header text-2xl font-bold mb-4 text-slate-800 dark:text-slate-200 cursor-pointer hover:text-blue-600 dark:hover:text-blue-400 select-none">5. Challenges and Considerations</h2>
+<div class="section-content">
+    <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
+        While agentic workflows hold immense promise, building and deploying them effectively comes with a unique set of challenges. The very flexibility that makes them powerful also introduces complexity in ensuring they are reliable, scalable, and safe.
+    </p>
+
+    <h3 class="text-lg font-semibold mb-3 text-slate-800 dark:text-slate-200">The Reliability Problem</h3>
+    <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
+        The biggest barrier to deploying more agents in production is **performance quality** <a href="#source2" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[2]</a>. The non-deterministic nature of LLMs means that an agent might complete a task perfectly one time and fail the next. Ensuring consistent, high-quality output is a major engineering hurdle. This is why many production systems still rely on:
+    </p>
+    <ul class="list-disc list-inside space-y-2 text-slate-700 dark:text-slate-300 ml-4 mb-4">
+        <li><strong>Strict Guardrails:</strong> Limiting the agent's permissions (e.g., read-only access) to prevent unintended consequences.</li>
+        <li><strong>Human-in-the-Loop:</strong> Requiring human approval for critical actions, which provides a safety net but reduces full automation.</li>
+        <li><strong>Offline Evaluation:</strong> Rigorously testing agents in simulated environments before deploying them to production.</li>
+    </ul>
+
+    <h3 class="text-lg font-semibold mb-3 text-slate-800 dark:text-slate-200">Scaling, Routing, and Collaboration</h3>
+    <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
+        For multi-agent systems, the challenges multiply. Effectively orchestrating a team of specialized agents requires robust solutions for:
+    </p>
+    <ul class="list-disc list-inside space-y-2 text-slate-700 dark:text-slate-300 ml-4 mb-4">
+        <li><strong>Task Routing:</strong> How do you ensure the right task goes to the right agent at the right time? This often requires a "meta-agent" or an orchestrator to manage the flow of work.</li>
+        <li><strong>Task Splitting:</strong> Breaking down a complex problem into the right-sized sub-tasks for each agent is a non-trivial problem.</li>
+        <li><strong>Collaboration:</strong> How do agents share information and context effectively without creating a communication bottleneck?</li>
+    </ul>
+
+    <div class="bg-amber-50 dark:bg-amber-950 border-l-4 border-amber-400 dark:border-amber-500 p-4 rounded-r-lg">
+        <p class="text-sm text-amber-800 dark:text-amber-200">
+            <strong>Important Consideration:</strong> The complexity of these systems makes them difficult to debug. When a workflow fails, tracing the issue back through multiple agents and their interactions can be a significant challenge. This is why observability tools and clear logging are critical components of any agentic system <a href="#source2" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[2]</a>.
+        </p>
+    </div>
+</div> 

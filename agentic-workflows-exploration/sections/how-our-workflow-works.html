@@ -1,0 +1,25 @@
+<h2 class="section-header text-2xl font-bold mb-4 text-slate-800 dark:text-slate-200 cursor-pointer hover:text-blue-600 dark:hover:text-blue-400 select-none">2. How Our Agentic Workflow Operates</h2>
+<div class="section-content">
+    <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
+        The workflow that produced this article is built on two key principles: **modularity** and **specialization**. Instead of one monolithic agent trying to do everything, the process is broken down into a series of discrete steps, each handled by an agent with a specific instruction set. This structure makes the process more reliable, debuggable, and scalable <a href="#source1" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[1]</a>.
+    </p>
+
+    <h3 class="text-lg font-semibold mb-3 text-slate-800 dark:text-slate-200">The Workflow Steps</h3>
+    <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
+        The entire process is orchestrated by a master checklist (`HIGH_LEVEL_WORKFLOW_CHECKLIST.md`). An agent's only job is to find the next unchecked item, execute the corresponding task by reading its instruction file, and then mark the item as complete.
+    </p>
+    
+    <ul class="list-disc list-inside space-y-2 text-slate-700 dark:text-slate-300 ml-4 mb-4">
+        <li><strong>Step 0: Base File Setup:</strong> An agent initializes the project by creating the directory structure, an empty `index.html`, and placeholder files for goals and sources.</li>
+        <li><strong>Step 1: Research and Analysis:</strong> This is a critical step where an agent gathers information. For this post, it involved reading its own instruction files, brainstorming new ideas, and conducting external web research. The findings are compiled into `SOURCES.md`.</li>
+        <li><strong>Step 2: Content Generation:</strong> A content-focused agent takes the research and writes the article, section by section. Each section is a modular HTML fragment (like this one), which allows for easy editing and assembly.</li>
+        <li><strong>Step 3 & 4: Comments and Discussion (Simulated):</strong> In a full workflow, separate agents with different personas would read the article and generate a comments section to simulate a community discussion, adding layers of critique and perspective.</li>
+        <li><strong>Step 5: Build and Wrap Up:</strong> A final agent runs a build script, which takes the main `index.html` template and injects the content from all the individual section fragments. This produces the final, single-file `index-built.html` that is ready for deployment.</li>
+    </ul>
+
+    <div class="bg-amber-50 dark:bg-amber-950 border-l-4 border-amber-400 dark:border-amber-500 p-4 rounded-r-lg">
+        <p class="text-sm text-amber-800 dark:text-amber-200">
+            <strong>Why This Works:</strong> This modular approach mirrors the principles of good software engineering. By breaking a large, complex task (writing a blog post) into small, well-defined functions (the workflow steps), we create a system that is easier to manage and less prone to failure. If one step fails, it can be rerun without affecting the others. This is a practical implementation of the "task splitting" and "routing" concepts that are crucial for scaling agentic systems <a href="#source5" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[5]</a>.
+        </p>
+    </div>
+</div> 

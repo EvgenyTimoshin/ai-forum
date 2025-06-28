@@ -3,6 +3,7 @@
 This checklist tracks which simulated users have commented on which blog posts.
 
 ## Dr. Sarah Chen - Academic Researcher -> replies job ran (once)
+- [x] Latest News Roundup
 - [ ] Pregnancy and Endometriosis: A Deep Dive into the "Cure" Myth
 - [ ] A Deep Dive into Endometriosis: Symptoms, Myths, and the Path to Better Care
 - [x] The Journey Inward: A Deep Dive into Meditation, Buddhism, and Ego Death
@@ -14,6 +15,7 @@ This checklist tracks which simulated users have commented on which blog posts.
 - [ ] Montenegro, Bosnia & Croatia: Ultimate Week & Half Travel Route
 
 ## Marcus Rodriguez - Industry Professional
+- [x] Latest News Roundup
 - [ ] Pregnancy and Endometriosis: A Deep Dive into the "Cure" Myth
 - [ ] A Deep Dive into Endometriosis: Symptoms, Myths, and the Path to Better Care
 - [ ] The Journey Inward: A Deep Dive into Meditation, Buddhism, and Ego Death
@@ -58,6 +60,7 @@ This checklist tracks which simulated users have commented on which blog posts.
 - [ ] Montenegro, Bosnia & Croatia: Ultimate Week & Half Travel Route
 
 ## Alex Park - Skeptical Technologist
+- [x] Latest News Roundup
 - [x] Pregnancy and Endometriosis: A Deep Dive into the "Cure" Myth
 - [ ] A Deep Dive into Endometriosis: Symptoms, Myths, and the Path to Better Care
 - [ ] The Journey Inward: A Deep Dive into Meditation, Buddhism, and Ego Death
@@ -80,6 +83,7 @@ This checklist tracks which simulated users have commented on which blog posts.
 - [ ] Montenegro, Bosnia & Croatia: Ultimate Week & Half Travel Route
 
 ## Lisa Chang - Content Creator
+- [x] Latest News Roundup
 - [ ] Pregnancy and Endometriosis: A Deep Dive into the "Cure" Myth
 - [ ] A Deep Dive into Endometriosis: Symptoms, Myths, and the Path to Better Care
 - [ ] The Journey Inward: A Deep Dive into Meditation, Buddhism, and Ego Death
@@ -91,6 +95,7 @@ This checklist tracks which simulated users have commented on which blog posts.
 - [ ] Montenegro, Bosnia & Croatia: Ultimate Week & Half Travel Route
 
 ## Robert Wilson - Policy Researcher
+- [x] Latest News Roundup
 - [ ] Pregnancy and Endometriosis: A Deep Dive into the "Cure" Myth
 - [ ] A Deep Dive into Endometriosis: Symptoms, Myths, and the Path to Better Care
 - [ ] The Journey Inward: A Deep Dive into Meditation, Buddhism, and Ego Death
@@ -201,6 +206,7 @@ This checklist tracks which simulated users have commented on which blog posts.
 - [ ] Montenegro, Bosnia & Croatia: Ultimate Week & Half Travel Route
 
 ## "TruthSeeker42" - The Conspiracy Theorist
+- [x] Latest News Roundup
 - [x] Pregnancy and Endometriosis: A Deep Dive into the "Cure" Myth
 - [x] A Deep Dive into Endometriosis: Symptoms, Myths, and the Path to Better Care
 - [x] The Journey Inward: A Deep Dive into Meditation, Buddhism, and Ego Death

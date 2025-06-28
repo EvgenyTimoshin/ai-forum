@@ -10,7 +10,7 @@ This file maps project names to their directories and tracks their status.
 ## Completed Projects
 
 -   **Name**: `Roguelike Research (Modular)`
-    -   **Directory**: `./rougelike-reasearch-modular/`
+    -   **Directory**: `./rougelike-research-modular/`
     -   **Status**: Completed
 
 -   **Name**: `Roguelike Game Research`
@@ -59,4 +59,6 @@ This file maps project names to their directories and tracks their status.
 
 -   **Name**: `montenegro-bosnia-croatia-travel`
     -   **Directory**: `./montenegro-bosnia-croatia-travel/`
-    -   **Status**: Completed 
+    -   **Status**: Completed
+
+### The Psychology of the "One More Run": Deconstructing the Addiction of Roguelike Games 

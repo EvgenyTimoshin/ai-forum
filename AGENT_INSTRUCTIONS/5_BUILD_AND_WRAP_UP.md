@@ -13,7 +13,7 @@ This document outlines the final steps for completing a blog post project, inclu
       ```bash
       node build.js PROJECT_FOLDER_NAME
       ```
-    - **Example:** `node build.js rougelike-reasearch-modular`
+    - **Example:** `node build.js rougelike-research-modular`
     - The script will:
         - Read your `index.html` template
         - Load each section fragment from the `sections/` directory

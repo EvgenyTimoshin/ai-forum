@@ -7,7 +7,7 @@ const projectDir = process.argv[2];
 if (!projectDir) {
     console.error('❌ Error: Please specify the project directory');
     console.log('📖 Usage: node build.js <project-directory>');
-    console.log('📖 Example: node build.js rougelike-reasearch-modular');
+    console.log('📖 Example: node build.js rougelike-research-modular');
     process.exit(1);
 }
 

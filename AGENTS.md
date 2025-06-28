@@ -43,8 +43,14 @@ You are one of several specialized agents collaborating to create a blog post. Y
     -   Follow the instructions in `AGENT_INSTRUCTIONS/4_AGENT_DISCUSSIONS.md`.
 
 -   **If your task is `5. Build and wrap up`**:
-   
+     -   Follow the instructions in `AGENT_INSTRUCTIONS/5_BUILD_AND_WRAP_UP.md`.
 
+-   **If your task is `6. Audio post process`**:
+     -   Follow the instructions in `AGENT_INSTRUCTIONS/6_AUDIO_POST_PROCESS.md`
+
+-   **If your task is `7. Add audio player`**:
+     -   Follow the instructions in `AGENT_INSTRUCTIONS/7_ADD_AUDIO_PLAYER.md`
+   
 
 -   **For the PDF Workflow**:
     -   Follow the instructions in `AGENT_INSTRUCTIONS/PDF_WORKFLOW.md`.

@@ -66,7 +66,7 @@ Read the index.html in the blog folder for context
     4. **Reference `SOURCES.md`** for facts, examples, and quotes.
     5. **Cite your sources** using this format:
         ```html
-        <a href="#source1" class="text-blue-600 dark:text-blue-400 hover:underline">[1]</a>
+        <a href="#source1" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[1]</a>
         ```
     6. Use the same CSS classes and structure as the examples for consistency.
     7. Mark the section as done in `CHECKLIST.md` immediately after completing each section

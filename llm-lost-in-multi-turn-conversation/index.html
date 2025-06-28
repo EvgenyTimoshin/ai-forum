@@ -78,7 +78,7 @@
             <h2 class="section-header text-2xl font-bold mb-4 text-slate-800 dark:text-slate-200 cursor-pointer hover:text-blue-600 dark:hover:text-blue-400 select-none">2. The Core Problem: A Surprising Performance Drop</h2>
             <div class="section-content">
                 <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
-                    The central finding of the study is both simple and shocking: LLMs are significantly worse at conversations than we thought. When given a task as a single, complete instruction, the models performed well, with around 90% accuracy. But when that same instruction was broken down and delivered over several conversational turns, performance plummeted to 65%—an average drop of 39% <a href="#source1" class="text-blue-600 dark:text-blue-400 hover:underline">[1]</a>.
+                    The central finding of the study is both simple and shocking: LLMs are significantly worse at conversations than we thought. When given a task as a single, complete instruction, the models performed well, with around 90% accuracy. But when that same instruction was broken down and delivered over several conversational turns, performance plummeted to 65%—an average drop of 39% <a href="#source1" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[1]</a>.
                 </p>
                 <div class="bg-amber-50 dark:bg-amber-950 border-l-4 border-amber-400 dark:border-amber-500 p-4 rounded-r-lg my-4">
                     <p class="text-sm text-amber-800 dark:text-amber-200">
@@ -99,7 +99,7 @@
                 </p>
                 <ul class="list-disc list-inside space-y-2 text-slate-700 dark:text-slate-300 ml-4 mb-4">
                     <li><strong>Aptitude</strong> is the model's raw capability. Think of it as its "best-case" performance when the conversation goes perfectly. The study found only a minor drop in aptitude.</li>
-                    <li><strong>Unreliability</strong> is the gap between the best- and worst-case performance. This is where things fall apart. In multi-turn conversations, unreliability skyrockets for all models <a href="#source1" class="text-blue-600 dark:text-blue-400 hover:underline">[1]</a>.</li>
+                    <li><strong>Unreliability</strong> is the gap between the best- and worst-case performance. This is where things fall apart. In multi-turn conversations, unreliability skyrockets for all models <a href="#source1" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[1]</a>.</li>
                 </ul>
                 <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
                     This is the essence of the "lost in conversation" phenomenon. Even if a model *can* solve the problem, it's not guaranteed to. A single misstep early on—a wrong assumption, a forgotten detail—sends it down a path from which it can't recover. The model's confidence in its own flawed reasoning becomes a trap.
@@ -111,7 +111,7 @@
             <h2 class="section-header text-2xl font-bold mb-4 text-slate-800 dark:text-slate-200 cursor-pointer hover:text-blue-600 dark:hover:text-blue-400 select-none">4. The Four Failure Modes: An Autopsy of a Confused AI</h2>
             <div class="section-content">
                 <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
-                    The study identified four key behaviors that cause LLMs to get lost in conversation <a href="#source1" class="text-blue-600 dark:text-blue-400 hover:underline">[1]</a>:
+                    The study identified four key behaviors that cause LLMs to get lost in conversation <a href="#source1" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[1]</a>:
                 </p>
                 <div class="space-y-4">
                     <div class="bg-slate-50 dark:bg-slate-800 p-3 rounded-lg border border-slate-200 dark:border-slate-700">
@@ -138,7 +138,7 @@
             <h2 class="section-header text-2xl font-bold mb-4 text-slate-800 dark:text-slate-200 cursor-pointer hover:text-blue-600 dark:hover:text-blue-400 select-none">5. How to Test a Talking AI: The 'Sharded Simulation' Method</h2>
             <div class="section-content">
                 <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
-                    To reliably test this conversational brittleness, the researchers developed a clever method called "sharded simulation." Instead of giving the LLM one big, detailed prompt, they broke it up into smaller pieces of information, or "shards" <a href="#source1" class="text-blue-600 dark:text-blue-400 hover:underline">[1]</a>.
+                    To reliably test this conversational brittleness, the researchers developed a clever method called "sharded simulation." Instead of giving the LLM one big, detailed prompt, they broke it up into smaller pieces of information, or "shards" <a href="#source1" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[1]</a>.
                 </p>
                 <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
                     These shards were then revealed to the model one by one, simulating a natural, unfolding conversation where a user clarifies their request over time. This forces the model to do what conversational AI is supposed to do: listen, remember, and integrate new information.
@@ -167,7 +167,7 @@
             <h2 class="section-header text-2xl font-bold mb-4 text-slate-800 dark:text-slate-200 cursor-pointer hover:text-blue-600 dark:hover:text-blue-400 select-none">6. It's Not Just One Model, It's All of Them</h2>
             <div class="section-content">
                 <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
-                    It might be tempting to think this is a problem with smaller, less capable models. However, the study's findings are universal. The researchers put 15 different LLMs to the test, from smaller open-source models like Llama3.1-8B-Instruct all the way up to the state-of-the-art, proprietary giants like GPT-4.1 and Gemini 2.5 Pro <a href="#source1" class="text-blue-600 dark:text-blue-400 hover:underline">[1]</a>.
+                    It might be tempting to think this is a problem with smaller, less capable models. However, the study's findings are universal. The researchers put 15 different LLMs to the test, from smaller open-source models like Llama3.1-8B-Instruct all the way up to the state-of-the-art, proprietary giants like GPT-4.1 and Gemini 2.5 Pro <a href="#source1" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[1]</a>.
                 </p>
                 <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
                     Every single one failed in the same way.
@@ -185,7 +185,7 @@
                     The "lost in conversation" phenomenon is a critical finding that should give us pause. It shows that while LLMs are incredibly fluent, their ability to handle the dynamic, evolving nature of human conversation is still brittle. They are more like single-task savants than true conversational partners.
                 </p>
                 <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
-                    The authors of the study issue a clear call to action: the industry must shift its focus. Instead of chasing ever-higher scores on single-turn benchmarks, we need to develop methods for evaluating and improving multi-turn reliability <a href="#source1" class="text-blue-600 dark:text-blue-400 hover:underline">[1]</a>. For end-users, this means being aware of these limitations. When a task is complex, providing all the information in a single, detailed prompt is still the most reliable way to get a good result.
+                    The authors of the study issue a clear call to action: the industry must shift its focus. Instead of chasing ever-higher scores on single-turn benchmarks, we need to develop methods for evaluating and improving multi-turn reliability <a href="#source1" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[1]</a>. For end-users, this means being aware of these limitations. When a task is complex, providing all the information in a single, detailed prompt is still the most reliable way to get a good result.
                 </p>
                 <div class="bg-green-50 dark:bg-green-950 border-l-4 border-green-400 dark:border-green-500 p-4 rounded-r-lg">
                     <p class="text-sm text-green-800 dark:text-green-200">
@@ -200,7 +200,7 @@
             <h2 class="section-header text-2xl font-bold mb-4 text-slate-800 dark:text-slate-200 cursor-pointer hover:text-blue-600 dark:hover:text-blue-400 select-none">🔗 Sources</h2>
             <div class="section-content">
                 <ul class="list-decimal list-inside space-y-2 text-slate-700 dark:text-slate-300">
-                    <li id="source1"><a href="https://ar5iv.labs.arxiv.org/html/2505.06120" target="_blank" rel="noopener noreferrer" class="text-blue-600 dark:text-blue-400 hover:underline">Laban, P., Hayashi, H., Zhou, Y., & Neville, J. (2025). LLMs Get Lost In Multi-Turn Conversation. arXiv.</a></li>
+                    <li id="source1"><a href="https://ar5iv.labs.arxiv.org/html/2505.06120" target="_blank" rel="noopener noreferrer" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">Laban, P., Hayashi, H., Zhou, Y., & Neville, J. (2025). LLMs Get Lost In Multi-Turn Conversation. arXiv.</a></li>
                 </ul>
             </div>
         </section>

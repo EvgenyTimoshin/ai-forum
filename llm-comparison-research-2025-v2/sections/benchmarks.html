@@ -1,0 +1,111 @@
+<!-- Benchmarks Section -->
+<h2 class="section-header text-2xl font-bold mb-4 text-slate-800 dark:text-slate-200 cursor-pointer hover:text-blue-600 dark:hover:text-blue-400 select-none">Benchmarks: Scientific Comparison of Leading LLMs</h2>
+<div class="section-content">
+    <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
+        To provide a transparent, evidence-based comparison, we summarize the performance of all major models on key scientific benchmarks. These include SWE-bench (software engineering), GPQA (graduate-level reasoning), AIME (advanced math), MMLU (multitask language understanding), and LiveCodeBench (coding). All results are from official or peer-reviewed sources<a href="#source10" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[10]</a>.
+    </p>
+    <div class="overflow-x-auto mb-4">
+        <table class="min-w-full text-xs md:text-sm border border-slate-300 dark:border-slate-700">
+            <thead class="bg-slate-100 dark:bg-slate-800">
+                <tr>
+                    <th class="px-2 py-2 border-b border-slate-300 dark:border-slate-700">Model</th>
+                    <th class="px-2 py-2 border-b border-slate-300 dark:border-slate-700">SWE-bench</th>
+                    <th class="px-2 py-2 border-b border-slate-300 dark:border-slate-700">GPQA</th>
+                    <th class="px-2 py-2 border-b border-slate-300 dark:border-slate-700">AIME</th>
+                    <th class="px-2 py-2 border-b border-slate-300 dark:border-slate-700">MMLU</th>
+                    <th class="px-2 py-2 border-b border-slate-300 dark:border-slate-700">LiveCodeBench</th>
+                </tr>
+            </thead>
+            <tbody class="bg-white dark:bg-slate-900">
+                <tr>
+                    <td class="px-2 py-2 font-semibold">Claude Opus 4</td>
+                    <td class="px-2 py-2">72.5%</td>
+                    <td class="px-2 py-2">83.3%</td>
+                    <td class="px-2 py-2">88.9%</td>
+                    <td class="px-2 py-2">88.8%</td>
+                    <td class="px-2 py-2">—</td>
+                </tr>
+                <tr>
+                    <td class="px-2 py-2 font-semibold">Claude Sonnet 4</td>
+                    <td class="px-2 py-2">72.7%</td>
+                    <td class="px-2 py-2">75.4%</td>
+                    <td class="px-2 py-2">—</td>
+                    <td class="px-2 py-2">86.5%</td>
+                    <td class="px-2 py-2">—</td>
+                </tr>
+                <tr>
+                    <td class="px-2 py-2 font-semibold">Claude 3.7 Sonnet</td>
+                    <td class="px-2 py-2">70.3%</td>
+                    <td class="px-2 py-2">78.2%</td>
+                    <td class="px-2 py-2">96.2%</td>
+                    <td class="px-2 py-2">86.1%</td>
+                    <td class="px-2 py-2">—</td>
+                </tr>
+                <tr>
+                    <td class="px-2 py-2 font-semibold">GPT-4.1</td>
+                    <td class="px-2 py-2">54.6%</td>
+                    <td class="px-2 py-2">66.3%</td>
+                    <td class="px-2 py-2">48.1%</td>
+                    <td class="px-2 py-2">90.2%</td>
+                    <td class="px-2 py-2">—</td>
+                </tr>
+                <tr>
+                    <td class="px-2 py-2 font-semibold">GPT-4o</td>
+                    <td class="px-2 py-2">54.6%</td>
+                    <td class="px-2 py-2">—</td>
+                    <td class="px-2 py-2">48.1%</td>
+                    <td class="px-2 py-2">90.2%</td>
+                    <td class="px-2 py-2">—</td>
+                </tr>
+                <tr>
+                    <td class="px-2 py-2 font-semibold">Gemini 2.5 Pro</td>
+                    <td class="px-2 py-2">59.6%</td>
+                    <td class="px-2 py-2">86.4%</td>
+                    <td class="px-2 py-2">88.0%</td>
+                    <td class="px-2 py-2">89.2%</td>
+                    <td class="px-2 py-2">69.0%</td>
+                </tr>
+                <tr>
+                    <td class="px-2 py-2 font-semibold">DeepSeek-R1</td>
+                    <td class="px-2 py-2">49.2%</td>
+                    <td class="px-2 py-2">—</td>
+                    <td class="px-2 py-2">79.8%</td>
+                    <td class="px-2 py-2">90.8%</td>
+                    <td class="px-2 py-2">65.9%</td>
+                </tr>
+                <tr>
+                    <td class="px-2 py-2 font-semibold">Grok 3</td>
+                    <td class="px-2 py-2">~70%</td>
+                    <td class="px-2 py-2">—</td>
+                    <td class="px-2 py-2">89.3%</td>
+                    <td class="px-2 py-2">92.7%</td>
+                    <td class="px-2 py-2">—</td>
+                </tr>
+                <tr>
+                    <td class="px-2 py-2 font-semibold">GPT o3</td>
+                    <td class="px-2 py-2">69.1%</td>
+                    <td class="px-2 py-2">83.3%</td>
+                    <td class="px-2 py-2">91.6%</td>
+                    <td class="px-2 py-2">88.8%</td>
+                    <td class="px-2 py-2">—</td>
+                </tr>
+                <tr>
+                    <td class="px-2 py-2 font-semibold">GPT o4-mini</td>
+                    <td class="px-2 py-2">68.1%</td>
+                    <td class="px-2 py-2">81.4%</td>
+                    <td class="px-2 py-2">92.7%</td>
+                    <td class="px-2 py-2">83.2%</td>
+                    <td class="px-2 py-2">—</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
+        <strong>Highlights:</strong> Claude 4 Opus and Sonnet 4 lead on SWE-bench and agentic coding. Gemini 2.5 Pro and Grok 3 excel at large-context and multimodal reasoning. GPT-4.1 offers the largest context window and strong coding. DeepSeek-R1 is the top open-source performer. o3 and o4-mini deliver near-flagship performance at a fraction of the cost.
+    </p>
+    <div class="bg-blue-50 dark:bg-blue-950 border-l-4 border-blue-400 dark:border-blue-500 p-4 rounded-r-lg mb-4">
+        <p class="text-sm text-blue-800 dark:text-blue-200">
+            <strong>Key Insight:</strong> No single model dominates every benchmark. The best choice depends on the specific agentic workflow, cost constraints, and required capabilities<a href="#source10" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[10]</a>.
+        </p>
+    </div>
+</div> 

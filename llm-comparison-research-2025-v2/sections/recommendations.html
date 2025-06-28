@@ -1,0 +1,68 @@
+<!-- Recommendations Section -->
+<h2 class="section-header text-2xl font-bold mb-4 text-slate-800 dark:text-slate-200 cursor-pointer hover:text-blue-600 dark:hover:text-blue-400 select-none">Recommendations: Model-Task Fit for Agentic Workflows</h2>
+<div class="section-content">
+    <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
+        Based on the latest benchmarks and official documentation, here are actionable recommendations for selecting the best LLM for each step in a multi-agent workflow. The right choice depends on the task, cost constraints, and required capabilities<a href="#source10" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[10]</a>.
+    </p>
+    <div class="overflow-x-auto mb-4">
+        <table class="min-w-full text-xs md:text-sm border border-slate-300 dark:border-slate-700">
+            <thead class="bg-slate-100 dark:bg-slate-800">
+                <tr>
+                    <th class="px-2 py-2 border-b border-slate-300 dark:border-slate-700">Workflow Step</th>
+                    <th class="px-2 py-2 border-b border-slate-300 dark:border-slate-700">Recommended Model(s)</th>
+                    <th class="px-2 py-2 border-b border-slate-300 dark:border-slate-700">Rationale</th>
+                </tr>
+            </thead>
+            <tbody class="bg-white dark:bg-slate-900">
+                <tr>
+                    <td class="px-2 py-2">Autonomous Coding/Refactoring</td>
+                    <td class="px-2 py-2">Claude Opus 4, Gemini 2.5 Pro, GPT o3</td>
+                    <td class="px-2 py-2">Top SWE-bench scores, long context, advanced reasoning</td>
+                </tr>
+                <tr>
+                    <td class="px-2 py-2">Customer-Facing Chatbots</td>
+                    <td class="px-2 py-2">Claude Sonnet 4, GPT-4o, o3-mini/o4-mini</td>
+                    <td class="px-2 py-2">Fast, cost-effective, strong instruction following, real-time multimodal</td>
+                </tr>
+                <tr>
+                    <td class="px-2 py-2">Large-Scale Document Analysis</td>
+                    <td class="px-2 py-2">GPT-4.1, Gemini 2.5 Pro</td>
+                    <td class="px-2 py-2">1M+ context window, strong long-context performance</td>
+                </tr>
+                <tr>
+                    <td class="px-2 py-2">Real-Time Research/Up-to-Date Info</td>
+                    <td class="px-2 py-2">Grok 3, GPT-4o</td>
+                    <td class="px-2 py-2">Live knowledge integration, real-time search, multimodal</td>
+                </tr>
+                <tr>
+                    <td class="px-2 py-2">Cost-Sensitive High-Volume Tasks</td>
+                    <td class="px-2 py-2">o3-mini, o4-mini, Claude 3.7 Sonnet</td>
+                    <td class="px-2 py-2">Near-flagship performance at a fraction of the cost</td>
+                </tr>
+                <tr>
+                    <td class="px-2 py-2">Open-Source/Customizable</td>
+                    <td class="px-2 py-2">DeepSeek-R1</td>
+                    <td class="px-2 py-2">Open weights, strong math/code/reasoning, privacy</td>
+                </tr>
+                <tr>
+                    <td class="px-2 py-2">Education/Transparency</td>
+                    <td class="px-2 py-2">Claude 3.7 Sonnet, DeepSeek-R1</td>
+                    <td class="px-2 py-2">Visible reasoning, safety, open-source</td>
+                </tr>
+                <tr>
+                    <td class="px-2 py-2">Multimodal Data Processing</td>
+                    <td class="px-2 py-2">Gemini 2.5 Pro, GPT-4o, Grok 3</td>
+                    <td class="px-2 py-2">Best-in-class for text, code, image, audio, video</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
+        <strong>General Guidance:</strong> Use Opus 4 or Gemini 2.5 Pro for the most demanding, long-context, or agentic tasks. Use Sonnet 4, o3-mini, or DeepSeek-R1 for cost-sensitive or open-source needs. For real-time, up-to-date, or multimodal workflows, Grok 3 and GPT-4o are top choices.
+    </p>
+    <div class="bg-blue-50 dark:bg-blue-950 border-l-4 border-blue-400 dark:border-blue-500 p-4 rounded-r-lg mb-4">
+        <p class="text-sm text-blue-800 dark:text-blue-200">
+            <strong>Key Insight:</strong> The optimal agentic system is often a network of specialized models, each selected for its strengths at a given workflow step<a href="#source10" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[10]</a>.
+        </p>
+    </div>
+</div> 

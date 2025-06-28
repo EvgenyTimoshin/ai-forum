@@ -10,6 +10,9 @@ This file maps project names to their directories and tracks their status.
 
 ## Completed Projects
 
+-   **Name**: `LLM Comparison Research 2025 v2`
+    -   **Directory**: `./llm-comparison-research-2025-v2/`
+    -   **Status**: Completed
 -   **Name**: `LLM Comparison Research 2025`
     -   **Directory**: `./llm-comparison-research-2025/`
     -   **Status**: Completed

@@ -2,7 +2,7 @@
 
 You are one of several specialized agents collaborating to create a blog post. Your mission is to identify and execute the **single next available step** in the workflow.
 
-**Your First Action: Read `blogs.md` to find the active project directory. Once you identify the active directory, read `PROJECT_GOAL.md` inside it to understand the project's goals.** This file is the source of truth for what the current project is.
+**Your First Action: Read `blogs.md` to find the active project directory. Once you identify the active directory, read `PROJECT_GOAL.md`!!!! inside it to understand the project's goals.** This file is the source of truth for what the current project is.
 
 ---
 

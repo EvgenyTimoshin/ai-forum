@@ -1,0 +1,99 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Minimal custom CSS only for features that require JavaScript interaction */
+
+/* CSS Variables for theme switching */
+:root {
+    --progress-width: 0%;
+}
+
+/* Progress bar that updates via JavaScript */
+.progress-bar {
+    width: var(--progress-width);
+}
+
+/* TOC slide-in animation */
+.toc-container {
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+}
+
+.toc-container:hover,
+.toc-container.show {
+    transform: translateX(0);
+}
+
+/* Section collapse animation */
+.section-content {
+    max-height: none;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.section-content.collapsed {
+    max-height: 0;
+}
+
+/* Glossary tooltip positioning */
+.glossary-term {
+    position: relative;
+}
+
+.glossary-term::after {
+    content: attr(data-definition);
+    position: fixed;
+    top: var(--tooltip-top, 0px);
+    left: var(--tooltip-left, 50%);
+    transform: translateX(-50%) translateY(-100%);
+    padding: 10px 14px;
+    background: #1e293b;
+    color: white;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 1.4;
+    max-width: 400px;
+    min-width: 200px;
+    white-space: pre-wrap;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+    z-index: 9999;
+    word-wrap: break-word;
+}
+
+/* Tooltip arrow */
+.glossary-term::before {
+    content: '';
+    position: fixed;
+    top: var(--tooltip-top, 0px);
+    left: var(--tooltip-left, 50%);
+    transform: translateX(-50%) translateY(-50%);
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #1e293b;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.glossary-term:hover::after,
+.glossary-term:hover::before {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Dark mode tooltip */
+html.dark .glossary-term::after {
+    background: #f8fafc;
+    color: #1e293b;
+}
+
+html.dark .glossary-term::before {
+    border-top-color: #f8fafc;
+} 

@@ -4,11 +4,11 @@ This file maps project names to their directories and tracks their status.
 
 ---
 
-## Active Projects
-
-*No active projects currently*
-
 ## Completed Projects
+
+-   **Name**: `The Ultimate History and Culture of Skateboarding`
+    -   **Directory**: `./skateboarding-history-and-culture/`
+    -   **Status**: Completed
 
 -   **Name**: `LLM Comparison Research 2025 v2`
     -   **Directory**: `./llm-comparison-research-2025-v2/`

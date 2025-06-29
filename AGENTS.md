@@ -24,31 +24,37 @@ You are one of several specialized agents collaborating to create a blog post. Y
 -   **If your task is `0. Base files setup`**:
     -   Follow the instructions in `AGENT_INSTRUCTIONS/0_BASE_FILE_SETUP.md`.
 
--   **If your task is `1. Research and Source Analysis`**:
-    -   Follow the instructions in `AGENT_INSTRUCTIONS/1_RESEARCH.md`.
+-   **If your task is `1. Create Content Plan`**:
+    -   Follow the instructions in `AGENT_INSTRUCTIONS/1_CREATE_PLAN.md`.
 
--   **If your task is `2. Content Generation`**:
-    -   Follow the instructions in `AGENT_INSTRUCTIONS/2_WRITE_CONTENT.md`.
+-   **If your task is `2. Preliminary Research`**:
+    -   Follow the instructions in `AGENT_INSTRUCTIONS/2_PRELIMINARY_RESEARCH.md`.
 
--   **If your task is `2.5. Content Editor`**:
+-   **If your task is `3. HTML SETUP`**:
+    -   Follow the instructions in `AGENT_INSTRUCTIONS/3_3_HTML_SETUP.md.md`.
+
+-   **If your task starts with `4. Write Section`**:
+    -   Follow the instructions in `AGENT_INSTRUCTIONS/4_WRITE_SECTION.md`.
+
+-   **If your task is `4.5. Content Editor`**:
     -   Follow the instructions in `AGENT_INSTRUCTIONS/2.5_CONTENT_BLOG_EDITOR.md`.
 
--   **If your task is `2.6. Markdown Creator`**:
+-   **If your task is `4.6. Markdown Creator`**:
     -   Follow the instructions in `AGENT_INSTRUCTIONS/2.6_MARKDOWN_CREATOR.md`.
 
--   **If your task is `3. Add Comments`**:
+-   **If your task is `5. Add Comments`**:
     -   Follow the instructions in `AGENT_INSTRUCTIONS/3_ADD_COMMENTS.md`.
 
--   **If your task is `4. Add Discussion`**:
+-   **If your task is `6. Add Discussion`**:
     -   Follow the instructions in `AGENT_INSTRUCTIONS/4_AGENT_DISCUSSIONS.md`.
 
--   **If your task is `5. Build and wrap up`**:
+-   **If your task is `7. Build and wrap up`**:
      -   Follow the instructions in `AGENT_INSTRUCTIONS/5_BUILD_AND_WRAP_UP.md`.
 
--   **If your task is `6. Audio post process`**:
+-   **If your task is `8. Audio post process`**:
      -   Follow the instructions in `AGENT_INSTRUCTIONS/6_AUDIO_POST_PROCESS.md`
 
--   **If your task is `7. Add audio player`**:
+-   **If your task is `9. Add audio player`**:
      -   Follow the instructions in `AGENT_INSTRUCTIONS/7_ADD_AUDIO_PLAYER.md`
    
 

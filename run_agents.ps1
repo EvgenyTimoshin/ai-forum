@@ -26,6 +26,10 @@ This will start the workflow and provide the initial prompt to the first agent.
 .EXAMPLE
 ./run_agents.ps1 -d
 This will start the workflow with debug mode enabled for all agent tasks.
+
+.EXAMPLE
+./run_agents.ps1 -InitialPrompt "Focus on the history of the Mazda MX-5." -Debug -Model "gemini-2.5-flash"
+This will start the workflow with an initial prompt, debug mode enabled, and a specific model for all agent tasks.
 #>
 
 param (
@@ -84,39 +88,47 @@ Write-Log "Executing Task: 0. Base files setup" "Yellow"
 gemini -y $DebugFlag $ModelFlag -p "$firstTaskPrompt. $instructionSuffix"
 Start-CancellableSleep -Seconds 30
 
-Write-Log "Executing Task: 1. Research and Source Analysis" "Yellow"
-gemini -y $DebugFlag $ModelFlag -p "Command your task is 1. Research and Source Analysis. $instructionSuffix"
+Write-Log "Executing Task: 1. Create Content Plan" "Yellow"
+gemini -y $DebugFlag $ModelFlag -p "Command your task is 1. Create Content Plan. $instructionSuffix"
 Start-CancellableSleep -Seconds 30
 
-Write-Log "Executing Task: 2. Content Generation" "Yellow"
-gemini -y $DebugFlag $ModelFlag -p "Command your task is 2. Content Generation. $instructionSuffix"
+Write-Log "Executing Task: 2. Preliminary Research" "Yellow"
+gemini -y $DebugFlag $ModelFlag -p "Command your task is 2. Preliminary Research. $instructionSuffix"
 Start-CancellableSleep -Seconds 30
 
-Write-Log "Executing Task: 2.5. Content Editor" "Yellow"
-gemini -y $DebugFlag $ModelFlag -p "Command your task is 2.5. Content Editor. $instructionSuffix"
+Write-Log "Executing Task: 3. HTML SETUP" "Yellow"
+gemini -y $DebugFlag $ModelFlag -p "Command your task is 3. HTML SETUP. $instructionSuffix"
 Start-CancellableSleep -Seconds 30
 
-Write-Log "Executing Task: 2.6. Markdown Creator" "Yellow"
-gemini -y $DebugFlag $ModelFlag -p "Command your task is 2.6. Markdown Creator. $instructionSuffix"
+Write-Log "Executing Task: 4. Write Section" "Yellow"
+gemini -y $DebugFlag $ModelFlag -p "Command your task is 4. Write Section. $instructionSuffix"
 Start-CancellableSleep -Seconds 30
 
-Write-Log "Executing Task: 3. Add Comments" "Yellow"
-gemini -y $DebugFlag $ModelFlag -p "Command your task is 3. Add Comments. $instructionSuffix"
+Write-Log "Executing Task: 4.5. Content Editor" "Yellow"
+gemini -y $DebugFlag $ModelFlag -p "Command your task is 4.5. Content Editor. $instructionSuffix"
 Start-CancellableSleep -Seconds 30
 
-Write-Log "Executing Task: 4. Add Discussion" "Yellow"
-gemini -y $DebugFlag $ModelFlag -p "Command your task is 4. Add Discussion. $instructionSuffix"
+Write-Log "Executing Task: 4.6. Markdown Creator" "Yellow"
+gemini -y $DebugFlag $ModelFlag -p "Command your task is 4.6. Markdown Creator. $instructionSuffix"
 Start-CancellableSleep -Seconds 30
 
-Write-Log "Executing Task: 5. Build and wrap up" "Yellow"
-gemini -y $DebugFlag $ModelFlag -p "Command your task is 5. Build and wrap up. $instructionSuffix"
+Write-Log "Executing Task: 5. Add Comments" "Yellow"
+gemini -y $DebugFlag $ModelFlag -p "Command your task is 5. Add Comments. $instructionSuffix"
 Start-CancellableSleep -Seconds 30
 
-Write-Log "Executing Task: 6. Audio post process" "Yellow"
-gemini -y $DebugFlag $ModelFlag -p "Command your task is 6. Audio post process. $instructionSuffix"
+Write-Log "Executing Task: 6. Add Discussion" "Yellow"
+gemini -y $DebugFlag $ModelFlag -p "Command your task is 6. Add Discussion. $instructionSuffix"
 Start-CancellableSleep -Seconds 30
 
-Write-Log "Executing Task: 7. Add audio player" "Yellow"
-gemini -y $DebugFlag $ModelFlag -p "Command your task is 7. Add audio player. $instructionSuffix"
+Write-Log "Executing Task: 7. Build and wrap up" "Yellow"
+gemini -y $DebugFlag $ModelFlag -p "Command your task is 7. Build and wrap up. $instructionSuffix"
+Start-CancellableSleep -Seconds 30
+
+Write-Log "Executing Task: 8. Audio post process" "Yellow"
+gemini -y $DebugFlag $ModelFlag -p "Command your task is 8. Audio post process. $instructionSuffix"
+Start-CancellableSleep -Seconds 30
+
+Write-Log "Executing Task: 9. Add audio player" "Yellow"
+gemini -y $DebugFlag $ModelFlag -p "Command your task is 9. Add audio player. $instructionSuffix"
 
 Write-Log "✅ All agent tasks completed." "Green" 

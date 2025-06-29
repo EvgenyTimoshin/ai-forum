@@ -15,8 +15,7 @@ You are one of several specialized agents collaborating to create a blog post. Y
 5.  **Find the first unchecked item**. This is your **only** assigned task.
 6.  **Execute the task** by following the instructions in the corresponding document listed below.
 7.  **Mark your task as complete** in `HIGH_LEVEL_WORKFLOW_CHECKLIST.md` by changing `[]` to `[x]`.
-8.  **Stop.** Another agent will handle the next step.
-
+8.  **FINISH**
 ---
 
 ## Task-to-Document Mapping
@@ -27,35 +26,32 @@ You are one of several specialized agents collaborating to create a blog post. Y
 -   **If your task is `1. Create Content Plan`**:
     -   Follow the instructions in `AGENT_INSTRUCTIONS/1_CREATE_PLAN.md`.
 
--   **If your task is `2. Preliminary Research`**:
-    -   Follow the instructions in `AGENT_INSTRUCTIONS/2_PRELIMINARY_RESEARCH.md`.
+-   **If your task is `2. HTML SETUP`**:
+    -   Follow the instructions in `AGENT_INSTRUCTIONS/3_HTML_SETUP.md`.
 
--   **If your task is `3. HTML SETUP`**:
-    -   Follow the instructions in `AGENT_INSTRUCTIONS/3_3_HTML_SETUP.md.md`.
+-   **If your task starts with `3. Write Section`**:
+    -   Follow the instructions in `AGENT_INSTRUCTIONS/3_WRITE_SECTIONS.md`.
 
--   **If your task starts with `4. Write Section`**:
-    -   Follow the instructions in `AGENT_INSTRUCTIONS/4_WRITE_SECTION.md`.
+-   **If your task is `3.5. Content Editor`**:
+    -   Follow the instructions in `AGENT_INSTRUCTIONS/4.5_MARKDOWN_CREATOR.md`.
 
--   **If your task is `4.5. Content Editor`**:
-    -   Follow the instructions in `AGENT_INSTRUCTIONS/2.5_CONTENT_BLOG_EDITOR.md`.
+-   **If your task is `3.6. Markdown Creator`**:
+    -   Follow the instructions in `AGENT_INSTRUCTIONS/4.5_MARKDOWN_CREATOR.md`.
 
--   **If your task is `4.6. Markdown Creator`**:
-    -   Follow the instructions in `AGENT_INSTRUCTIONS/2.6_MARKDOWN_CREATOR.md`.
+-   **If your task is `4. Add Comments`**:
+    -   Follow the instructions in `AGENT_INSTRUCTIONS/5_ADD_COMMENTS.md`.
 
--   **If your task is `5. Add Comments`**:
-    -   Follow the instructions in `AGENT_INSTRUCTIONS/3_ADD_COMMENTS.md`.
+-   **If your task is `5. Add Discussion`**:
+    -   Follow the instructions in `AGENT_INSTRUCTIONS/6_AGENT_DISCUSSIONS.md`.
 
--   **If your task is `6. Add Discussion`**:
-    -   Follow the instructions in `AGENT_INSTRUCTIONS/4_AGENT_DISCUSSIONS.md`.
+-   **If your task is `6. Build and wrap up`**:
+     -   Follow the instructions in `AGENT_INSTRUCTIONS/7_BUILD_AND_WRAP_UP.md`.
 
--   **If your task is `7. Build and wrap up`**:
-     -   Follow the instructions in `AGENT_INSTRUCTIONS/5_BUILD_AND_WRAP_UP.md`.
+-   **If your task is `7. Audio post process`**:
+     -   Follow the instructions in `AGENT_INSTRUCTIONS/8_AUDIO_POST_PROCESS.md`
 
--   **If your task is `8. Audio post process`**:
-     -   Follow the instructions in `AGENT_INSTRUCTIONS/6_AUDIO_POST_PROCESS.md`
-
--   **If your task is `9. Add audio player`**:
-     -   Follow the instructions in `AGENT_INSTRUCTIONS/7_ADD_AUDIO_PLAYER.md`
+-   **If your task is `8. Add audio player`**:
+     -   Follow the instructions in `AGENT_INSTRUCTIONS/9_ADD_AUDIO_PLAYER.md`
    
 
 -   **For the PDF Workflow**:

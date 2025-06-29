@@ -85,58 +85,55 @@ if (-not [string]::IsNullOrEmpty($InitialPrompt)) {
     Write-Log "Injecting user's initial prompt into the first task." "Cyan"
 }
 Write-Log "Executing Task: 0. Base files setup" "Yellow"
-gemini -y $DebugFlag $ModelFlag -p "$firstTaskPrompt. $instructionSuffix"
+gemini -y $DebugFlag -m "gemini-2.5-flash" -p "$firstTaskPrompt. $instructionSuffix"
 Start-CancellableSleep -Seconds 30
 
 Write-Log "Executing Task: 1. Create Content Plan" "Yellow"
-gemini -y $DebugFlag $ModelFlag -p "Command your task is 1. Create Content Plan. $instructionSuffix"
+gemini -y $DebugFlag -m "gemini-2.5-pro" -p "Command your task is 1. Create Content Plan. $instructionSuffix"
 Start-CancellableSleep -Seconds 30
 
 Write-Log "Executing Task: 2. HTML SETUP" "Yellow"
-gemini -y $DebugFlag $ModelFlag -p "Command your task is 2. HTML SETUP. $instructionSuffix"
+gemini -y $DebugFlag -m "gemini-2.5-flash" -p "Command your task is 2. HTML SETUP. $instructionSuffix"
 Start-CancellableSleep -Seconds 30
 
 Write-Log "Executing Task: 3. Write Section (1/4)" "Yellow"
-gemini -y $DebugFlag $ModelFlag -p "Command your task is 3. Write Sections (1/4). $instructionSuffix"
+gemini -y $DebugFlag -m "gemini-2.5-pro" -p "Command your task is 3. Write Sections (1/4). $instructionSuffix"
 Start-CancellableSleep -Seconds 30
 
 Write-Log "Executing Task: 3. Write Section (2/4)" "Yellow"
-gemini -y $DebugFlag $ModelFlag -p "Command your task is 3. Write Sections (2/4). $instructionSuffix"
+gemini -y $DebugFlag -m "gemini-2.5-pro" -p "Command your task is 3. Write Sections (2/4). $instructionSuffix"
 Start-CancellableSleep -Seconds 30
 
 Write-Log "Executing Task: 3. Write Section (3/4)" "Yellow"
-gemini -y $DebugFlag $ModelFlag -p "Command your task is 3. Write Sections (3/4). $instructionSuffix"
+gemini -y $DebugFlag -m "gemini-2.5-pro" -p "Command your task is 3. Write Sections (3/4). $instructionSuffix"
 Start-CancellableSleep -Seconds 30
 
 Write-Log "Executing Task: 3. Write Section (4/4)" "Yellow"
-gemini -y $DebugFlag $ModelFlag -p "Command your task is 3. Write Sections (4/4). $instructionSuffix"
+gemini -y $DebugFlag -m "gemini-2.5-pro" -p "Command your task is 3. Write Sections (4/4). $instructionSuffix"
 Start-CancellableSleep -Seconds 30
 
-Write-Log "Executing Task: 3.5. Content Editor" "Yellow"
-gemini -y $DebugFlag $ModelFlag -p "Command your task is 3.5. Content Editor. $instructionSuffix"
-Start-CancellableSleep -Seconds 30
 
 Write-Log "Executing Task: 3.6. Markdown Creator" "Yellow"
-gemini -y $DebugFlag $ModelFlag -p "Command your task is 3.6. Markdown Creator. $instructionSuffix"
+gemini -y $DebugFlag -m "gemini-2.5-flash" -p "Command your task is 3.6. Markdown Creator. $instructionSuffix"
 Start-CancellableSleep -Seconds 30
 
 Write-Log "Executing Task: 4. Add Comments" "Yellow"
-gemini -y $DebugFlag $ModelFlag -p "Command your task is 4. Add Comments. $instructionSuffix"
+gemini -y $DebugFlag -m "gemini-2.5-flash" -p "Command your task is 4. Add Comments. $instructionSuffix"
 Start-CancellableSleep -Seconds 30
 
 Write-Log "Executing Task: 5. Add Discussion" "Yellow"
-gemini -y $DebugFlag $ModelFlag -p "Command your task is 5. Add Discussion. $instructionSuffix"
+gemini -y $DebugFlag -m "gemini-2.5-flash" -p "Command your task is 5. Add Discussion. $instructionSuffix"
 Start-CancellableSleep -Seconds 30
 
 Write-Log "Executing Task: 6. Build and wrap up" "Yellow"
-gemini -y $DebugFlag $ModelFlag -p "Command your task is 6. Build and wrap up. $instructionSuffix"
+gemini -y $DebugFlag -m "gemini-2.5-flash" -p "Command your task is 6. Build and wrap up. $instructionSuffix"
 Start-CancellableSleep -Seconds 30
 
 Write-Log "Executing Task: 7. Audio post process" "Yellow"
-gemini -y $DebugFlag $ModelFlag -p "Command your task is 7. Audio post process. $instructionSuffix"
+gemini -y $DebugFlag -m "gemini-2.5-flash" -p "Command your task is 7. Audio post process. $instructionSuffix"
 Start-CancellableSleep -Seconds 30
 
 Write-Log "Executing Task: 8. Add audio player" "Yellow"
-gemini -y $DebugFlag $ModelFlag -p "Command your task is 8. Add audio player. $instructionSuffix"
+gemini -y $DebugFlag -m "gemini-2.5-flash" -p "Command your task is 8. Add audio player. $instructionSuffix"
 
 Write-Log "✅ All agent tasks completed." "Green" 

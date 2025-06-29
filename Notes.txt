@@ -1,0 +1,18 @@
+- Looks like we start to see rly high context usage during the prelimenary research phase
+    - Need to look at modularizing the researc hand plan updating similar to how writing sections are done, splitting research into buckets
+    - During deep research on vast topics with many sources we are just searching, loading it all into context updating and moving on to the next section
+    - We could split the research into a folder of its own a markdown for each research topic
+    - So maybe when we are initially making the PLAN.md we should make it as is, but also create a folder for
+        - Plan_Sections -> and an empty markdown will be created for each plan section outlining it 
+        - When we do preliminary research we can tack a section at a time per agent
+
+    - Modularizing like this will also allow us to parallelize this part, multiple agents can research at the same time
+
+- Modularizing the writing sections could also be done in parallel likely
+
+- We would need to figure out how to do the async tasks and await for all agents to finish before proceeding.
+
+- Sometimes gemini cli bugs out and just outputs the same shit over and over again, noticed this loop in cursor before with gemini
+
+- So far running gemini pro 2.5 at each step has been good but I feel like its unecessary, we dont need thinking models at each step. 
+    - For example once the plan and research is done, we could likely pass of the writing, content editing and the rest of shit to regular faster models

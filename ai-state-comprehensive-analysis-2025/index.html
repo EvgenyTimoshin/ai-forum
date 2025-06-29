@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document Digest Template</title>
+    <title>The State of Artificial Intelligence: A Comprehensive Analysis (2025)</title>
     
     <!-- Tailwind CSS Play CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="../styles.css">
     <script>
         tailwind.config = {
             darkMode: 'class',
@@ -54,7 +54,7 @@
                     This article uses modular loading for better performance. Please enable JavaScript to view the complete article, or access the individual sections directly:
                 </p>
                 <ul class="list-disc list-inside space-y-1 text-slate-700 dark:text-slate-300 ml-4">
-
+                  
                     <li><a href="sections/introduction.html" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">Introduction</a></li>
                     <li><a href="sections/sources.html" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">Sources</a></li>
                     <li><a href="sections/glossary.html" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">Glossary</a></li>
@@ -65,33 +65,27 @@
     </noscript>
     
     <!-- Main Content -->
-    <main class="max-w-none mx-auto px-6 py-8" style="max-width: 70ch;">
+    <main class="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         
-     
-    
-        
-        <!-- Introduction -->
-        <section id="introduction" data-src="sections/introduction.html" class="mb-8">
-            <div class="animate-pulse">
-                <div class="h-6 bg-slate-300 rounded w-1/2 mb-4"></div>
-                <div class="h-4 bg-slate-200 rounded w-full mb-2"></div>
-                <div class="h-4 bg-slate-200 rounded w-full mb-2"></div>
-                <div class="h-4 bg-slate-200 rounded w-2/3"></div>
-            </div>
-        </section>
-        
-        <!-- Add more section placeholders as needed -->
-        <!-- Example additional sections - customize based on your content:
-        <section id="section-2" data-src="sections/section-2.html" class="mb-8">
-            <div class="animate-pulse">
-                <div class="h-6 bg-slate-300 rounded w-1/2 mb-4"></div>
-                <div class="h-4 bg-slate-200 rounded w-full mb-2"></div>
-                <div class="h-4 bg-slate-200 rounded w-3/4"></div>
-            </div>
-        </section>
-        
-        -->
 
+        
+        <!-- Introduction Section -->
+        <section id="introduction" class="mb-8">
+            <h2 class="section-header text-2xl font-bold mb-4 text-slate-800 dark:text-slate-200 cursor-pointer hover:text-blue-600 dark:hover:text-blue-400 select-none">Introduction</h2>
+            <div class="section-content">
+                <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
+                    The rapid evolution of artificial intelligence has reached a critical juncture where fundamental questions about its capabilities, limitations, and future trajectory demand serious examination. This analysis provides a comprehensive, evidence-based overview of where AI stands today and where it is heading over the next decade. We will focus primarily on large language models (LLMs) while also examining the broader AI landscape, covering technical capabilities, economic factors, expert perspectives, and long-term viability.
+                </p>
+            </div>
+        </section>
+
+        <!-- Dynamically Loaded Sections -->
+        <section id="current-state" data-src="sections/current-state.html" class="mb-8"></section>
+        <section id="compute-costs" data-src="sections/compute-costs.html" class="mb-8"></section>
+        <section id="expert-opinions" data-src="sections/expert-opinions.html" class="mb-8"></section>
+        <section id="limitations-viability" data-src="sections/limitations-viability.html" class="mb-8"></section>
+        <section id="current-trends" data-src="sections/current-trends.html" class="mb-8"></section>
+        <section id="future-prognosis" data-src="sections/future-prognosis.html" class="mb-8"></section>
         
         <!-- Glossary -->
         <section id="glossary" data-src="sections/glossary.html" class="mb-8">
@@ -132,6 +126,6 @@
         
     </main>
     
-    <script src="./script.js"></script>
+    <script src="../script.js"></script>
 </body>
 </html> 

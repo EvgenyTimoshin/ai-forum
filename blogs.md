@@ -5,16 +5,18 @@ This file maps project names to their directories and tracks their status.
 ---
 
 ## Active Project
-- 
-
-## In Progress
--   
+- **None**
 
 ## Completed Projects
-
--   **Name**: `The Ultimate History and Culture of Skateboarding v7`
-    -   **Directory**: `./skateboarding-history-and-culture-v7/`
-    -   **Status**: Completed
+- **The State of Artificial Intelligence: A Comprehensive Analysis (2025)**
+  - **Folder:** `ai-state-comprehensive-analysis-2025`
+  - **Status:** Completed
+- **The Rise of AI Agents: A New Era of Automation**
+  - **Folder:** `ai-agents-automation-era`
+  - **Status:** Completed
+- **Skateboarding History and Culture v7**
+  - **Folder:** `skateboarding-history-and-culture-v7`
+  - **Status:** Completed
 -   **Name**: `The Ultimate History and Culture of Skateboarding v5`
     -   **Directory**: `./skateboarding-history-and-culture-v5/`
     -   **Status**: Completed
@@ -72,3 +74,8 @@ This file maps project names to their directories and tracks their status.
 -   **Name**: `montenegro-bosnia-croatia-travel`
     -   **Directory**: `./montenegro-bosnia-croatia-travel/`
     -   **Status**: Completed
+
+## To Do
+- **[Your Topic Here]**
+  - **Folder:** `your-topic-folder-name`
+  - **Status:** Not Started 

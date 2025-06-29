@@ -22,24 +22,42 @@ One shotting all of the tasks with the thinking models. One prompt with a goal o
 
 ### Agent Workflow Overview
 
-1. **Project Initialization:**
-   - Create a new project directory and set up base files using templates.
-   - Define project goals in `PROJECT_GOAL.md`.
-2. **Research & Source Analysis:**
-   - Gather, analyze, and document sources in `SOURCES.md`.
-3. **Content Generation:**
-   - Write modular content fragments (HTML) for each section.
-   - Use a checklist to track progress and ensure coverage.
-4. **Content Editing:**
-   - Review and polish each fragment for clarity, consistency, and glossary integration.
-5. **Comments & Discussion:**
-   - Simulate user comments and agent persona discussions using profiles from `AGENT_USERS.md`.
-6. **Build & Wrap Up:**
-   - Combine all fragments into a final static HTML file for deployment.
-7. **Optional Steps:**
-   - PDF conversion, audio post-processing, and audio player integration.
+The agent workflow is a structured, multi-step process designed to take a project from an idea to a complete, polished piece of content. Each step is handled by a specialized agent that follows a specific set of instructions.
 
-Each step is governed by detailed instructions in the `AGENT_INSTRUCTIONS/` folder. Agents use checklists to ensure strict task boundaries and handoffs.
+1.  **Project Initialization (`0_BASE_FILE_SETUP.md`):**
+    -   Creates a new project directory and sets up base files (`index.html`, `PROJECT_GOAL.md`, etc.).
+    -   Defines the project's high-level goals.
+
+2.  **Create Content Plan (`1_CREATE_PLAN.md`):**
+    -   Generates a detailed content plan and an outline, which is saved to `PLAN.md`.
+    -   Creates a comprehensive blueprint for the entire content creation process.
+
+3.  **HTML Setup (`3_HTML_SETUP.md`):**
+    -   Creates the necessary HTML section files based on the content plan.
+
+4.  **Write Sections (`3_WRITE_SECTIONS.md`):**
+    -   Conducts just-in-time research for each section and writes the content.
+    -   Performs targeted research specific to each section's requirements.
+    -   Embeds findings and source links directly into `PLAN.md` under the relevant sections.
+    -   Writes content for each HTML section file, following the plan and research.
+
+5.  **Markdown Creation (`4.5_MARKDOWN_CREATOR.md`):**
+    -   Generates a unified markdown file from all the HTML sections.
+
+6.  **Add Comments & Discussion (`5_ADD_COMMENTS.md` & `6_AGENT_DISCUSSIONS.md`):**
+    -   Simulates user comments and agent persona discussions to enrich the content.
+    -   Uses profiles from `AGENT_USERS.md`.
+
+7.  **Build and Wrap Up (`7_BUILD_AND_WRAP_UP.md`):**
+    -   Combines all HTML fragments into a final, single `index-built.html` file.
+    -   Performs final cleanup.
+
+8.  **Optional Post-Processing:**
+    -   **PDF Conversion (`PDF_WORKFLOW.md`):** Converts the final HTML into a PDF.
+    -   **Audio Post-Processing (`8_AUDIO_POST_PROCESS.md`):** Generates audio from the content.
+    -   **Add Audio Player (`9_ADD_AUDIO_PLAYER.md`):** Integrates an audio player into the HTML.
+
+Each step is governed by detailed instructions in the `AGENT_INSTRUCTIONS/` folder. Agents use `HIGH_LEVEL_WORKFLOW_CHECKLIST.md` in the project directory to track progress and ensure clean handoffs.
 
 ### Modular Content System
 

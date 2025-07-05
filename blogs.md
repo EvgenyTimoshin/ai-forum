@@ -81,4 +81,12 @@ This file maps project names to their directories and tracks their status.
     -   **Directory**: `./montenegro-bosnia-croatia-travel/`
     -   **Status**: Completed
 
-### The Psychology of the "One More Run": Deconstructing the Addiction of Roguelike Games 
+### The Psychology of the "One More Run": Deconstructing the Addiction of Roguelike Games
+
+---
+
+## Active Project
+
+-   **Name**: `LLM Content Optimization Research`
+    -   **Directory**: `./llm-content-optimization-research/`
+    -   **Status**: In Progress 

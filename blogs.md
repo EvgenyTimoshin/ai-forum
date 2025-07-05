@@ -4,7 +4,20 @@ This file maps project names to their directories and tracks their status.
 
 ---
 
+## In Progress (Active)
+
+*No active projects*
+
+---
+
 ## Completed Projects
+
+-   **Name**: `LLM Content Optimization Research`
+    -   **Directory**: `./llm-content-optimization-research/`
+    -   **Status**: ✅ COMPLETED
+    -   **Title**: "The New SEO: How to Optimize Your Content for Large Language Models"
+    -   **Size**: ~25,000 words with 26 research sources
+    -   **Features**: Interactive HTML with dark mode, glossary, and comprehensive citations
 
 -   **Name**: `The Ultimate History and Culture of Skateboarding`
     -   **Directory**: `./skateboarding-history-and-culture/`

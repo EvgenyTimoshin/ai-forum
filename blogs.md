@@ -81,4 +81,14 @@ This file maps project names to their directories and tracks their status.
     -   **Directory**: `./montenegro-bosnia-croatia-travel/`
     -   **Status**: Completed
 
+---
+
+## Active Projects
+
+-   **Name**: `State of the Art in LLM Translations as of 2025`
+    -   **Directory**: `./llm-translations-state-of-art-2025/`
+    -   **Status**: In Progress
+
+---
+
 ### The Psychology of the "One More Run": Deconstructing the Addiction of Roguelike Games 

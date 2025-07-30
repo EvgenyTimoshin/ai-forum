@@ -1,0 +1,49 @@
+<!-- Multimodal Translation Section -->
+<h2 class="section-header text-2xl font-bold mb-4 text-slate-800 dark:text-slate-200 cursor-pointer hover:text-blue-600 dark:hover:text-blue-400 select-none">🎤 Multimodal Translation: Beyond Text</h2>
+<div class="section-content">
+    <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
+        The evolution from text-only translation to comprehensive multimodal systems represents one of the most significant advances in LLM translation technology. Modern systems can now seamlessly translate across speech, text, and visual modalities, opening new possibilities for real-time communication and accessibility<a href="#source2" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[2]</a><a href="#source10" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[10]</a>.
+    </p>
+    
+    <h3 class="text-xl font-semibold mb-3 text-slate-800 dark:text-slate-200">Speech-to-Speech Translation Breakthroughs</h3>
+    <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
+        The Holy Grail of automatic interpretation—real-time speech-to-speech translation—has seen remarkable progress in 2025. Meta's SeamlessM4T system supports speech-to-speech translation from 101 languages to 36 target languages, achieving performance that surpasses cascaded systems by significant margins<a href="#source2" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[2]</a>. The system's V2 iteration demonstrates up to 23% higher BLEU scores in speech-to-speech tasks compared to traditional three-stage pipelines.
+    </p>
+    
+    <div class="bg-blue-50 dark:bg-blue-950 border-l-4 border-blue-400 dark:border-blue-500 p-4 rounded-r-lg mb-4">
+        <p class="text-sm text-blue-800 dark:text-blue-200">
+            <strong>Human Parity Achievement:</strong> ByteDance's CLASI system has achieved 81.3% VIP (Valid Information Proportion) for Chinese-to-English translation, approaching the ~80% VIP typically achieved by professional human interpreters, while commercial systems only reach 35.4%<a href="#source10" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[10]</a>.
+        </p>
+    </div>
+    
+    <h3 class="text-xl font-semibold mb-3 text-slate-800 dark:text-slate-200">Real-Time Processing and Latency Optimization</h3>
+    <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
+        Achieving truly real-time speech translation requires sophisticated optimization of the entire processing pipeline. Advanced systems now implement novel <span class="glossary-term relative border-b border-dotted border-slate-400 cursor-help" data-definition="Read-Write Strategy: an approach that determines when to listen to input (read) and when to produce output (write) in streaming translation systems.">read-write strategies</span> that dynamically balance translation quality and latency<a href="#source10" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[10]</a>. These systems can handle disfluent, informal, and unclear speech—conditions that are common in real-world scenarios but challenging for traditional systems.
+    </p>
+    
+    <h3 class="text-xl font-semibold mb-3 text-slate-800 dark:text-slate-200">Robustness and Environmental Adaptation</h3>
+    <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
+        Modern multimodal translation systems have made significant strides in handling challenging acoustic conditions. SeamlessM4T-V2 demonstrates approximately 50% better resilience against background noise and speaker variations compared to previous state-of-the-art systems<a href="#source2" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[2]</a>. This robustness is crucial for real-world deployment where perfect acoustic conditions cannot be guaranteed.
+    </p>
+    
+    <h3 class="text-xl font-semibold mb-3 text-slate-800 dark:text-slate-200">Cross-Modal Zero-Shot Capabilities</h3>
+    <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
+        One of the most impressive capabilities of unified multimodal systems is their ability to perform zero-shot translation across modalities they weren't explicitly trained for. SeamlessM4T can perform text-to-speech translation (T2ST) without being specifically trained for this task, leveraging its unified architecture to bridge between text and speech representations<a href="#source2" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[2]</a>. This capability demonstrates the power of unified embeddings that can generalize across different input and output modalities.
+    </p>
+    
+    <h3 class="text-xl font-semibold mb-3 text-slate-800 dark:text-slate-200">Commercial Applications and Accessibility</h3>
+    <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
+        The practical impact of multimodal translation extends far beyond research demonstrations. DeepL Voice, for example, has implemented real-time voice translation for business meetings and conversations, addressing the significant cost of ineffective multilingual communication—estimated at up to $54,860 per employee annually<a href="#source12" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[12]</a>. The system offers two specialized solutions: DeepL Voice for Meetings (virtual environments) and DeepL Voice for Conversations (in-person interactions).
+    </p>
+    
+    <div class="bg-amber-50 dark:bg-amber-950 border-l-4 border-amber-400 dark:border-amber-500 p-4 rounded-r-lg mb-4">
+        <p class="text-sm text-amber-800 dark:text-amber-200">
+            <strong>Business Impact:</strong> Research indicates that 33.8% of meeting time is wasted due to multilingual communication challenges, making real-time multimodal translation a critical business efficiency tool<a href="#source12" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[12]</a>.
+        </p>
+    </div>
+    
+    <h3 class="text-xl font-semibold mb-3 text-slate-800 dark:text-slate-200">Technical Architecture and Integration</h3>
+    <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
+        The success of multimodal translation systems relies on sophisticated architectures that can handle multiple data types simultaneously. These systems typically employ unified transformer architectures with specialized encoders for different modalities, shared representation spaces, and multi-task learning objectives that allow the model to leverage cross-modal information for improved translation quality<a href="#source2" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[2]</a><a href="#source3" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[3]</a>.
+    </p>
+</div>

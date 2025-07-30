@@ -4,7 +4,18 @@ This file maps project names to their directories and tracks their status.
 
 ---
 
+## Active Projects
+
+*No active projects*
+
+---
+
 ## Completed Projects
+
+-   **Name**: `State of the Art in LLM Translations 2025`
+    -   **Directory**: `./llm-translations-state-2025/`
+    -   **Status**: Completed
+    -   **Built File**: `./llm-translations-state-2025/index-built.html`
 
 -   **Name**: `The Ultimate History and Culture of Skateboarding`
     -   **Directory**: `./skateboarding-history-and-culture/`

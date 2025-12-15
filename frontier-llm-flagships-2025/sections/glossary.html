@@ -1,0 +1,32 @@
+<!-- Glossary Section -->
+<h2 class="section-header text-2xl font-bold mb-4 text-slate-800 dark:text-slate-200">Glossary</h2>
+<div class="grid md:grid-cols-2 gap-4">
+    <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-4 rounded-lg shadow-sm">
+        <h3 class="font-semibold text-slate-900 dark:text-slate-100">Long-context</h3>
+        <p class="text-sm text-slate-700 dark:text-slate-300">The ability to process hundreds of thousands to millions of tokens without losing track of earlier content, enabling book-length reasoning.</p>
+    </div>
+    <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-4 rounded-lg shadow-sm">
+        <h3 class="font-semibold text-slate-900 dark:text-slate-100">Multimodality</h3>
+        <p class="text-sm text-slate-700 dark:text-slate-300">Native handling of multiple input/output types (text, images, audio, video) inside a single model rather than through separate pipelines.</p>
+    </div>
+    <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-4 rounded-lg shadow-sm">
+        <h3 class="font-semibold text-slate-900 dark:text-slate-100">Agentic workflow</h3>
+        <p class="text-sm text-slate-700 dark:text-slate-300">Chained steps where models call tools, manage memory, and coordinate subtasks to complete goals with minimal human guidance.</p>
+    </div>
+    <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-4 rounded-lg shadow-sm">
+        <h3 class="font-semibold text-slate-900 dark:text-slate-100">Tool-calling / tool graph</h3>
+        <p class="text-sm text-slate-700 dark:text-slate-300">Structured JSON requests that trigger external functions; graphs indicate nested or sequential tool invocations with schema guarantees.</p>
+    </div>
+    <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-4 rounded-lg shadow-sm">
+        <h3 class="font-semibold text-slate-900 dark:text-slate-100">Typed outputs</h3>
+        <p class="text-sm text-slate-700 dark:text-slate-300">Model responses constrained by schemas (JSON, Pydantic) to ensure reliable parsing and downstream automation.</p>
+    </div>
+    <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-4 rounded-lg shadow-sm">
+        <h3 class="font-semibold text-slate-900 dark:text-slate-100">Extended thinking</h3>
+        <p class="text-sm text-slate-700 dark:text-slate-300">Optional extra compute for deeper reasoning traces before summarizing, trading latency and cost for accuracy on hard tasks.</p>
+    </div>
+    <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-4 rounded-lg shadow-sm">
+        <h3 class="font-semibold text-slate-900 dark:text-slate-100">Prompt caching</h3>
+        <p class="text-sm text-slate-700 dark:text-slate-300">Storing repeated prompt+context combinations so follow-up calls are cheaper and faster, often used with long-context workflows.</p>
+    </div>
+</div>

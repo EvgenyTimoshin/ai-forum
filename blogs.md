@@ -4,7 +4,15 @@ This file maps project names to their directories and tracks their status.
 
 ---
 
+## Active Project
+
+-   None (all projects complete)
+
 ## Completed Projects
+
+-   **Name**: `Frontier LLM Flagships 2025`
+    -   **Directory**: `./frontier-llm-flagships-2025/`
+    -   **Status**: Completed
 
 -   **Name**: `The Ultimate History and Culture of Skateboarding`
     -   **Directory**: `./skateboarding-history-and-culture/`

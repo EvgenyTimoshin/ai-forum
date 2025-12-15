@@ -1,0 +1,16 @@
+[x] Create sections/ directory
+[x] prefix-panel.html (how document was created)
+[x] summary.html (executive summary)
+[x] introduction.html (context and thesis)
+[x] model-snapshots.html (Opus 4.5, GPT-5.2, Gemini 3 Pro)
+[x] capabilities-wow.html (multimodal, reasoning, coding, agents)
+[x] use-cases.html (enterprise and indie workflows)
+[x] safety-reliability.html (safety, alignment, evals)
+[x] benchmarks-pricing.html (performance, pricing, context length)
+[x] ecosystem-tooling.html (plugins, agents, integrations)
+[x] outlook-recommendations.html (roadmap signals and guidance)
+[x] conclusion.html (final synthesis)
+[x] glossary.html (terms defined)
+[x] sources.html (references consolidated)
+[x] comments.html (persona reactions)
+[x] Update index.html with section placeholders

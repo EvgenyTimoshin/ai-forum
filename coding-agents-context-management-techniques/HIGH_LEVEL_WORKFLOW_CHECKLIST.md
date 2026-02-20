@@ -3,7 +3,7 @@
 - [x] 2. Content Generation
 - [x] 2.5. Content Editor
 - [x] 2.6. Markdown Creator
-- [ ] 3. Add Comments
+- [x] 3. Add Comments
 - [ ] 4. Add Discussion
 - [ ] 5. Build and wrap up
 - [ ] 6. Audio post process

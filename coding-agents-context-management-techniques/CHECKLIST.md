@@ -13,5 +13,5 @@
 - [x] conclusion.html ✓ Edited and Polished
 - [x] glossary.html ✓ Edited and Polished
 - [x] sources.html (COMPLETE FIRST) ✓ Edited and Polished
-- [ ] comments.html (DO NOT COMPLETE FOR ANOTHER AGENT)
+- [x] comments.html ✓ Edited and Polished
 - [x] Update index.html with section placeholders ✓ Edited and Polished

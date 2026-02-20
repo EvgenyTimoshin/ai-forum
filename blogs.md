@@ -6,7 +6,9 @@ This file maps project names to their directories and tracks their status.
 
 ## Active Project
 
--   None (all projects complete)
+-   **Name**: `Coding Agents and Context Management Techniques`
+    -   **Directory**: `./coding-agents-context-management-techniques/`
+    -   **Status**: In Progress
 
 ## Completed Projects
 

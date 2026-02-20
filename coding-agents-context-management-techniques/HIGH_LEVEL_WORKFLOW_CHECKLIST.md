@@ -2,7 +2,7 @@
 - [x] 1. Research and Source Analysis
 - [x] 2. Content Generation
 - [x] 2.5. Content Editor
-- [ ] 2.6. Markdown Creator
+- [x] 2.6. Markdown Creator
 - [ ] 3. Add Comments
 - [ ] 4. Add Discussion
 - [ ] 5. Build and wrap up

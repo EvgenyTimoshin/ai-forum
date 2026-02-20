@@ -6,11 +6,13 @@ This file maps project names to their directories and tracks their status.
 
 ## Active Project
 
--   **Name**: `Coding Agents and Context Management Techniques`
-    -   **Directory**: `./coding-agents-context-management-techniques/`
-    -   **Status**: In Progress
+-   None (all projects complete)
 
 ## Completed Projects
+
+-   **Name**: `Coding Agents and Context Management Techniques`
+    -   **Directory**: `./coding-agents-context-management-techniques/`
+    -   **Status**: Completed
 
 -   **Name**: `Frontier LLM Flagships 2025`
     -   **Directory**: `./frontier-llm-flagships-2025/`

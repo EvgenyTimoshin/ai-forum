@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="./styles.css">
     <script>
         tailwind.config = {
             darkMode: 'class',
@@ -20,20 +20,20 @@
 <body class="bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-200 transition-colors">
     
     <!-- Progress Bar -->
-    <div class="progress-bar fixed top-0 left-0 h-1 bg-blue-500 z-50 transition-all duration-100 no-audio"></div>
+    <div class="progress-bar fixed top-0 left-0 h-1 bg-blue-500 z-50 transition-all duration-100"></div>
     
     <!-- Reading Time Display -->
-    <div id="readingTimeDisplay" class="fixed top-2 left-4 px-3 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-300 dark:border-slate-600 rounded-full text-xs text-slate-600 dark:text-slate-400 z-50 transition-colors no-audio">
+    <div id="readingTimeDisplay" class="fixed top-2 left-4 px-3 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-300 dark:border-slate-600 rounded-full text-xs text-slate-600 dark:text-slate-400 z-50 transition-colors">
         <span id="readingTimeText">📖 Calculating...</span>
     </div>
     
     <!-- Dark Mode Toggle -->
-    <button id="themeToggle" class="fixed top-4 right-4 w-12 h-12 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-300 dark:border-slate-600 hover:bg-slate-200 dark:hover:bg-slate-700 flex items-center justify-center text-xl z-50 transition-colors no-audio">
+    <button id="themeToggle" class="fixed top-4 right-4 w-12 h-12 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-300 dark:border-slate-600 hover:bg-slate-200 dark:hover:bg-slate-700 flex items-center justify-center text-xl z-50 transition-colors">
         <span id="themeIcon">🌙</span>
     </button>
     
     <!-- Table of Contents -->
-    <div class="toc-container fixed top-0 right-0 h-screen w-72 bg-slate-50 dark:bg-slate-800 border-l border-slate-200 dark:border-slate-700 z-40 overflow-y-auto no-audio">
+    <div class="toc-container fixed top-0 right-0 h-screen w-72 bg-slate-50 dark:bg-slate-800 border-l border-slate-200 dark:border-slate-700 z-40 overflow-y-auto">
         <div class="absolute -left-10 top-1/2 -translate-y-1/2 w-10 h-15 bg-slate-50 dark:bg-slate-800 border border-r-0 border-slate-200 dark:border-slate-700 rounded-l-lg flex items-center justify-center cursor-pointer text-slate-600 dark:text-slate-400">
             ☰
         </div>
@@ -46,7 +46,7 @@
     </div>
 
     <!-- Noscript fallback -->
-    <noscript class="no-audio">
+    <noscript>
         <div class="max-w-4xl mx-auto px-6 py-8">
             <div class="bg-amber-50 dark:bg-amber-950 border-l-4 border-amber-400 dark:border-amber-500 p-4 rounded-r-lg mb-8">
                 <h2 class="text-xl font-semibold mb-3 text-slate-800 dark:text-slate-200">JavaScript Required</h2>
@@ -341,7 +341,7 @@
 </section>
         
         <!-- Sources Section -->
-        <section id="sources"  class="mb-8 no-audio">
+        <section id="sources"  class="mb-8">
 <h2 class="section-header text-2xl font-bold mb-4 text-slate-800 dark:text-slate-200 cursor-pointer hover:text-blue-600 dark:hover:text-blue-400 select-none">📖 Sources</h2>
 <div class="section-content">
     <div class="space-y-4 text-sm">
@@ -399,7 +399,7 @@
 </section>
         
         <!-- Comments Section -->
-        <section id="comments"  class="mt-12 border-t border-slate-200 dark:border-slate-700 pt-8 no-audio">
+        <section id="comments"  class="mt-12 border-t border-slate-200 dark:border-slate-700 pt-8">
 <h2 class="text-2xl font-bold mb-6 text-slate-800 dark:text-slate-200">💬 Community Discussion</h2>
 
 <!-- Comment 1: Dr. Sarah Chen -->
@@ -448,19 +448,19 @@
     <div class="mt-4 ml-8 pl-4 border-l-2 border-slate-200 dark:border-slate-600">
         <div class="flex items-start space-x-3">
             <div class="flex-shrink-0">
-                <div class="w-8 h-8 bg-cyan-500 rounded-full flex items-center justify-center text-white font-semibold text-xs">
-                    JK
+                <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white font-semibold text-xs">
+                    MR
                 </div>
             </div>
             <div class="flex-grow">
                 <div class="flex items-center space-x-2 mb-1">
-                    <h4 class="font-semibold text-sm text-slate-800 dark:text-slate-200">James Kim</h4>
-                    <span class="text-xs text-slate-500 dark:text-slate-400">Startup Founder</span>
+                    <h4 class="font-semibold text-sm text-slate-800 dark:text-slate-200">Marcus Rodriguez</h4>
+                    <span class="text-xs text-slate-500 dark:text-slate-400">Senior Engineer</span>
                     <span class="text-xs text-slate-400">•</span>
-                    <span class="text-xs text-slate-400">1d ago</span>
+                    <span class="text-xs text-slate-400">just now</span>
                 </div>
                 <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
-                    Totally agree on the integration pain. That's where the opportunity is, though. Startups that can build the "plumbing" for these agentic systems—the reliable APIs, the observability tools, the security wrappers—are going to be huge. The big players are building the models, but someone needs to build the roads for them to run on.
+                    For anyone interested in the cost/performance side of agentic workflows, check out the new <a href="https://evgenytimoshin.github.io/ai-forum/llm-comparison-research-2025-v2/index.html" class="text-blue-600 dark:text-blue-400 hover:underline">LLM Comparison 2025 v2</a> blog post. It dives deep into real-world benchmarks and tradeoffs for deploying LLMs at scale. The tables on throughput and latency are especially relevant if you're struggling with integration and scaling issues.
                 </p>
             </div>
         </div>
@@ -553,10 +553,33 @@
         </div>
     </div>
 </div> 
+
+<!-- Comment 6: Alex Park -->
+<div class="mb-6 bg-slate-50 dark:bg-slate-800 rounded-lg p-4 border border-slate-200 dark:border-slate-700">
+    <div class="flex items-start space-x-3">
+        <div class="flex-shrink-0">
+            <div class="w-10 h-10 bg-slate-700 rounded-full flex items-center justify-center text-white font-semibold text-sm">
+                AP
+            </div>
+        </div>
+        <div class="flex-grow">
+            <div class="flex items-center space-x-2 mb-2">
+                <h4 class="font-semibold text-slate-800 dark:text-slate-200">Alex Park</h4>
+                <span class="text-xs text-slate-500 dark:text-slate-400">Skeptical Technologist</span>
+                <span class="text-xs text-slate-400">•</span>
+                <span class="text-xs text-slate-400">1h ago</span>
+            </div>
+            <p class="text-slate-700 dark:text-slate-300 leading-relaxed">
+                This workflow write-up is great for understanding the mechanics (checklists, modular fragments, build step). The piece I think teams underestimate is “context engineering” once you run these agents for hundreds of turns—logs balloon, contradictions creep in, and costs spike. If you want a companion deep-dive on keeping coding agents sane over long tasks, see:
+                <a href="https://evgenytimoshin.github.io/ai-forum/coding-agents-context-management-techniques/index.html" class="no-audio text-blue-600 dark:text-blue-400 hover:underline" target="_blank" rel="noreferrer">Coding Agents &amp; Context Management Techniques</a>.
+            </p>
+        </div>
+    </div>
+</div>
 </section>
         
     </main>
     
-    <script src="../script.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html> 

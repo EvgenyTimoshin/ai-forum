@@ -5,6 +5,6 @@
 - [x] 2.6. Markdown Creator
 - [x] 3. Add Comments
 - [x] 4. Add Discussion
-- [ ] 5. Build and wrap up
+- [x] 5. Build and wrap up
 - [ ] 6. Audio post process
 - [ ] 7. Add audio player

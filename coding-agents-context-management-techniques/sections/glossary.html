@@ -85,5 +85,25 @@
             <h4 class="font-semibold text-slate-800 dark:text-slate-200">Benchmark (agent evaluation)</h4>
             <p class="text-sm text-slate-600 dark:text-slate-400">A standardized set of tasks and scoring used to measure agent performance and guide iteration (e.g., SWE-bench for real GitHub issues).</p>
         </div>
+
+        <div class="bg-slate-50 dark:bg-slate-800 p-3 rounded-lg border border-slate-200 dark:border-slate-700">
+            <h4 class="font-semibold text-slate-800 dark:text-slate-200">Decision Log</h4>
+            <p class="text-sm text-slate-600 dark:text-slate-400">A small, canonical record of important choices (what we decided and why), with explicit superseding entries to prevent contradictions across long agent runs.</p>
+        </div>
+
+        <div class="bg-slate-50 dark:bg-slate-800 p-3 rounded-lg border border-slate-200 dark:border-slate-700">
+            <h4 class="font-semibold text-slate-800 dark:text-slate-200">Evidence capsule</h4>
+            <p class="text-sm text-slate-600 dark:text-slate-400">A compact summary of a tool output: error signature, the relevant excerpt, and the next action it implies.</p>
+        </div>
+
+        <div class="bg-slate-50 dark:bg-slate-800 p-3 rounded-lg border border-slate-200 dark:border-slate-700">
+            <h4 class="font-semibold text-slate-800 dark:text-slate-200">Rolling summary</h4>
+            <p class="text-sm text-slate-600 dark:text-slate-400">A short, canonical state block (goal, constraints, verified facts) updated every loop iteration to keep key context visible.</p>
+        </div>
+
+        <div class="bg-slate-50 dark:bg-slate-800 p-3 rounded-lg border border-slate-200 dark:border-slate-700">
+            <h4 class="font-semibold text-slate-800 dark:text-slate-200">Trace</h4>
+            <p class="text-sm text-slate-600 dark:text-slate-400">A structured log of an agent run (steps, tool calls, token budgets, diffs, outcomes) used for debugging and evaluation.</p>
+        </div>
     </div>
 </div>

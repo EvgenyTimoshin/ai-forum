@@ -20,8 +20,8 @@
     <ul class="list-disc list-inside space-y-2 text-slate-700 dark:text-slate-300 ml-4 mb-4">
         <li><strong>Task Brief:</strong> what “done” means, acceptance criteria, and constraints (must not break API X, must update tests Y).</li>
         <li><strong>Plan:</strong> 3–8 steps, each tied to a tool call or file.</li>
-        <li><strong>Decision Log:</strong> durable choices (“we will keep behavior A; change B”) with explicit superseding entries.</li>
-        <li><strong>Evidence Capsules:</strong> compact summaries of tool outputs (error signature, cause hypothesis, next action).</li>
+        <li><strong><span class="glossary-term relative border-b border-dotted border-slate-400 cursor-help" data-definition="A small, canonical record of important choices (what we decided and why), with explicit superseding entries to prevent contradictions across long runs.">Decision Log</span>:</strong> durable choices (“we will keep behavior A; change B”) with explicit superseding entries.</li>
+        <li><strong><span class="glossary-term relative border-b border-dotted border-slate-400 cursor-help" data-definition="A compact summary of a tool output: error signature, relevant excerpt, and the next action it implies.">Evidence capsules</span>:</strong> compact summaries of tool outputs (error signature, cause hypothesis, next action).</li>
     </ul>
 
     <div class="bg-blue-50 dark:bg-blue-950 border-l-4 border-blue-400 dark:border-blue-500 p-4 rounded-r-lg mb-4">
@@ -42,7 +42,7 @@
         The trick is to compress <em>into a stable state representation</em>, not a vague narrative.
     </p>
     <ul class="list-disc list-inside space-y-2 text-slate-700 dark:text-slate-300 ml-4 mb-4">
-        <li><strong>Rolling summary:</strong> 10–20 lines capturing current goal, constraints, and what has been verified.</li>
+        <li><strong><span class="glossary-term relative border-b border-dotted border-slate-400 cursor-help" data-definition="A short, canonical state block (goal, constraints, verified facts) updated every loop iteration.">Rolling summary</span>:</strong> 10–20 lines capturing current goal, constraints, and what has been verified.</li>
         <li><strong>Delta summary:</strong> after each tool call, record only what changed: “new error signature”, “file X edited”, “test Y now passes”.</li>
         <li><strong>Prune duplicates:</strong> keep the latest representative stack trace; remove repeated failures.</li>
         <li><strong>Rewrite, don’t append:</strong> update the canonical artifacts instead of stacking more transcript.</li>

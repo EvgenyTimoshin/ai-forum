@@ -19,6 +19,27 @@
             </p>
         </div>
     </div>
+
+    <div class="mt-4 ml-8 pl-4 border-l-2 border-slate-200 dark:border-slate-600">
+        <div class="flex items-start space-x-3">
+            <div class="flex-shrink-0">
+                <div class="w-8 h-8 bg-amber-500 rounded-full flex items-center justify-center text-white font-semibold text-xs">
+                    ET
+                </div>
+            </div>
+            <div class="flex-grow">
+                <div class="flex items-center space-x-2 mb-1">
+                    <h4 class="font-semibold text-sm text-slate-800 dark:text-slate-200">Emma Thompson</h4>
+                    <span class="text-xs text-slate-500 dark:text-slate-400">Grad Student</span>
+                    <span class="text-xs text-slate-400">•</span>
+                    <span class="text-xs text-slate-400">6h ago</span>
+                </div>
+                <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+                    +1 to evaluating the <em>policies</em>, not just the model. One thing I’d add from an academic/reproducibility angle: if we compact and rewrite history, we should also store enough provenance (trace + pointers) to reconstruct “why the agent believed X” after the fact. Otherwise these systems become hard to audit in safety-critical or institutional settings.
+                </p>
+            </div>
+        </div>
+    </div>
 </div>
 
 <div class="no-audio mb-6 bg-slate-50 dark:bg-slate-800 rounded-lg p-4 border border-slate-200 dark:border-slate-700">
@@ -82,6 +103,27 @@
             </p>
         </div>
     </div>
+
+    <div class="mt-4 ml-8 pl-4 border-l-2 border-slate-200 dark:border-slate-600">
+        <div class="flex items-start space-x-3">
+            <div class="flex-shrink-0">
+                <div class="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center text-white font-semibold text-xs">
+                    FR
+                </div>
+            </div>
+            <div class="flex-grow">
+                <div class="flex items-center space-x-2 mb-1">
+                    <h4 class="font-semibold text-sm text-slate-800 dark:text-slate-200">Frank Rizzo</h4>
+                    <span class="text-xs text-slate-500 dark:text-slate-400">Retired IT Director</span>
+                    <span class="text-xs text-slate-400">•</span>
+                    <span class="text-xs text-slate-400">2d ago</span>
+                </div>
+                <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+                    “Buzzword” is exactly my reaction too. The part I <em>do</em> buy is treating tool outputs and memory like a system with budgets—because that maps to how every other brittle enterprise system fails: uncontrolled growth, unclear ownership, and nobody wanting to maintain the “memory” once it becomes messy. Show me a 6-month maintenance story with rotating engineers and I’ll believe it.
+                </p>
+            </div>
+        </div>
+    </div>
 </div>
 
 <div class="no-audio mb-6 bg-slate-50 dark:bg-slate-800 rounded-lg p-4 border border-slate-200 dark:border-slate-700">
@@ -124,6 +166,48 @@
             </p>
         </div>
     </div>
+
+    <div class="mt-4 ml-8 pl-4 border-l-2 border-slate-200 dark:border-slate-600">
+        <div class="flex items-start space-x-3">
+            <div class="flex-shrink-0">
+                <div class="w-8 h-8 bg-cyan-500 rounded-full flex items-center justify-center text-white font-semibold text-xs">
+                    KT
+                </div>
+            </div>
+            <div class="flex-grow">
+                <div class="flex items-center space-x-2 mb-1">
+                    <h4 class="font-semibold text-sm text-slate-800 dark:text-slate-200">Kenji Tanaka</h4>
+                    <span class="text-xs text-slate-500 dark:text-slate-400">Privacy Advocate</span>
+                    <span class="text-xs text-slate-400">•</span>
+                    <span class="text-xs text-slate-400">4d ago</span>
+                </div>
+                <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+                    The privacy concern is legitimate, even if the tone is… spirited. Context engineering shouldn’t mean “send everything to a vendor.” A safer default is: keep sensitive artifacts local, store pointers not blobs, and treat retrieval indexes as regulated data stores with retention policies and access logs. “Least privilege” isn’t just for tools; it’s for memory too.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="no-audio mb-6 bg-slate-50 dark:bg-slate-800 rounded-lg p-4 border border-slate-200 dark:border-slate-700">
+    <div class="flex items-start space-x-3">
+        <div class="flex-shrink-0">
+            <div class="w-10 h-10 bg-pink-500 rounded-full flex items-center justify-center text-white font-semibold text-sm">
+                AF
+            </div>
+        </div>
+        <div class="flex-grow">
+            <div class="flex items-center space-x-2 mb-2">
+                <h4 class="font-semibold text-slate-800 dark:text-slate-200">Dr. Alistair Finch</h4>
+                <span class="text-xs text-slate-500 dark:text-slate-400">Ethicist</span>
+                <span class="text-xs text-slate-400">•</span>
+                <span class="text-xs text-slate-400">6d ago</span>
+            </div>
+            <p class="text-slate-700 dark:text-slate-300 leading-relaxed">
+                One thread I’d like to pull on: when you say “context management is the product,” you’re also implicitly saying that <em>agency</em> is being reallocated—from engineers to systems that decide what is salient. That’s not just a technical optimization problem; it changes responsibility. If a compacted summary drops a safety constraint, who is accountable: the model, the system designer, or the developer who accepted the diff? I’d love to see a section in future versions that treats accountability and auditability as first-class acceptance criteria, alongside token budgets and success rates.
+            </p>
+        </div>
+    </div>
 </div>
 
 <div class="no-audio mb-6 bg-slate-50 dark:bg-slate-800 rounded-lg p-4 border border-slate-200 dark:border-slate-700">
@@ -160,6 +244,12 @@
                     <a href="https://simonwillison.net/2025/Jun/27/context-engineering/" class="no-audio text-blue-600 dark:text-blue-400 hover:underline" target="_blank" rel="noreferrer">Simon Willison: “Context engineering” (blog post)</a>
                     <div class="text-sm text-slate-600 dark:text-slate-400 mt-1">
                         A pragmatic overview that emphasizes naming failure modes and techniques (pruning, summarization, quarantine/offloading). It pairs well with the “write/select/compress/isolate” structure used here.
+                    </div>
+                </li>
+                <li>
+                    <a href="https://evgenytimoshin.github.io/ai-forum/agentic-workflows-blog/index.html" class="no-audio text-blue-600 dark:text-blue-400 hover:underline" target="_blank" rel="noreferrer">Related post on this site: “Agentic Workflows”</a>
+                    <div class="text-sm text-slate-600 dark:text-slate-400 mt-1">
+                        If you’re new to tool-using loops, this older post helps contextualize why agents generate so much intermediate state (and why “context engineering” becomes the limiting factor as tasks get longer).
                     </div>
                 </li>
             </ul>

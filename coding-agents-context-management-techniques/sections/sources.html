@@ -1,0 +1,82 @@
+<h2 class="section-header text-2xl font-bold mb-4 text-slate-800 dark:text-slate-200 cursor-pointer hover:text-blue-600 dark:hover:text-blue-400 select-none">📖 Sources</h2>
+<div class="no-audio section-content">
+    <div class="space-y-4 text-sm">
+        <div id="source1" class="bg-slate-50 dark:bg-slate-800 p-4 rounded-lg border border-slate-200 dark:border-slate-700">
+            <p class="font-semibold text-slate-800 dark:text-slate-200 mb-2">[1] Effective context engineering for AI agents (Anthropic)</p>
+            <p class="text-slate-600 dark:text-slate-400 mb-2">Practical guide defining context engineering and showing how to curate high-signal tokens, design token-efficient tools, and retrieve context “just in time”.</p>
+            <a href="https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents" class="no-audio text-blue-600 dark:text-blue-400 hover:underline" target="_blank" rel="noreferrer">Read article</a>
+        </div>
+
+        <div id="source2" class="bg-slate-50 dark:bg-slate-800 p-4 rounded-lg border border-slate-200 dark:border-slate-700">
+            <p class="font-semibold text-slate-800 dark:text-slate-200 mb-2">[2] Context Engineering for Agents (LangChain)</p>
+            <p class="text-slate-600 dark:text-slate-400 mb-2">A taxonomy of context strategies (write/select/compress/isolate) and a discussion of long-run agent context failure modes.</p>
+            <a href="https://blog.langchain.com/context-engineering-for-agents/" class="no-audio text-blue-600 dark:text-blue-400 hover:underline" target="_blank" rel="noreferrer">Read article</a>
+        </div>
+
+        <div id="source3" class="bg-slate-50 dark:bg-slate-800 p-4 rounded-lg border border-slate-200 dark:border-slate-700">
+            <p class="font-semibold text-slate-800 dark:text-slate-200 mb-2">[3] Cutting Through the Noise: Smarter Context Management for LLM-Powered Agents (JetBrains Research)</p>
+            <p class="text-slate-600 dark:text-slate-400 mb-2">Why naive “append everything” agent logs become expensive noise; motivates pruning, compression, and selective memory.</p>
+            <a href="https://blog.jetbrains.com/research/2025/12/efficient-context-management/" class="no-audio text-blue-600 dark:text-blue-400 hover:underline" target="_blank" rel="noreferrer">Read article</a>
+        </div>
+
+        <div id="source4" class="bg-slate-50 dark:bg-slate-800 p-4 rounded-lg border border-slate-200 dark:border-slate-700">
+            <p class="font-semibold text-slate-800 dark:text-slate-200 mb-2">[4] ReAct: Synergizing Reasoning and Acting in Language Models</p>
+            <p class="text-slate-600 dark:text-slate-400 mb-2">Foundational agent pattern: interleave reasoning traces with tool actions to reduce hallucinations and improve interpretability.</p>
+            <a href="https://arxiv.org/abs/2210.03629" class="no-audio text-blue-600 dark:text-blue-400 hover:underline" target="_blank" rel="noreferrer">View paper</a>
+        </div>
+
+        <div id="source5" class="bg-slate-50 dark:bg-slate-800 p-4 rounded-lg border border-slate-200 dark:border-slate-700">
+            <p class="font-semibold text-slate-800 dark:text-slate-200 mb-2">[5] Lost in the Middle: How Language Models Use Long Contexts</p>
+            <p class="text-slate-600 dark:text-slate-400 mb-2">Evidence that models often use long context position-sensitively; relevant info “in the middle” can be hardest to retrieve.</p>
+            <a href="https://arxiv.org/abs/2307.03172" class="no-audio text-blue-600 dark:text-blue-400 hover:underline" target="_blank" rel="noreferrer">View paper</a>
+        </div>
+
+        <div id="source6" class="bg-slate-50 dark:bg-slate-800 p-4 rounded-lg border border-slate-200 dark:border-slate-700">
+            <p class="font-semibold text-slate-800 dark:text-slate-200 mb-2">[6] Context Rot: How Increasing Input Tokens Impacts LLM Performance (Chroma Research)</p>
+            <p class="text-slate-600 dark:text-slate-400 mb-2">Benchmarks showing performance and reliability can degrade as input length grows, motivating compression and selective loading.</p>
+            <a href="https://research.trychroma.com/context-rot" class="no-audio text-blue-600 dark:text-blue-400 hover:underline" target="_blank" rel="noreferrer">Read report</a>
+        </div>
+
+        <div id="source7" class="bg-slate-50 dark:bg-slate-800 p-4 rounded-lg border border-slate-200 dark:border-slate-700">
+            <p class="font-semibold text-slate-800 dark:text-slate-200 mb-2">[7] MemGPT: Towards LLMs as Operating Systems</p>
+            <p class="text-slate-600 dark:text-slate-400 mb-2">OS-inspired tiered memory (“virtual context management”) to extend effective context beyond the window.</p>
+            <a href="https://arxiv.org/abs/2310.08560" class="no-audio text-blue-600 dark:text-blue-400 hover:underline" target="_blank" rel="noreferrer">View paper</a>
+        </div>
+
+        <div id="source8" class="bg-slate-50 dark:bg-slate-800 p-4 rounded-lg border border-slate-200 dark:border-slate-700">
+            <p class="font-semibold text-slate-800 dark:text-slate-200 mb-2">[8] Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks (RAG)</p>
+            <p class="text-slate-600 dark:text-slate-400 mb-2">Canonical retrieval-augmented generation formulation; grounding for parametric vs non-parametric memory in agent systems.</p>
+            <a href="https://arxiv.org/abs/2005.11401" class="no-audio text-blue-600 dark:text-blue-400 hover:underline" target="_blank" rel="noreferrer">View paper</a>
+        </div>
+
+        <div id="source9" class="bg-slate-50 dark:bg-slate-800 p-4 rounded-lg border border-slate-200 dark:border-slate-700">
+            <p class="font-semibold text-slate-800 dark:text-slate-200 mb-2">[9] Reflexion: Language Agents with Verbal Reinforcement Learning</p>
+            <p class="text-slate-600 dark:text-slate-400 mb-2">Agents improve via linguistic feedback stored in an episodic memory buffer—useful for postmortems and self-correction loops.</p>
+            <a href="https://arxiv.org/abs/2303.11366" class="no-audio text-blue-600 dark:text-blue-400 hover:underline" target="_blank" rel="noreferrer">View paper</a>
+        </div>
+
+        <div id="source10" class="bg-slate-50 dark:bg-slate-800 p-4 rounded-lg border border-slate-200 dark:border-slate-700">
+            <p class="font-semibold text-slate-800 dark:text-slate-200 mb-2">[10] SWE-bench: Can Language Models Resolve Real-World GitHub Issues?</p>
+            <p class="text-slate-600 dark:text-slate-400 mb-2">Realistic benchmark: issues from real repos; highlights the need for multi-file changes, tool use, and long-context handling.</p>
+            <a href="https://arxiv.org/abs/2310.06770" class="no-audio text-blue-600 dark:text-blue-400 hover:underline" target="_blank" rel="noreferrer">View paper</a>
+        </div>
+
+        <div id="source11" class="bg-slate-50 dark:bg-slate-800 p-4 rounded-lg border border-slate-200 dark:border-slate-700">
+            <p class="font-semibold text-slate-800 dark:text-slate-200 mb-2">[11] SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering</p>
+            <p class="text-slate-600 dark:text-slate-400 mb-2">Shows interface/tool design (ACI) significantly changes agent performance—tight coupling of tools, context, and repo navigation.</p>
+            <a href="https://arxiv.org/abs/2405.15793" class="no-audio text-blue-600 dark:text-blue-400 hover:underline" target="_blank" rel="noreferrer">View paper</a>
+        </div>
+
+        <div id="source12" class="bg-slate-50 dark:bg-slate-800 p-4 rounded-lg border border-slate-200 dark:border-slate-700">
+            <p class="font-semibold text-slate-800 dark:text-slate-200 mb-2">[12] AgentBench: Evaluating LLMs as Agents</p>
+            <p class="text-slate-600 dark:text-slate-400 mb-2">Benchmark across interactive environments; discusses typical agent failures such as poor long-term reasoning and instruction following.</p>
+            <a href="https://arxiv.org/abs/2308.03688" class="no-audio text-blue-600 dark:text-blue-400 hover:underline" target="_blank" rel="noreferrer">View paper</a>
+        </div>
+
+        <div id="source13" class="bg-slate-50 dark:bg-slate-800 p-4 rounded-lg border border-slate-200 dark:border-slate-700">
+            <p class="font-semibold text-slate-800 dark:text-slate-200 mb-2">[13] OWASP Top 10 for Large Language Model Applications</p>
+            <p class="text-slate-600 dark:text-slate-400 mb-2">Security baseline for agent context: prompt injection, insecure plugin design, excessive agency, sensitive info disclosure, and more.</p>
+            <a href="https://owasp.org/www-project-top-10-for-large-language-model-applications/" class="no-audio text-blue-600 dark:text-blue-400 hover:underline" target="_blank" rel="noreferrer">View OWASP project</a>
+        </div>
+    </div>
+</div>

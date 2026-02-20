@@ -1,0 +1,17 @@
+- [x] Create sections/ directory
+- [x] prefix-panel.html (how document was created) ✓ Edited and Polished
+- [x] summary.html (document summary) ✓ Edited and Polished
+- [x] introduction.html ✓ Edited and Polished
+- [x] what-is-a-coding-agent.html ✓ Edited and Polished
+- [x] context-as-a-budget.html ✓ Edited and Polished
+- [x] context-failure-modes.html ✓ Edited and Polished
+- [x] context-architecture.html ✓ Edited and Polished
+- [x] context-engineering-playbook.html ✓ Edited and Polished
+- [x] security-and-guardrails.html ✓ Edited and Polished
+- [x] operating-a-coding-agent-in-a-real-repo.html ✓ Edited and Polished
+- [x] evaluation-and-iteration.html ✓ Edited and Polished
+- [x] conclusion.html ✓ Edited and Polished
+- [x] glossary.html ✓ Edited and Polished
+- [x] sources.html (COMPLETE FIRST) ✓ Edited and Polished
+- [ ] comments.html (DO NOT COMPLETE FOR ANOTHER AGENT)
+- [x] Update index.html with section placeholders ✓ Edited and Polished

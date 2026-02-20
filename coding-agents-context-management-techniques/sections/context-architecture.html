@@ -1,0 +1,49 @@
+<h2 class="section-header text-2xl font-bold mb-4 text-slate-800 dark:text-slate-200 cursor-pointer hover:text-blue-600 dark:hover:text-blue-400 select-none">4. Context architecture patterns (what to store where)</h2>
+<div class="section-content">
+    <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
+        The fastest way to improve a coding agent is to stop thinking of “memory” as one blob of chat history. Strong agents use an architecture: different stores for different half-lives, with retrieval and <span class="glossary-term relative border-b border-dotted border-slate-400 cursor-help" data-definition="Reducing context size by summarizing, pruning, and rewriting history into a smaller state representation while preserving critical constraints.">compaction</span> policies that keep the prompt small and high-signal<a href="#source1" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[1]</a><a href="#source2" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[2]</a>.
+    </p>
+
+    <h3 class="text-lg font-semibold mb-3 text-slate-800 dark:text-slate-200">Pattern A: “Working memory + pointers”</h3>
+    <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
+        Keep the minimal working set in-context (goal, constraints, current plan, latest evidence), and keep everything else as pointers: file paths, URLs, query IDs, and artifact IDs. This is the “just-in-time” approach described by Anthropic<a href="#source1" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[1]</a>.
+    </p>
+
+    <div class="bg-blue-50 dark:bg-blue-950 border-l-4 border-blue-400 dark:border-blue-500 p-4 rounded-r-lg mb-4">
+        <p class="text-sm text-blue-800 dark:text-blue-200">
+            <strong>Design goal:</strong> the prompt should answer “what should I do next?” without requiring the model to scan pages of irrelevant history.
+        </p>
+    </div>
+
+    <h3 class="text-lg font-semibold mb-3 text-slate-800 dark:text-slate-200">Pattern B: Retrieval-augmented context (<span class="glossary-term relative border-b border-dotted border-slate-400 cursor-help" data-definition="A pattern that retrieves relevant documents from a non-parametric store and conditions generation on them.">RAG</span>)</h3>
+    <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
+        RAG provides a clean separation: facts live in a non-parametric store (search index / vector DB), and the model loads only the top-k relevant passages per step. The original RAG paper frames this as combining parametric and non-parametric memory, improving factuality and enabling provenance<a href="#source8" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[8]</a>.
+    </p>
+    <ul class="list-disc list-inside space-y-2 text-slate-700 dark:text-slate-300 ml-4 mb-4">
+        <li><strong>Good fit:</strong> large repos, documentation corpora, incident runbooks, and “how things work here” knowledge.</li>
+        <li><strong>Common mistake:</strong> retrieving huge chunks. Chunk size and ranking are context engineering decisions, not “just infrastructure.”</li>
+    </ul>
+
+    <h3 class="text-lg font-semibold mb-3 text-slate-800 dark:text-slate-200">Pattern C: Tiered memory (OS-inspired)</h3>
+    <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
+        <span class="glossary-term relative border-b border-dotted border-slate-400 cursor-help" data-definition="An OS-inspired agent architecture that manages tiered memory and ‘virtual context’ beyond a model’s window.">MemGPT</span> makes the OS analogy explicit: use a hierarchy of memory tiers and move information between “fast” and “slow” stores so the agent appears to have more memory than the context window allows<a href="#source7" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[7]</a>.
+        Whether or not you adopt MemGPT directly, the design lesson is powerful: treat compaction and retrieval as first-class scheduling problems.
+    </p>
+
+    <h3 class="text-lg font-semibold mb-3 text-slate-800 dark:text-slate-200">Pattern D: Episodic memory for improvement loops</h3>
+    <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
+        <span class="glossary-term relative border-b border-dotted border-slate-400 cursor-help" data-definition="A framework where agents store linguistic reflections on feedback in an episodic memory buffer to improve later attempts.">Reflexion</span> shows a lightweight path to agent improvement without fine-tuning: store “reflective text” about failures in an <span class="glossary-term relative border-b border-dotted border-slate-400 cursor-help" data-definition="A per-run or per-attempt memory store used to keep lessons and feedback across attempts.">episodic memory</span> buffer and use it in future attempts<a href="#source9" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[9]</a>.
+        For coding agents, this maps nicely to:
+    </p>
+    <ul class="list-disc list-inside space-y-2 text-slate-700 dark:text-slate-300 ml-4 mb-4">
+        <li>Postmortem notes (“we misread the error because…”) that become guardrails.</li>
+        <li>Library-specific gotchas and conventions that recur across tasks.</li>
+        <li>Failure-mode checklists (e.g., “when tests fail, check X before editing”).</li>
+    </ul>
+
+    <div class="bg-amber-50 dark:bg-amber-950 border-l-4 border-amber-400 dark:border-amber-500 p-4 rounded-r-lg">
+        <p class="text-sm text-amber-800 dark:text-amber-200">
+            <strong>Important:</strong> Persistence is power—but also risk. A poisoned memory can permanently degrade performance. Promote only verified facts, and version your “truth” artifacts.
+        </p>
+    </div>
+</div>

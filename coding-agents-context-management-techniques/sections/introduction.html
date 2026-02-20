@@ -1,0 +1,35 @@
+<h2 class="section-header text-2xl font-bold mb-4 text-slate-800 dark:text-slate-200 cursor-pointer hover:text-blue-600 dark:hover:text-blue-400 select-none">Introduction: Why context is the bottleneck</h2>
+<div class="section-content">
+    <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
+        A “coding agent” is not just a chatbot that writes code. It’s a loop: read the repo, form a plan, call tools, edit files, run tests, recover from errors, and repeat. The hidden constraint in that loop is not IQ—it’s <span class="glossary-term relative border-b border-dotted border-slate-400 cursor-help" data-definition="The finite token budget available to the model for a single generation.">context window</span> management.
+    </p>
+
+    <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
+        In practice, agents produce a firehose of intermediate artifacts: stack traces, diffs, log output, partial plans, and “thoughts.” If you simply append everything, you get massive (and expensive) memory logs that quickly turn into noise<a href="#source3" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[3]</a>. Even when models accept long contexts, they don’t always use them robustly—relevant facts can be “lost in the middle,” and reliability can degrade as inputs grow<a href="#source5" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[5]</a><a href="#source6" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[6]</a>.
+    </p>
+
+    <div class="bg-amber-50 dark:bg-amber-950 border-l-4 border-amber-400 dark:border-amber-500 p-4 rounded-r-lg mb-4">
+        <p class="text-sm text-amber-800 dark:text-amber-200">
+            <strong>Important:</strong> Long context does not automatically mean “more correct.” Context can distract, conflict, or even inject malicious instructions if you mix trusted and untrusted text without isolation<a href="#source13" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[13]</a>.
+        </p>
+    </div>
+
+    <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
+        This post is a practical playbook for the craft that sits between model prompting and systems engineering: <span class="glossary-term relative border-b border-dotted border-slate-400 cursor-help" data-definition="Designing and maintaining the smallest high-signal set of tokens and artifacts that reliably drives the agent’s next step.">context engineering</span><a href="#source1" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[1]</a>. We’ll cover:
+    </p>
+
+    <ul class="list-disc list-inside space-y-2 text-slate-700 dark:text-slate-300 ml-4 mb-4">
+        <li>What makes a coding agent different from “code generation”.</li>
+        <li>Why context fails (and why adding tokens can make it worse).</li>
+        <li>Architectures for memory, retrieval, and compaction.</li>
+        <li>A step-by-step playbook for writing, selecting, compressing, and isolating context.</li>
+        <li>Security guardrails for untrusted inputs and tool use.</li>
+        <li>How to evaluate and iterate using real-world benchmarks like SWE-bench<a href="#source10" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[10]</a>.</li>
+    </ul>
+
+    <div class="bg-blue-50 dark:bg-blue-950 border-l-4 border-blue-400 dark:border-blue-500 p-4 rounded-r-lg">
+        <p class="text-sm text-blue-800 dark:text-blue-200">
+            <strong>How to read this:</strong> Skim the headings first. If you only implement one thing, implement a durable “decision log + rolling summary” and switch your agent to just-in-time retrieval. Everything else builds on that.
+        </p>
+    </div>
+</div>

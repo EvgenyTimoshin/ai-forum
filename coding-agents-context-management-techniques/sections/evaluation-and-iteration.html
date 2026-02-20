@@ -1,0 +1,42 @@
+<h2 class="section-header text-2xl font-bold mb-4 text-slate-800 dark:text-slate-200 cursor-pointer hover:text-blue-600 dark:hover:text-blue-400 select-none">8. Evaluation and iteration (measure the context system, not vibes)</h2>
+<div class="section-content">
+    <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
+        If you’re serious about coding agents, you need to evaluate them like you evaluate software: with benchmarks, instrumentation, and postmortems.
+        AgentBench frames this as an urgent need to quantitatively evaluate “LLMs as agents” in interactive environments and analyzes typical failure reasons like poor long-term reasoning and instruction following<a href="#source12" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[12]</a>.
+    </p>
+
+    <h3 class="text-lg font-semibold mb-3 text-slate-800 dark:text-slate-200">Use realistic benchmarks where context matters</h3>
+    <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
+        SWE-bench is particularly valuable because it forces agents to work inside real codebases with real issues, often requiring multi-file coordination and tool interaction<a href="#source10" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[10]</a>.
+        SWE-agent’s results reinforce another point: interface/tool design can be the difference between failure and success<a href="#source11" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[11]</a>.
+    </p>
+
+    <h3 class="text-lg font-semibold mb-3 text-slate-800 dark:text-slate-200">Instrument your agent with a trace</h3>
+    <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
+        You can’t improve what you can’t see. At minimum, store a structured trace per run:
+    </p>
+    <ul class="list-disc list-inside space-y-2 text-slate-700 dark:text-slate-300 ml-4 mb-4">
+        <li><strong>Inputs:</strong> task brief, constraints, repo snapshot.</li>
+        <li><strong>Per-step context budget:</strong> token counts by category (system/tools/state/retrieved).</li>
+        <li><strong>Tool calls:</strong> tool name, arguments, summarized output, latency/cost.</li>
+        <li><strong>Edits:</strong> files touched, diff size, test impact.</li>
+        <li><strong>Outcome:</strong> pass/fail, time-to-fix, number of iterations.</li>
+    </ul>
+
+    <h3 class="text-lg font-semibold mb-3 text-slate-800 dark:text-slate-200">Evaluate context policies as first-class components</h3>
+    <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
+        Don’t treat context engineering as “prompt tweaks.” Treat it as a set of policies you can ablate:
+    </p>
+    <ul class="list-disc list-inside space-y-2 text-slate-700 dark:text-slate-300 ml-4 mb-4">
+        <li><strong>Selection policy:</strong> what retrieval queries run, how many chunks, which reranker.</li>
+        <li><strong>Compression policy:</strong> when to summarize, what to drop, what must be restated every step.</li>
+        <li><strong>Isolation policy:</strong> which inputs are untrusted, how they’re quoted, and what is forbidden to execute.</li>
+        <li><strong>Tool policy:</strong> which tools exist, how outputs are trimmed, and how ambiguity is resolved.</li>
+    </ul>
+
+    <div class="bg-blue-50 dark:bg-blue-950 border-l-4 border-blue-400 dark:border-blue-500 p-4 rounded-r-lg">
+        <p class="text-sm text-blue-800 dark:text-blue-200">
+            <strong>Key Insight:</strong> The fastest wins typically come from shrinking and structuring context, not enlarging it. Measure token spend vs. success rate and iterate on the cheapest failure modes first.
+        </p>
+    </div>
+</div>

@@ -1,0 +1,55 @@
+<h2 class="section-header text-2xl font-bold mb-4 text-slate-800 dark:text-slate-200 cursor-pointer hover:text-blue-600 dark:hover:text-blue-400 select-none">3. How contexts fail (and what to do about it)</h2>
+<div class="section-content">
+    <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
+        “Context management” sounds like a storage problem, but it’s really a failure-mode problem: what goes wrong when your agent’s context grows, mutates, and absorbs untrusted text?
+        The most useful approach is to name the failures and design countermeasures. LangChain highlights a set of concrete context failures (poisoning, distraction, confusion, clash) as recurring patterns in long-running agents<a href="#source2" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[2]</a>.
+    </p>
+
+    <h3 class="text-lg font-semibold mb-3 text-slate-800 dark:text-slate-200">Failure mode 1: Context poisoning</h3>
+    <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
+        A hallucination, a wrong assumption, or a mistaken tool output gets written into the agent’s persistent notes—and then treated as truth. In coding, this often happens when the agent “infers” an API shape without reading the file, or when it misreads a stack trace and then anchors on the wrong root cause.
+    </p>
+    <ul class="list-disc list-inside space-y-2 text-slate-700 dark:text-slate-300 ml-4 mb-4">
+        <li><strong>Countermeasure:</strong> promote only verified facts (with file/line references or test evidence) into durable memory.</li>
+        <li><strong>Countermeasure:</strong> keep an “assumptions” list that must be confirmed or deleted on the next tool call.</li>
+    </ul>
+
+    <h3 class="text-lg font-semibold mb-3 text-slate-800 dark:text-slate-200">Failure mode 2: Context distraction and overload</h3>
+    <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
+        Tool outputs accumulate: long logs, repeated errors, and multiple partial diffs. JetBrains describes how this “append-everything” approach creates massive, expensive memory logs that quickly become noise<a href="#source3" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[3]</a>. Chroma’s context-rot results add an uncomfortable truth: even if you can fit more, the model may become less reliable as the input grows<a href="#source6" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[6]</a>.
+    </p>
+    <ul class="list-disc list-inside space-y-2 text-slate-700 dark:text-slate-300 ml-4 mb-4">
+        <li><strong>Countermeasure:</strong> dedupe and summarize tool outputs into “evidence capsules” (error signature, top 5 relevant lines, next action).</li>
+        <li><strong>Countermeasure:</strong> keep raw logs out of the prompt; store them externally and retrieve only the needed excerpt.</li>
+    </ul>
+
+    <h3 class="text-lg font-semibold mb-3 text-slate-800 dark:text-slate-200">Failure mode 3: Lost-in-the-middle and position sensitivity</h3>
+    <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
+        “Lost in the Middle” shows a simple but painful pattern: performance is often higher when relevant information appears at the beginning or end of a long context, and it can degrade when the key fact is buried in the middle<a href="#source5" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[5]</a>.
+        In agent terms: you can have the correct constraint in the transcript, and the model still misses it.
+    </p>
+    <ul class="list-disc list-inside space-y-2 text-slate-700 dark:text-slate-300 ml-4 mb-4">
+        <li><strong>Countermeasure:</strong> restate “hard constraints” in a compact, structured state block near the top of the context each turn.</li>
+        <li><strong>Countermeasure:</strong> reorder context so current constraints and acceptance criteria are adjacent to the current action.</li>
+    </ul>
+
+    <h3 class="text-lg font-semibold mb-3 text-slate-800 dark:text-slate-200">Failure mode 4: Context clash (contradictions)</h3>
+    <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
+        Long agent runs often contain contradictions: “we decided to do X” and then later “we decided to do Y.” This can happen due to iteration, multiple attempts, or partial rollbacks. Contradictions are toxic because they don’t just add noise—they create ambiguous decision boundaries.
+    </p>
+    <ul class="list-disc list-inside space-y-2 text-slate-700 dark:text-slate-300 ml-4 mb-4">
+        <li><strong>Countermeasure:</strong> maintain a single canonical <em>Decision Log</em> (append-only, but with explicit superseding entries).</li>
+        <li><strong>Countermeasure:</strong> use “latest state wins” rules and explicitly mark older notes as stale.</li>
+    </ul>
+
+    <h3 class="text-lg font-semibold mb-3 text-slate-800 dark:text-slate-200">Failure mode 5: Untrusted text and instruction conflicts</h3>
+    <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
+        When your agent retrieves web pages, GitHub issues, or user-provided files, you are importing untrusted text into a privileged instruction channel. OWASP lists prompt injection as the #1 risk for LLM apps and also highlights insecure output handling, excessive agency, and overreliance as common hazards in agentic systems<a href="#source13" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[13]</a>.
+    </p>
+
+    <div class="bg-amber-50 dark:bg-amber-950 border-l-4 border-amber-400 dark:border-amber-500 p-4 rounded-r-lg">
+        <p class="text-sm text-amber-800 dark:text-amber-200">
+            <strong>Important:</strong> Treat retrieved text as <em>data</em>, not instructions. Isolation is a context-management technique and a security control<a href="#source2" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[2]</a><a href="#source13" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[13]</a>.
+        </p>
+    </div>
+</div>

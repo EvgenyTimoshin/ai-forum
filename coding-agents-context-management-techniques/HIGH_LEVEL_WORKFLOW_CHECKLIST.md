@@ -6,5 +6,5 @@
 - [x] 3. Add Comments
 - [x] 4. Add Discussion
 - [x] 5. Build and wrap up
-- [ ] 6. Audio post process
+- [x] 6. Audio post process
 - [ ] 7. Add audio player

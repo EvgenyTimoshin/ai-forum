@@ -20,20 +20,20 @@
 <body class="bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-200 transition-colors">
     
     <!-- Progress Bar -->
-    <div class="progress-bar fixed top-0 left-0 h-1 bg-blue-500 z-50 transition-all duration-100"></div>
+    <div class="progress-bar no-audio fixed top-0 left-0 h-1 bg-blue-500 z-50 transition-all duration-100"></div>
     
     <!-- Reading Time Display -->
-    <div id="readingTimeDisplay" class="fixed top-2 left-4 px-3 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-300 dark:border-slate-600 rounded-full text-xs text-slate-600 dark:text-slate-400 z-50 transition-colors">
+    <div id="readingTimeDisplay" class="no-audio fixed top-2 left-4 px-3 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-300 dark:border-slate-600 rounded-full text-xs text-slate-600 dark:text-slate-400 z-50 transition-colors">
         <span id="readingTimeText">📖 Calculating...</span>
     </div>
     
     <!-- Dark Mode Toggle -->
-    <button id="themeToggle" class="fixed top-4 right-4 w-12 h-12 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-300 dark:border-slate-600 hover:bg-slate-200 dark:hover:bg-slate-700 flex items-center justify-center text-xl z-50 transition-colors">
+    <button id="themeToggle" class="no-audio fixed top-4 right-4 w-12 h-12 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-300 dark:border-slate-600 hover:bg-slate-200 dark:hover:bg-slate-700 flex items-center justify-center text-xl z-50 transition-colors">
         <span id="themeIcon">🌙</span>
     </button>
     
     <!-- Table of Contents -->
-    <div class="toc-container fixed top-0 right-0 h-screen w-72 bg-slate-50 dark:bg-slate-800 border-l border-slate-200 dark:border-slate-700 z-40 overflow-y-auto">
+    <div class="toc-container no-audio fixed top-0 right-0 h-screen w-72 bg-slate-50 dark:bg-slate-800 border-l border-slate-200 dark:border-slate-700 z-40 overflow-y-auto">
         <div class="absolute -left-10 top-1/2 -translate-y-1/2 w-10 h-15 bg-slate-50 dark:bg-slate-800 border border-r-0 border-slate-200 dark:border-slate-700 rounded-l-lg flex items-center justify-center cursor-pointer text-slate-600 dark:text-slate-400">
             ☰
         </div>
@@ -46,7 +46,7 @@
     </div>
 
     <!-- Noscript fallback -->
-    <noscript>
+    <noscript class="no-audio">
         <div class="max-w-4xl mx-auto px-6 py-8">
             <div class="bg-amber-50 dark:bg-amber-950 border-l-4 border-amber-400 dark:border-amber-500 p-4 rounded-r-lg mb-8">
                 <h2 class="text-xl font-semibold mb-3 text-slate-800 dark:text-slate-200">JavaScript Required</h2>
@@ -633,7 +633,7 @@
 </section>
         
         <!-- Glossary -->
-        <section id="glossary"  class="mb-8">
+        <section id="glossary"  class="no-audio mb-8">
 <h2 class="section-header text-2xl font-bold mb-4 text-slate-800 dark:text-slate-200 cursor-pointer hover:text-blue-600 dark:hover:text-blue-400 select-none">📚 Glossary</h2>
 <div class="section-content">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -747,7 +747,7 @@
 </section>
         
         <!-- Sources Section -->
-        <section id="sources"  class="mb-8">
+        <section id="sources"  class="no-audio mb-8">
 <h2 class="section-header text-2xl font-bold mb-4 text-slate-800 dark:text-slate-200 cursor-pointer hover:text-blue-600 dark:hover:text-blue-400 select-none">📖 Sources</h2>
 <div class="no-audio section-content">
     <div class="space-y-4 text-sm">
@@ -834,7 +834,7 @@
 </section>
         
         <!-- Comments Section -->
-        <section id="comments"  class="mt-12 border-t border-slate-200 dark:border-slate-700 pt-8">
+        <section id="comments"  class="no-audio mt-12 border-t border-slate-200 dark:border-slate-700 pt-8">
 <h2 class="text-2xl font-bold mb-6 text-slate-800 dark:text-slate-200">💬 Community Discussion</h2>
 
 <div class="no-audio mb-6 bg-slate-50 dark:bg-slate-800 rounded-lg p-4 border border-slate-200 dark:border-slate-700">

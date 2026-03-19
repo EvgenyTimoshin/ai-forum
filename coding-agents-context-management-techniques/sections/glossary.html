@@ -1,0 +1,109 @@
+<h2 class="section-header text-2xl font-bold mb-4 text-slate-800 dark:text-slate-200 cursor-pointer hover:text-blue-600 dark:hover:text-blue-400 select-none">📚 Glossary</h2>
+<div class="section-content">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="bg-slate-50 dark:bg-slate-800 p-3 rounded-lg border border-slate-200 dark:border-slate-700">
+            <h4 class="font-semibold text-slate-800 dark:text-slate-200">Coding agent</h4>
+            <p class="text-sm text-slate-600 dark:text-slate-400">An LLM-driven system that uses tools (search/read/edit/build/test) in a loop to complete software tasks across multiple files and iterations.</p>
+        </div>
+
+        <div class="bg-slate-50 dark:bg-slate-800 p-3 rounded-lg border border-slate-200 dark:border-slate-700">
+            <h4 class="font-semibold text-slate-800 dark:text-slate-200">Context window</h4>
+            <p class="text-sm text-slate-600 dark:text-slate-400">The finite token budget available to the model for a single generation: system instructions, tool descriptions, retrieved documents, and message history all compete for space.</p>
+        </div>
+
+        <div class="bg-slate-50 dark:bg-slate-800 p-3 rounded-lg border border-slate-200 dark:border-slate-700">
+            <h4 class="font-semibold text-slate-800 dark:text-slate-200">Context engineering</h4>
+            <p class="text-sm text-slate-600 dark:text-slate-400">Designing and maintaining the smallest high-signal set of tokens and artifacts that reliably drives the agent’s next step (what to write, select, compress, and isolate).</p>
+        </div>
+
+        <div class="bg-slate-50 dark:bg-slate-800 p-3 rounded-lg border border-slate-200 dark:border-slate-700">
+            <h4 class="font-semibold text-slate-800 dark:text-slate-200">Working memory</h4>
+            <p class="text-sm text-slate-600 dark:text-slate-400">Short-lived, high-priority state (current task, constraints, latest tool outputs) kept in the prompt for immediate reasoning.</p>
+        </div>
+
+        <div class="bg-slate-50 dark:bg-slate-800 p-3 rounded-lg border border-slate-200 dark:border-slate-700">
+            <h4 class="font-semibold text-slate-800 dark:text-slate-200">Long-term memory</h4>
+            <p class="text-sm text-slate-600 dark:text-slate-400">Persisted knowledge across sessions (decisions, preferences, repo conventions, stable facts) stored outside the prompt and retrieved when relevant.</p>
+        </div>
+
+        <div class="bg-slate-50 dark:bg-slate-800 p-3 rounded-lg border border-slate-200 dark:border-slate-700">
+            <h4 class="font-semibold text-slate-800 dark:text-slate-200">Retrieval-augmented generation (RAG)</h4>
+            <p class="text-sm text-slate-600 dark:text-slate-400">A pattern that retrieves relevant documents from a non-parametric store (search index/vector DB) and conditions generation on them to improve accuracy and provenance.</p>
+        </div>
+
+        <div class="bg-slate-50 dark:bg-slate-800 p-3 rounded-lg border border-slate-200 dark:border-slate-700">
+            <h4 class="font-semibold text-slate-800 dark:text-slate-200">Tool calling</h4>
+            <p class="text-sm text-slate-600 dark:text-slate-400">A structured interface where the model requests an external function/tool (e.g., search, read file, run tests) and then uses the returned output to decide next steps.</p>
+        </div>
+
+        <div class="bg-slate-50 dark:bg-slate-800 p-3 rounded-lg border border-slate-200 dark:border-slate-700">
+            <h4 class="font-semibold text-slate-800 dark:text-slate-200">Just-in-time retrieval</h4>
+            <p class="text-sm text-slate-600 dark:text-slate-400">Keeping lightweight pointers (file paths, URLs, query handles) and loading details only when needed, instead of preloading everything up front.</p>
+        </div>
+
+        <div class="bg-slate-50 dark:bg-slate-800 p-3 rounded-lg border border-slate-200 dark:border-slate-700">
+            <h4 class="font-semibold text-slate-800 dark:text-slate-200">Compaction</h4>
+            <p class="text-sm text-slate-600 dark:text-slate-400">Reducing context size by summarizing, pruning, and rewriting history into a smaller state representation while preserving critical constraints and decisions.</p>
+        </div>
+
+        <div class="bg-slate-50 dark:bg-slate-800 p-3 rounded-lg border border-slate-200 dark:border-slate-700">
+            <h4 class="font-semibold text-slate-800 dark:text-slate-200">MemGPT</h4>
+            <p class="text-sm text-slate-600 dark:text-slate-400">An OS-inspired agent architecture that manages tiered memory (“virtual context management”) by moving information between fast and slow stores.</p>
+        </div>
+
+        <div class="bg-slate-50 dark:bg-slate-800 p-3 rounded-lg border border-slate-200 dark:border-slate-700">
+            <h4 class="font-semibold text-slate-800 dark:text-slate-200">Reflexion</h4>
+            <p class="text-sm text-slate-600 dark:text-slate-400">A framework where agents store linguistic reflections on feedback in an episodic buffer to improve decision-making across attempts.</p>
+        </div>
+
+        <div class="bg-slate-50 dark:bg-slate-800 p-3 rounded-lg border border-slate-200 dark:border-slate-700">
+            <h4 class="font-semibold text-slate-800 dark:text-slate-200">Episodic memory</h4>
+            <p class="text-sm text-slate-600 dark:text-slate-400">A per-run or per-attempt memory store used to keep lessons learned and feedback across multiple tries.</p>
+        </div>
+
+        <div class="bg-slate-50 dark:bg-slate-800 p-3 rounded-lg border border-slate-200 dark:border-slate-700">
+            <h4 class="font-semibold text-slate-800 dark:text-slate-200">Prompt injection</h4>
+            <p class="text-sm text-slate-600 dark:text-slate-400">An attack where untrusted text (e.g., retrieved docs, web pages, issues) tries to override instructions or trick the agent into unsafe behavior.</p>
+        </div>
+
+        <div class="bg-slate-50 dark:bg-slate-800 p-3 rounded-lg border border-slate-200 dark:border-slate-700">
+            <h4 class="font-semibold text-slate-800 dark:text-slate-200">Excessive agency</h4>
+            <p class="text-sm text-slate-600 dark:text-slate-400">When an agent is granted too much autonomy (too many tools/permissions) without safeguards, leading to risky actions, runaway loops, or unintended changes.</p>
+        </div>
+
+        <div class="bg-slate-50 dark:bg-slate-800 p-3 rounded-lg border border-slate-200 dark:border-slate-700">
+            <h4 class="font-semibold text-slate-800 dark:text-slate-200">Agent-computer interface (ACI)</h4>
+            <p class="text-sm text-slate-600 dark:text-slate-400">The concrete tool and UI surface an agent uses to navigate files, edit code, and run programs; design quality can strongly influence success rate.</p>
+        </div>
+
+        <div class="bg-slate-50 dark:bg-slate-800 p-3 rounded-lg border border-slate-200 dark:border-slate-700">
+            <h4 class="font-semibold text-slate-800 dark:text-slate-200">Context poisoning / distraction / confusion / clash</h4>
+            <p class="text-sm text-slate-600 dark:text-slate-400">Common failure modes in long contexts: false info enters memory (poisoning), too much text overwhelms (distraction), irrelevant text steers outputs (confusion), and contradictions appear (clash).</p>
+        </div>
+
+        <div class="bg-slate-50 dark:bg-slate-800 p-3 rounded-lg border border-slate-200 dark:border-slate-700">
+            <h4 class="font-semibold text-slate-800 dark:text-slate-200">Benchmark (agent evaluation)</h4>
+            <p class="text-sm text-slate-600 dark:text-slate-400">A standardized set of tasks and scoring used to measure agent performance and guide iteration (e.g., SWE-bench for real GitHub issues).</p>
+        </div>
+
+        <div class="bg-slate-50 dark:bg-slate-800 p-3 rounded-lg border border-slate-200 dark:border-slate-700">
+            <h4 class="font-semibold text-slate-800 dark:text-slate-200">Decision Log</h4>
+            <p class="text-sm text-slate-600 dark:text-slate-400">A small, canonical record of important choices (what we decided and why), with explicit superseding entries to prevent contradictions across long agent runs.</p>
+        </div>
+
+        <div class="bg-slate-50 dark:bg-slate-800 p-3 rounded-lg border border-slate-200 dark:border-slate-700">
+            <h4 class="font-semibold text-slate-800 dark:text-slate-200">Evidence capsule</h4>
+            <p class="text-sm text-slate-600 dark:text-slate-400">A compact summary of a tool output: error signature, the relevant excerpt, and the next action it implies.</p>
+        </div>
+
+        <div class="bg-slate-50 dark:bg-slate-800 p-3 rounded-lg border border-slate-200 dark:border-slate-700">
+            <h4 class="font-semibold text-slate-800 dark:text-slate-200">Rolling summary</h4>
+            <p class="text-sm text-slate-600 dark:text-slate-400">A short, canonical state block (goal, constraints, verified facts) updated every loop iteration to keep key context visible.</p>
+        </div>
+
+        <div class="bg-slate-50 dark:bg-slate-800 p-3 rounded-lg border border-slate-200 dark:border-slate-700">
+            <h4 class="font-semibold text-slate-800 dark:text-slate-200">Trace</h4>
+            <p class="text-sm text-slate-600 dark:text-slate-400">A structured log of an agent run (steps, tool calls, token budgets, diffs, outcomes) used for debugging and evaluation.</p>
+        </div>
+    </div>
+</div>

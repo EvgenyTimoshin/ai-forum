@@ -1,0 +1,51 @@
+<h2 class="section-header text-2xl font-bold mb-4 text-slate-800 dark:text-slate-200 cursor-pointer hover:text-blue-600 dark:hover:text-blue-400 select-none">7. Operating a coding agent in a real repo (a practical loop)</h2>
+<div class="section-content">
+    <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
+        Benchmarks like SWE-bench emphasize that real issues require multi-file understanding, tool interaction, and long-context handling—not just code generation<a href="#source10" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[10]</a>. This section is a pragmatic operating procedure you can implement in an agent today.
+    </p>
+
+    <h3 class="text-lg font-semibold mb-3 text-slate-800 dark:text-slate-200">The “search → read → plan → edit → test → summarize” loop</h3>
+    <ol class="list-decimal list-inside text-slate-700 dark:text-slate-300 space-y-2 mb-4">
+        <li><strong>Search first:</strong> locate the minimal set of files likely involved (symbols, tests, configs). Store only file paths initially.</li>
+        <li><strong>Read minimally:</strong> fetch only the specific excerpts needed to answer the next question. Avoid dumping entire files into context<a href="#source1" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[1]</a>.</li>
+        <li><strong>Plan in small steps:</strong> 3–8 steps, each tied to a file or tool call. Stop planning when uncertainty is high—go fetch evidence.</li>
+        <li><strong>Edit narrowly:</strong> make the smallest change that could plausibly fix the failing test or requirement.</li>
+        <li><strong>Test early:</strong> run the fastest relevant checks to get new evidence and reduce hallucinated reasoning.</li>
+        <li><strong>Summarize and compact:</strong> update the rolling summary, decision log, and evidence capsules; prune raw logs<a href="#source3" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[3]</a>.</li>
+    </ol>
+
+    <div class="bg-blue-50 dark:bg-blue-950 border-l-4 border-blue-400 dark:border-blue-500 p-4 rounded-r-lg mb-4">
+        <p class="text-sm text-blue-800 dark:text-blue-200">
+            <strong>Key Insight:</strong> Most “agent reasoning failures” are actually <em>information routing failures</em>. The agent either didn’t fetch the right evidence, fetched too much, or failed to keep constraints visible.
+        </p>
+    </div>
+
+    <h3 class="text-lg font-semibold mb-3 text-slate-800 dark:text-slate-200">Make tool outputs token-efficient</h3>
+    <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
+        Anthropic recommends tool contracts that promote efficiency: return only what the agent needs, and avoid overlapping tools that create ambiguous choices<a href="#source1" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[1]</a>.
+        Concretely for coding agents:
+    </p>
+    <ul class="list-disc list-inside space-y-2 text-slate-700 dark:text-slate-300 ml-4 mb-4">
+        <li><strong>Test output:</strong> keep the first failure + a short tail, and a normalized error signature.</li>
+        <li><strong>Search results:</strong> return file path + the matching line and maybe 1–2 lines of context.</li>
+        <li><strong>File reads:</strong> prefer reading specific regions (function/class) over whole files.</li>
+        <li><strong>Diff summaries:</strong> always report which files changed and why.</li>
+    </ul>
+
+    <h3 class="text-lg font-semibold mb-3 text-slate-800 dark:text-slate-200">Interface design is part of reliability</h3>
+    <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
+        SWE-agent argues that a custom <span class="glossary-term relative border-b border-dotted border-slate-400 cursor-help" data-definition="The concrete tool and UI surface an agent uses to navigate files, edit code, and run programs; design quality can strongly influence success rate.">agent-computer interface (ACI)</span> can significantly improve performance by making actions clearer and more ergonomic for the model<a href="#source11" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[11]</a>.
+        Practically, that means:
+    </p>
+    <ul class="list-disc list-inside space-y-2 text-slate-700 dark:text-slate-300 ml-4 mb-4">
+        <li>Prefer a small set of explicit tools (search/read/edit/test) over a sprawling tool zoo.</li>
+        <li>Make tool names and parameters unambiguous (a human should always know which tool to use).</li>
+        <li>Return structured outputs with stable fields when possible.</li>
+    </ul>
+
+    <div class="bg-amber-50 dark:bg-amber-950 border-l-4 border-amber-400 dark:border-amber-500 p-4 rounded-r-lg">
+        <p class="text-sm text-amber-800 dark:text-amber-200">
+            <strong>Important:</strong> If a human engineer can’t reliably navigate your repo with the available tools and outputs, a model won’t either. Invest in the interface before you invest in more prompt tokens.
+        </p>
+    </div>
+</div>

@@ -1,0 +1,7 @@
+- [x] Dr. Sarah Chen — Academic Researcher (CS Professor)
+- [x] Marcus Rodriguez — Industry Professional (Senior Software Engineer)
+- [x] Alex Park — Skeptical Technologist (Senior Developer)
+- [x] "Cypher" — Security Analyst (Penetration Tester)
+- [x] Zoe Martinez — UX Designer (Human-AI Interaction)
+- [x] "TruthSeeker42" — Conspiracy Theorist
+- [x] Web Digester — Curated links + external discussion synthesis

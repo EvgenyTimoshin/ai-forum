@@ -1,0 +1,54 @@
+<h2 class="section-header text-2xl font-bold mb-4 text-slate-800 dark:text-slate-200 cursor-pointer hover:text-blue-600 dark:hover:text-blue-400 select-none">2. Context as a budget (tokens, attention, and diminishing returns)</h2>
+<div class="section-content">
+    <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
+        Engineers often treat the <span class="glossary-term relative border-b border-dotted border-slate-400 cursor-help" data-definition="The finite token budget available to the model for a single generation.">context window</span> like a hard drive: “if there’s space, store it.” But agent context behaves more like RAM under pressure. The practical question isn’t “can I fit it?” — it’s “will the model reliably use it?”
+    </p>
+
+    <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
+        Anthropic’s framing is blunt: context is a finite resource with diminishing returns, and effective agents aim for the <em>smallest possible</em> set of high-signal tokens that maximize the chance of the right next action<a href="#source1" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[1]</a>. JetBrains makes the same point from a systems angle: agent logs grow fast, become expensive, and the “effective context size” is much smaller than the maximum window<a href="#source3" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[3]</a>.
+    </p>
+
+    <blockquote class="border-l-4 border-slate-300 dark:border-slate-600 pl-4 py-2 mb-4 text-slate-700 dark:text-slate-300">
+        <p class="text-base leading-relaxed">
+            “Good context engineering means finding the <em>smallest possible set of high-signal tokens</em> that maximize the likelihood of some desired outcome.”
+            <a href="#source1" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[1]</a>
+        </p>
+    </blockquote>
+
+    <h3 class="text-lg font-semibold mb-3 text-slate-800 dark:text-slate-200">Why “more tokens” can make answers worse</h3>
+    <ul class="list-disc list-inside space-y-2 text-slate-700 dark:text-slate-300 ml-4 mb-4">
+        <li><strong>Position effects:</strong> models can perform best when the key fact is at the beginning or end, and worse when it’s buried in the middle<a href="#source5" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[5]</a>.</li>
+        <li><strong>Reliability decay:</strong> as input length grows, performance can become increasingly unreliable (“context rot”)<a href="#source6" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[6]</a>.</li>
+        <li><strong>Noise accumulation:</strong> intermediate attempts, partial diffs, and long logs can drown out the true constraints of the task<a href="#source3" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[3]</a>.</li>
+    </ul>
+
+    <div class="bg-blue-50 dark:bg-blue-950 border-l-4 border-blue-400 dark:border-blue-500 p-4 rounded-r-lg mb-4">
+        <p class="text-sm text-blue-800 dark:text-blue-200">
+            <strong>Practical heuristic:</strong> treat every token like it has rent. If it doesn’t change the next decision, don’t pay for it.
+        </p>
+    </div>
+
+    <h3 class="text-lg font-semibold mb-3 text-slate-800 dark:text-slate-200">Four types of context you should separate</h3>
+    <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
+        One reason contexts get messy is that different information has different “half-lives.” LangChain’s taxonomy is a good starting point: instructions, knowledge, and tool feedback are distinct types that should not be mixed indiscriminately<a href="#source2" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[2]</a>. In coding agents, it helps to make the separation explicit:
+    </p>
+
+    <ul class="list-disc list-inside space-y-2 text-slate-700 dark:text-slate-300 ml-4 mb-4">
+        <li><strong>Task state (working memory):</strong> current goal, constraints, acceptance tests, and “what we tried so far.”</li>
+        <li><strong>Repo facts:</strong> file paths, APIs, conventions, and the few relevant code snippets needed right now.</li>
+        <li><strong>Execution evidence:</strong> test output, stack traces, and profiler logs—kept short, deduped, and summarized.</li>
+        <li><strong>Long-term memory:</strong> durable decisions and lessons learned that should persist across runs (stored outside the prompt and retrieved selectively).</li>
+    </ul>
+
+    <h3 class="text-lg font-semibold mb-3 text-slate-800 dark:text-slate-200">The “working set” principle</h3>
+    <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
+        The best agent contexts behave like a curated working set:
+        keep the minimal state needed to decide the next tool call, and keep pointers to everything else. This is the core of “just-in-time retrieval” from Anthropic’s article<a href="#source1" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[1]</a>. You’ll see this idea recur in memory architectures (MemGPT’s tiered memory<a href="#source7" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[7]</a>) and retrieval systems (RAG’s non-parametric memory<a href="#source8" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[8]</a>).
+    </p>
+
+    <div class="bg-amber-50 dark:bg-amber-950 border-l-4 border-amber-400 dark:border-amber-500 p-4 rounded-r-lg">
+        <p class="text-sm text-amber-800 dark:text-amber-200">
+            <strong>Important:</strong> Context engineering is not “summarize everything.” It’s <em>decide what to make easy to attend to</em>, and what to keep as a pointer to be loaded later.
+        </p>
+    </div>
+</div>

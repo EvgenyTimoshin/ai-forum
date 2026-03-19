@@ -1,0 +1,24 @@
+<h2 class="section-header text-2xl font-bold mb-4 text-slate-800 dark:text-slate-200 cursor-pointer hover:text-blue-600 dark:hover:text-blue-400 select-none">Conclusion: Context management is the job</h2>
+<div class="section-content">
+    <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
+        Coding agents fail in familiar ways: they lose constraints, drown in logs, chase the wrong files, or absorb untrusted text. The common root is not “model capability” in the abstract—it’s whether the system reliably presents the right information at the right time.
+    </p>
+
+    <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
+        The best guidance across research and practice converges:
+        treat context as a scarce budget with diminishing returns<a href="#source1" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[1]</a><a href="#source3" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[3]</a>,
+        expect long-context weaknesses like “lost in the middle” and context rot<a href="#source5" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[5]</a><a href="#source6" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[6]</a>,
+        and build architectures that write state, retrieve evidence, compress history, and isolate untrusted inputs<a href="#source2" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[2]</a><a href="#source13" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[13]</a>.
+    </p>
+
+    <div class="bg-blue-50 dark:bg-blue-950 border-l-4 border-blue-400 dark:border-blue-500 p-4 rounded-r-lg mb-4">
+        <p class="text-sm text-blue-800 dark:text-blue-200">
+            <strong>If you do one thing:</strong> implement a canonical Rolling Summary + Decision Log, switch to just-in-time retrieval, and evaluate on a real benchmark like SWE-bench<a href="#source10" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[10]</a>. It will change your agent more than any prompt tweak.
+        </p>
+    </div>
+
+    <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300">
+        From there, treat context engineering as a product: instrument it, run ablations, and improve the interface your agent uses to see and act on the repo<a href="#source11" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[11]</a><a href="#source12" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[12]</a>.
+        That’s how “cool demos” become dependable software.
+    </p>
+</div>

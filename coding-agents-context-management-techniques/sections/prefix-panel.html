@@ -1,0 +1,13 @@
+<div class="no-audio bg-blue-50 dark:bg-blue-950 border-l-4 border-blue-400 dark:border-blue-500 p-4 rounded-r-lg">
+    <h3 class="text-lg font-semibold mb-2 text-slate-800 dark:text-slate-200">How This Document Was Created</h3>
+    <p class="text-sm text-slate-700 dark:text-slate-300 mb-2">
+        This post was produced using the repo’s agent workflow (see <code>AGENT_INSTRUCTIONS/</code>). A coding agent executed the steps end-to-end: source analysis first, then modular writing into HTML fragments that are dynamically loaded into the main page.
+    </p>
+    <ol class="list-decimal list-inside text-sm text-slate-600 dark:text-slate-400 space-y-1">
+        <li>Scaffolded a new project directory and wired it to the shared site template.</li>
+        <li>Collected and analyzed authoritative sources (papers, engineering guides, security baselines) into <code>SOURCES.md</code>.</li>
+        <li>Converted the outline into a set of modular section fragments under <code>sections/</code>.</li>
+        <li>Wove citations throughout the text and linked them to the numbered source list.</li>
+        <li>Built the final stitched HTML with the repository build pipeline.</li>
+    </ol>
+</div>

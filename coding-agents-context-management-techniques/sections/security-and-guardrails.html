@@ -1,0 +1,48 @@
+<h2 class="section-header text-2xl font-bold mb-4 text-slate-800 dark:text-slate-200 cursor-pointer hover:text-blue-600 dark:hover:text-blue-400 select-none">6. Security and guardrails (context is an attack surface)</h2>
+<div class="section-content">
+    <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
+        Once an agent can browse the web, read tickets, or run tools, it’s no longer “just generating text.” It is operating inside a system with permissions—and its <span class="glossary-term relative border-b border-dotted border-slate-400 cursor-help" data-definition="The finite token budget available to the model for a single generation.">context window</span> becomes an attack surface. OWASP’s Top 10 for LLM apps makes this explicit: <span class="glossary-term relative border-b border-dotted border-slate-400 cursor-help" data-definition="An attack where untrusted text tries to override instructions or trick the agent into unsafe behavior.">prompt injection</span>, insecure output handling, insecure plugin/tool design, excessive agency, and overreliance are all common risks in agentic applications<a href="#source13" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[13]</a>.
+    </p>
+
+    <h3 class="text-lg font-semibold mb-3 text-slate-800 dark:text-slate-200">Threat model: the “untrusted text” problem</h3>
+    <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
+        A coding agent’s inputs often include untrusted text: GitHub issues, dependency changelogs, stack traces, or web pages. <span class="glossary-term relative border-b border-dotted border-slate-400 cursor-help" data-definition="An attack where untrusted text tries to override instructions or trick the agent into unsafe behavior.">Prompt injection</span> is the simplest form: the text tries to override instructions (“ignore previous directions…”) or trick the agent into disclosing secrets or running unsafe commands<a href="#source13" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[13]</a>.
+        Context engineering’s “isolate” step exists for a reason<a href="#source2" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[2]</a>.
+    </p>
+
+    <h3 class="text-lg font-semibold mb-3 text-slate-800 dark:text-slate-200">Guardrail 1: Isolate and quote untrusted content</h3>
+    <ul class="list-disc list-inside space-y-2 text-slate-700 dark:text-slate-300 ml-4 mb-4">
+        <li><strong>Separate channels:</strong> store retrieved text outside the main “instruction” block; inject only small excerpts.</li>
+        <li><strong>Force provenance:</strong> require citations to <code>#sourceX</code> (or file paths/line numbers) for factual claims.</li>
+        <li><strong>Quote, don’t paraphrase:</strong> pull exact snippets when the detail matters (APIs, constraints, requirements).</li>
+    </ul>
+
+    <h3 class="text-lg font-semibold mb-3 text-slate-800 dark:text-slate-200">Guardrail 2: Least privilege for tools (and “excessive agency”)</h3>
+    <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
+        OWASP calls out <span class="glossary-term relative border-b border-dotted border-slate-400 cursor-help" data-definition="When an agent is granted too much autonomy (too many tools/permissions) without safeguards.">excessive agency</span> as a core risk<a href="#source13" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[13]</a>. The fix is systems engineering:
+    </p>
+    <ul class="list-disc list-inside space-y-2 text-slate-700 dark:text-slate-300 ml-4 mb-4">
+        <li><strong>Tool allowlists:</strong> only enable the minimum set of tools needed for the task<a href="#source1" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[1]</a>.</li>
+        <li><strong>Permission tiers:</strong> read-only by default; elevate to “edit” only when a plan step demands it.</li>
+        <li><strong>Dry-run mode:</strong> generate a patch and a test plan before writing changes.</li>
+        <li><strong>Rate limits and timeouts:</strong> prevent runaway loops and resource exhaustion.</li>
+    </ul>
+
+    <h3 class="text-lg font-semibold mb-3 text-slate-800 dark:text-slate-200">Guardrail 3: Output handling and validation</h3>
+    <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
+        “Insecure output handling” is an OWASP item for a reason<a href="#source13" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[13]</a>: agent outputs can become inputs to other systems (CI scripts, database queries, shell commands).
+        For coding agents, treat any model-suggested command or patch as untrusted until verified:
+    </p>
+    <ul class="list-disc list-inside space-y-2 text-slate-700 dark:text-slate-300 ml-4 mb-4">
+        <li><strong>Schema/format validation</strong> for tool calls and structured outputs.</li>
+        <li><strong>Command sanitization</strong> and explicit “what will this do?” previews for shell steps.</li>
+        <li><strong>Test gates:</strong> require unit/integration tests to pass before accepting changes.</li>
+        <li><strong>Diff review:</strong> summarize edits (files touched, risk areas) before merge.</li>
+    </ul>
+
+    <div class="bg-blue-50 dark:bg-blue-950 border-l-4 border-blue-400 dark:border-blue-500 p-4 rounded-r-lg">
+        <p class="text-sm text-blue-800 dark:text-blue-200">
+            <strong>Key Insight:</strong> The safest agent is also the most effective one: isolation, minimal tools, and evidence-based state reduce both security risk and “context confusion.”
+        </p>
+    </div>
+</div>

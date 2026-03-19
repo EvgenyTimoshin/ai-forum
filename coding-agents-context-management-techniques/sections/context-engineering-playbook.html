@@ -1,0 +1,71 @@
+<h2 class="section-header text-2xl font-bold mb-4 text-slate-800 dark:text-slate-200 cursor-pointer hover:text-blue-600 dark:hover:text-blue-400 select-none">5. The context engineering playbook (write · select · compress · isolate)</h2>
+<div class="section-content">
+    <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
+        Here’s the practical core. Most successful agent systems converge on the same four moves:
+        <strong>write</strong> durable artifacts, <strong>select</strong> relevant context, <strong>compress</strong> aggressively, and <strong>isolate</strong> untrusted/noisy inputs<a href="#source2" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[2]</a>.
+        Context engineering is applying these moves repeatedly as the agent loops for dozens or hundreds of turns<a href="#source1" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[1]</a>.
+    </p>
+
+    <blockquote class="border-l-4 border-slate-300 dark:border-slate-600 pl-4 py-2 mb-4 text-slate-700 dark:text-slate-300">
+        <p class="text-base leading-relaxed">
+            “Context engineering is the… <em>delicate art and science of filling the context window with just the right information for the next step</em>.”
+            <a href="#source2" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[2]</a>
+        </p>
+    </blockquote>
+
+    <h3 class="text-lg font-semibold mb-3 text-slate-800 dark:text-slate-200">Write: create a small set of canonical artifacts</h3>
+    <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
+        The biggest mistake in agent systems is letting the only “state” be the chat transcript. Instead, write canonical artifacts that are designed to be read quickly:
+    </p>
+    <ul class="list-disc list-inside space-y-2 text-slate-700 dark:text-slate-300 ml-4 mb-4">
+        <li><strong>Task Brief:</strong> what “done” means, acceptance criteria, and constraints (must not break API X, must update tests Y).</li>
+        <li><strong>Plan:</strong> 3–8 steps, each tied to a tool call or file.</li>
+        <li><strong><span class="glossary-term relative border-b border-dotted border-slate-400 cursor-help" data-definition="A small, canonical record of important choices (what we decided and why), with explicit superseding entries to prevent contradictions across long runs.">Decision Log</span>:</strong> durable choices (“we will keep behavior A; change B”) with explicit superseding entries.</li>
+        <li><strong><span class="glossary-term relative border-b border-dotted border-slate-400 cursor-help" data-definition="A compact summary of a tool output: error signature, relevant excerpt, and the next action it implies.">Evidence capsules</span>:</strong> compact summaries of tool outputs (error signature, cause hypothesis, next action).</li>
+    </ul>
+
+    <div class="bg-blue-50 dark:bg-blue-950 border-l-4 border-blue-400 dark:border-blue-500 p-4 rounded-r-lg mb-4">
+        <p class="text-sm text-blue-800 dark:text-blue-200">
+            <strong>Key Insight:</strong> Written artifacts prevent “lost in the middle” failures by keeping critical constraints short, structured, and repeatedly restated near the top of the context<a href="#source5" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[5]</a>.
+        </p>
+    </div>
+
+    <h3 class="text-lg font-semibold mb-3 text-slate-800 dark:text-slate-200">Select: retrieve what matters for the next step</h3>
+    <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
+        Selection is the discipline of <em>not</em> loading everything. Anthropic recommends a just-in-time strategy: keep lightweight identifiers (paths, links, query handles) and fetch the minimum excerpt needed at runtime<a href="#source1" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[1]</a>.
+        RAG formalizes the same idea for large corpora: retrieve top-k evidence from a non-parametric store and condition generation on it<a href="#source8" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[8]</a>.
+    </p>
+
+    <h3 class="text-lg font-semibold mb-3 text-slate-800 dark:text-slate-200">Compress: summarize, prune, and rewrite history</h3>
+    <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
+        Compression is necessary because long contexts can degrade reliability (“context rot”) and can produce large, expensive logs<a href="#source3" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[3]</a><a href="#source6" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[6]</a>.
+        The trick is to compress <em>into a stable state representation</em>, not a vague narrative.
+    </p>
+    <ul class="list-disc list-inside space-y-2 text-slate-700 dark:text-slate-300 ml-4 mb-4">
+        <li><strong><span class="glossary-term relative border-b border-dotted border-slate-400 cursor-help" data-definition="A short, canonical state block (goal, constraints, verified facts) updated every loop iteration.">Rolling summary</span>:</strong> 10–20 lines capturing current goal, constraints, and what has been verified.</li>
+        <li><strong>Delta summary:</strong> after each tool call, record only what changed: “new error signature”, “file X edited”, “test Y now passes”.</li>
+        <li><strong>Prune duplicates:</strong> keep the latest representative stack trace; remove repeated failures.</li>
+        <li><strong>Rewrite, don’t append:</strong> update the canonical artifacts instead of stacking more transcript.</li>
+    </ul>
+
+    <h3 class="text-lg font-semibold mb-3 text-slate-800 dark:text-slate-200">Isolate: separate untrusted and high-variance context</h3>
+    <p class="text-base leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
+        Isolation is both a quality technique and a security control. OWASP puts prompt injection at the top of the risk list for LLM apps<a href="#source13" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[13]</a>.
+        If your agent ingests web pages, tickets, or logs, treat them as untrusted data: keep them in a separate channel/store and surface only quoted snippets with provenance.
+    </p>
+
+    <div class="bg-amber-50 dark:bg-amber-950 border-l-4 border-amber-400 dark:border-amber-500 p-4 rounded-r-lg mb-4">
+        <p class="text-sm text-amber-800 dark:text-amber-200">
+            <strong>Important:</strong> Isolation means your agent should never treat retrieved text as higher priority than system instructions. Summaries should quote data, not inherit it.
+        </p>
+    </div>
+
+    <h3 class="text-lg font-semibold mb-3 text-slate-800 dark:text-slate-200">A “do this tomorrow” checklist</h3>
+    <ul class="list-disc list-inside space-y-2 text-slate-700 dark:text-slate-300 ml-4">
+        <li><strong>Define a fixed context budget</strong> (e.g., 20% system+tools, 30% working state, 50% retrieved evidence).</li>
+        <li><strong>Add a Decision Log and Rolling Summary</strong> artifact; update them every loop iteration.</li>
+        <li><strong>Switch to just-in-time retrieval</strong>: store pointers, not blobs<a href="#source1" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[1]</a>.</li>
+        <li><strong>Make tools token-efficient</strong>: return only the lines that matter; avoid duplicating context in tool outputs<a href="#source1" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[1]</a>.</li>
+        <li><strong>Isolate untrusted inputs</strong> and require explicit quoting + source IDs for any external claims<a href="#source13" class="no-audio text-blue-600 dark:text-blue-400 hover:underline">[13]</a>.</li>
+    </ul>
+</div>

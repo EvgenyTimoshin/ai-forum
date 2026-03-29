@@ -1,0 +1,18 @@
+- [x] Enhancing Large Language Models’ Machine Translation via Dynamic
+- [x] Focus Anchoring
+- [x] Qiuyu Ding, Zhiqiang Cao * , Hailong Cao, Tiejun Zhao
+- [x] School of Computer Science of Technology, Harbin Institute of Technology
+- [x] qiuyuding@stu.hit.edu.cn, Zhiqiang_Cao@stu.hit.edu.cn,
+- [x] caohailong@hit.edu.cn, tjzhao@hit.edu.cn
+- [x] Abstract
+- [x] 1 Introduction
+- [x] 2 Preliminary Experiment
+- [x] 3 Methodology
+- [x] 4 Experimental Setup
+- [x] 5 Results and Discussion
+- [x] 6 Related Work
+- [x] 7 Conclusion
+- [x] Limitaion
+- [x] Ethics Statement
+- [x] References
+- [x] A Appendix
